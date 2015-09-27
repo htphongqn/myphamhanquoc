@@ -24,20 +24,12 @@
     <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
-     <style type="text/css">
-        input[type="radio"]
-        {
-            margin: 4px 4px 4px 4px;    
-        }
-        table label
-        {
-            font-size:12px;
-        }
-        table input
-        {
-            min-height:21px
-        }
-    </style>
+    <link href="../css/css.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript">
+            $(function () {
+                setInterval(function () { $.get("../KeepAlive.ashx"); }, 1000 * 30); // 30s gửi request một lần
+            });
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">

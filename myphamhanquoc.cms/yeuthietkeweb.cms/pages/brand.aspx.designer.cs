@@ -10,16 +10,7 @@
 namespace yeuthietkeweb.cms.pages {
     
     
-    public partial class aditem {
-        
-        /// <summary>
-        /// lbtSave control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbtSave;
+    public partial class brand {
         
         /// <summary>
         /// lbtDelete control.
@@ -31,94 +22,58 @@ namespace yeuthietkeweb.cms.pages {
         protected global::System.Web.UI.WebControls.LinkButton lbtDelete;
         
         /// <summary>
-        /// txtCode control.
+        /// lbtSaveNew control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtCode;
+        protected global::System.Web.UI.WebControls.LinkButton lbtSaveNew;
         
         /// <summary>
-        /// RequiredFieldValidator2 control.
+        /// lbtSave control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+        protected global::System.Web.UI.WebControls.LinkButton lbtSave;
         
         /// <summary>
-        /// txtDesc control.
+        /// lbMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea txtDesc;
+        protected global::System.Web.UI.WebControls.Literal lbMessage;
         
         /// <summary>
-        /// txtUrl control.
+        /// ValidationSummary1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtUrl;
+        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
         
         /// <summary>
-        /// ddlTarget control.
+        /// lblError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlTarget;
+        protected global::System.Web.UI.WebControls.Label lblError;
         
         /// <summary>
-        /// rblBannerType control.
+        /// txtName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rblBannerType;
-        
-        /// <summary>
-        /// rblAdPos control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rblAdPos;
-        
-        /// <summary>
-        /// txtWidth control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtWidth;
-        
-        /// <summary>
-        /// txtHeight control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtHeight;
-        
-        /// <summary>
-        /// rvHeight control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RangeValidator rvHeight;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtName;
         
         /// <summary>
         /// txtOrder control.
@@ -130,31 +85,22 @@ namespace yeuthietkeweb.cms.pages {
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtOrder;
         
         /// <summary>
-        /// rblLanguage control.
+        /// rblActive control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rblLanguage;
+        protected global::System.Web.UI.WebControls.RadioButtonList rblActive;
         
         /// <summary>
-        /// lblCount control.
+        /// trUploadImage1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCount;
-        
-        /// <summary>
-        /// trUpload control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl trUpload;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl trUploadImage1;
         
         /// <summary>
         /// fileImage1 control.
@@ -166,13 +112,13 @@ namespace yeuthietkeweb.cms.pages {
         protected global::System.Web.UI.HtmlControls.HtmlInputFile fileImage1;
         
         /// <summary>
-        /// trFile control.
+        /// trImage1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl trFile;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl trImage1;
         
         /// <summary>
         /// btnDelete1 control.
@@ -184,30 +130,21 @@ namespace yeuthietkeweb.cms.pages {
         protected global::System.Web.UI.WebControls.ImageButton btnDelete1;
         
         /// <summary>
-        /// hplFile control.
+        /// hplImage1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hplFile;
+        protected global::System.Web.UI.WebControls.HyperLink hplImage1;
         
         /// <summary>
-        /// ltrImage control.
+        /// Image1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ltrImage;
-        
-        /// <summary>
-        /// rptList control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptList;
+        protected global::System.Web.UI.HtmlControls.HtmlImage Image1;
     }
 }

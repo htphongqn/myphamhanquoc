@@ -38,3 +38,4 @@ E:\WWW\myphamhanquoc\myphamhanquoc.cms\yeuthietkeweb.cms\bin\vpro.functions.pdb
 E:\WWW\myphamhanquoc\myphamhanquoc.cms\yeuthietkeweb.cms\obj\Debug\yeuthietkeweb.cms.csprojResolveAssemblyReference.cache
 E:\WWW\myphamhanquoc\myphamhanquoc.cms\yeuthietkeweb.cms\obj\Debug\yeuthietkeweb.cms.dll
 E:\WWW\myphamhanquoc\myphamhanquoc.cms\yeuthietkeweb.cms\obj\Debug\yeuthietkeweb.cms.pdb
+E:\WWW\myphamhanquoc\myphamhanquoc.cms\yeuthietkeweb.cms\bin\ComponentArt.Web.UI.dll

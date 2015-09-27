@@ -127,8 +127,8 @@ namespace yeuthietkeweb.cms.pages
                     txtWidth.Value = Utils.CStrDef(G_info.ToList()[0].AD_ITEM_WIDTH);
                     txtHeight.Value = Utils.CStrDef(G_info.ToList()[0].AD_ITEM_HEIGHT);
                     txtOrder.Value = Utils.CStrDef(G_info.ToList()[0].AD_ITEM_ORDER);
-                    ucFromDate.returnDate = Utils.CDateDef(G_info.ToList()[0].AD_ITEM_DATEFROM, DateTime.Now);
-                    ucToDate.returnDate = Utils.CDateDef(G_info.ToList()[0].AD_ITEM_DATEFROM, DateTime.Now.Add(new TimeSpan(365, 0, 0, 0)));
+                    //ucFromDate.returnDate = Utils.CDateDef(G_info.ToList()[0].AD_ITEM_DATEFROM, DateTime.Now);
+                    //ucToDate.returnDate = Utils.CDateDef(G_info.ToList()[0].AD_ITEM_DATEFROM, DateTime.Now.Add(new TimeSpan(365, 0, 0, 0)));
                     rblLanguage.SelectedValue = Utils.CStrDef(G_info.ToList()[0].AD_ITEM_LANGUAGE);
                     //txtClip.Value = Utils.CStrDef(G_info.ToList()[0].AD_ITEM_FIELD1);
 
@@ -165,8 +165,8 @@ namespace yeuthietkeweb.cms.pages
                     trUpload.Visible = true;
                     trFile.Visible = false;
 
-                    ucFromDate.returnDate = DateTime.Now;
-                    ucToDate.returnDate = DateTime.Now.Add(new TimeSpan(365, 0, 0, 0));
+                    //ucFromDate.returnDate = DateTime.Now;
+                    //ucToDate.returnDate = DateTime.Now.Add(new TimeSpan(365, 0, 0, 0));
                 }
             }
             catch (Exception ex)
@@ -213,8 +213,8 @@ namespace yeuthietkeweb.cms.pages
                     g_insert.AD_ITEM_WIDTH = Utils.CIntDef(txtWidth.Value);
                     g_insert.AD_ITEM_HEIGHT = Utils.CIntDef(txtHeight.Value);
                     g_insert.AD_ITEM_ORDER = Utils.CIntDef(txtOrder.Value);
-                    g_insert.AD_ITEM_DATEFROM = ucFromDate.returnDate;
-                    g_insert.AD_ITEM_DATETO = ucToDate.returnDate;
+                    //g_insert.AD_ITEM_DATEFROM = ucFromDate.returnDate;
+                    //g_insert.AD_ITEM_DATETO = ucToDate.returnDate;
                     g_insert.AD_ITEM_LANGUAGE = Utils.CIntDef(rblLanguage.SelectedValue);
                     g_insert.AD_ITEM_FILENAME = Banner_File;
                     //g_insert.AD_ITEM_FIELD1 = Utils.CStrDef(txtClip.Value);
@@ -249,8 +249,8 @@ namespace yeuthietkeweb.cms.pages
                         g_update.Single().AD_ITEM_WIDTH = Utils.CIntDef(txtWidth.Value);
                         g_update.Single().AD_ITEM_HEIGHT = Utils.CIntDef(txtHeight.Value);
                         g_update.Single().AD_ITEM_ORDER = Utils.CIntDef(txtOrder.Value);
-                        g_update.Single().AD_ITEM_DATEFROM = ucFromDate.returnDate;
-                        g_update.Single().AD_ITEM_DATETO = ucToDate.returnDate;
+                        //g_update.Single().AD_ITEM_DATEFROM = ucFromDate.returnDate;
+                        //g_update.Single().AD_ITEM_DATETO = ucToDate.returnDate;
                         g_update.Single().AD_ITEM_LANGUAGE = Utils.CIntDef(rblLanguage.SelectedValue);
                         g_update.Single().AD_ITEM_FILENAME = Banner_File;
                         //g_update.Single().AD_ITEM_FIELD1 = Utils.CStrDef(txtClip.Value);

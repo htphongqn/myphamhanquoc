@@ -29,6 +29,13 @@
                 </ul>
             </li>
             <li>
+                <a href="#"><i class="fa fa-table fa-fw"></i>Thương hiệu<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li><a href="brand_list.aspx">Danh sách thương hiệu</a></li>
+                    <li><a href="brand.aspx">Thêm mới thương hiệu</a></li>
+                </ul>
+            </li>
+            <li>
                 <a href="#"><i class="fa fa-table fa-fw"></i>Hình ảnh<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li><a href="aditem_list.aspx">Danh sách hình ảnh</a></li>
