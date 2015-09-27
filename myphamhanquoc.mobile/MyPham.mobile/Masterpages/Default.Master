@@ -1,0 +1,88 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="MyPham.Masterpages.Default" %>
+
+<%@ Register src="../Usercontrols/MenuMobile.ascx" tagname="MenuMobile" tagprefix="uc1" %>
+<%@ Register src="../Usercontrols/Header.ascx" tagname="Header" tagprefix="uc2" %>
+<%@ Register src="../Usercontrols/SearchTool.ascx" tagname="SearchTool" tagprefix="uc3" %>
+<%@ Register src="../Usercontrols/Slide.ascx" tagname="Slide" tagprefix="uc4" %>
+<%@ Register src="../Usercontrols/CateProductsHome.ascx" tagname="CateProductsHome" tagprefix="uc5" %>
+<%@ Register src="../Usercontrols/CateProductsList.ascx" tagname="CateProductsList" tagprefix="uc6" %>
+<%@ Register src="../Usercontrols/BrandsFooter.ascx" tagname="BrandsFooter" tagprefix="uc7" %>
+<%@ Register src="../Usercontrols/CatesFooter.ascx" tagname="CatesFooter" tagprefix="uc8" %>
+<%@ Register src="../Usercontrols/Statistics.ascx" tagname="Statistics" tagprefix="uc9" %>
+<%@ Register src="../Usercontrols/AccessEmail.ascx" tagname="AccessEmail" tagprefix="uc10" %>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link href="http://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css" />
+    <link type="text/css" href="/Resources/Styles/template.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/Resources/Styles/base.css" type="text/css" />
+    <!--Main Menu-->
+    <link type="text/css" rel="stylesheet" href="/Resources/Styles/head_menu.css" />
+    <link rel="stylesheet" type="text/css" href="/Resources/Styles/icon.css" />
+    <link href="/Resources/Styles/menu_level.css" rel="stylesheet" type="text/css" />
+    <!-- Owl Carousel Assets -->
+    <link href="/Resources/Styles/owl.carousel.css" rel="stylesheet" />
+    <link href="/Resources/Styles/owl.theme.css" rel="stylesheet" />
+    <!-- Calendar css -->
+    <link rel="stylesheet" href="/Resources/Styles/BeatPicker.min.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <!--MenuMobile-->
+    <uc1:MenuMobile ID="MenuMobile1" runat="server" />
+    <!--End MenuMobile-->
+    <div id="wrap_outer">
+        <!--Header-->
+        <uc2:Header ID="Header1" runat="server" />
+        <!--Ennd Header-->
+        <!--SearchTool-->
+        <uc3:SearchTool ID="SearchTool1" runat="server" />
+        <!--End SearchTool-->
+        <!--Slide-->
+        <uc4:Slide ID="Slide1" runat="server" />
+        <!--End Slide-->
+        <div class="container">
+            <div id="main">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+                <!--CateProductsList-->
+                <uc6:CateProductsList ID="CateProductsList1" runat="server" />
+                <!--End CateProductsList-->
+            </div>
+        </div>
+        <div id="footer" class="cf">
+            <div id="topmenu_footer">
+                <!--BrandsFooter-->
+                <uc7:BrandsFooter ID="BrandsFooter1" runat="server" />
+                <!--End BrandsFooter-->
+                <!--CatesFooter-->
+                <uc8:CatesFooter ID="CatesFooter1" runat="server" />
+                <!--End CatesFooter-->
+                <!--Statistics-->
+                <uc9:Statistics ID="Statistics1" runat="server" />
+                <!-- End Statistics-->
+                <!--AccessEmail-->
+                <uc10:AccessEmail ID="AccessEmail1" runat="server" />
+                <!--End AccessEmail-->
+            </div>
+        </div>
+        <div id="copyright" class="cf">Copyright © 2015 mypham. All rights reserved
+            <p> <a id="Lbdevice" class="change-device" href="javascript:__doPostBack(&#39;ctl00$Lbdevice&#39;,&#39;&#39;)">Chuyển sang sử dụng phiên bản desktop</a> </p>
+        </div>
+    </div>
+    <!-- back to top -->
+    <script src="/Resources/Scripts/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="/Resources/Scripts/scrolltopcontrol.js" type="text/javascript"></script>
+    <div id="toTop"></div>
+    <script type="text/javascript" src="/Resources/Scripts/owl.carousel.js"></script>
+    <script src="/Resources/Scripts/all_scripts.js" type="text/javascript"></script>
+    </form>
+</body>
+</html>

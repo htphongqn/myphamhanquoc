@@ -1,0 +1,505 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{91A20496-DA04-4246-9492-3E4EF7F69DB9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyPham</RootNamespace>
+    <AssemblyName>MyPham</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.60919.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentArt.Web.UI, Version=2010.1.2637.35, Culture=neutral, PublicKeyToken=9bc9f846553156bb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\ComponentArt.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v12.1, Version=12.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Data.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxEditors.v12.1, Version=12.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Web.ASPxEditors.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxTreeList.v12.1, Version=12.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Web.ASPxTreeList.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.v12.1, Version=12.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Web.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Intelligencia.UrlRewriter, Version=2.0.0.9, Culture=neutral, PublicKeyToken=0573f3650687980d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Intelligencia.UrlRewriter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MSCaptcha, Version=4.0.4250.31585, Culture=neutral, PublicKeyToken=b9ff12f28cdcf412, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\MSCaptcha.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="vpro.functions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\vpro.functions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ajax\Addtocart.js" />
+    <Content Include="Ajax\Email.js" />
+    <Content Include="Ajax\login.js" />
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="bin\ComponentArt.Web.UI.dll" />
+    <Content Include="bin\Controller.dll" />
+    <Content Include="bin\Controller.pdb" />
+    <Content Include="bin\DevExpress.Data.v12.1.dll" />
+    <Content Include="bin\DevExpress.Web.ASPxEditors.v12.1.dll" />
+    <Content Include="bin\DevExpress.Web.ASPxTreeList.v12.1.dll" />
+    <Content Include="bin\DevExpress.Web.v12.1.dll" />
+    <Content Include="bin\Intelligencia.UrlRewriter.dll" />
+    <Content Include="bin\Model.dll" />
+    <Content Include="bin\Model.pdb" />
+    <Content Include="bin\MSCaptcha.dll" />
+    <Content Include="bin\MyPham.dll" />
+    <Content Include="bin\MyPham.pdb" />
+    <Content Include="bin\vpro.functions.dll" />
+    <Content Include="data\contact\contact-vi.htm" />
+    <Content Include="data\footer\footer-vi.htm" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Pages\Addtocart.aspx" />
+    <Content Include="Pages\Ajax-customer.aspx" />
+    <Content Include="Pages\ajaxmoreprolist.aspx" />
+    <Content Include="Pages\cart-result.aspx" />
+    <Content Include="Pages\Contact.aspx" />
+    <Content Include="Pages\Login.aspx" />
+    <Content Include="Pages\Main.aspx" />
+    <Content Include="Pages\Payment.aspx" />
+    <Content Include="Pages\Print.aspx" />
+    <Content Include="Pages\Register.aspx" />
+    <Content Include="Resources\fonts\fontawesome-webfont.svg" />
+    <Content Include="Resources\Images\account_icon.png" />
+    <Content Include="Resources\Images\address_icon.png" />
+    <Content Include="Resources\Images\ajax-loader.gif" />
+    <Content Include="Resources\Images\all_menu_icon.png" />
+    <Content Include="Resources\Images\arrow_down.png" />
+    <Content Include="Resources\Images\arrow_l.png" />
+    <Content Include="Resources\Images\arrow_l1.png" />
+    <Content Include="Resources\Images\arrow_r.png" />
+    <Content Include="Resources\Images\arrow_up.png" />
+    <Content Include="Resources\Images\arr_active.png" />
+    <Content Include="Resources\Images\arr_l.png" />
+    <Content Include="Resources\Images\arr_l1.png" />
+    <Content Include="Resources\Images\arr_orange.png" />
+    <Content Include="Resources\Images\arr_search.png" />
+    <Content Include="Resources\Images\back_to_top.png" />
+    <Content Include="Resources\Images\banner_head.png" />
+    <Content Include="Resources\Images\bg_li_f.png" />
+    <Content Include="Resources\Images\calendar_icon.jpg" />
+    <Content Include="Resources\Images\cargo_icon.png" />
+    <Content Include="Resources\Images\cart_btn.png" />
+    <Content Include="Resources\Images\cart_head_icon.png" />
+    <Content Include="Resources\Images\cate_icon.png" />
+    <Content Include="Resources\Images\certification.png" />
+    <Content Include="Resources\Images\close_icon.png" />
+    <Content Include="Resources\Images\dropdown_bg.png" />
+    <Content Include="Resources\Images\faq.png" />
+    <Content Include="Resources\Images\faq1.png" />
+    <Content Include="Resources\Images\faq_icons.png" />
+    <Content Include="Resources\Images\fonts\fontawesome-webfont.svg" />
+    <Content Include="Resources\Images\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Resources\Images\greenBg.gif" />
+    <Content Include="Resources\Images\green_check.png" />
+    <Content Include="Resources\Images\home_icon.png" />
+    <Content Include="Resources\Images\hotline_icon.png" />
+    <Content Include="Resources\Images\icons.png" />
+    <Content Include="Resources\Images\icon_cate\cate1.png" />
+    <Content Include="Resources\Images\icon_cate\cate2.png" />
+    <Content Include="Resources\Images\icon_cate\cate3.png" />
+    <Content Include="Resources\Images\icon_cate\cate4.png" />
+    <Content Include="Resources\Images\icon_list_video.gif" />
+    <Content Include="Resources\Images\icon_order.png" />
+    <Content Include="Resources\Images\input-repeat.png" />
+    <Content Include="Resources\Images\key_icon.png" />
+    <Content Include="Resources\Images\likeproduct.jpg" />
+    <Content Include="Resources\Images\like_P.jpg" />
+    <Content Include="Resources\Images\loading.gif" />
+    <Content Include="Resources\Images\login_icon.png" />
+    <Content Include="Resources\Images\logo.png" />
+    <Content Include="Resources\Images\logout_icon.png" />
+    <Content Include="Resources\Images\mainTabBg.gif" />
+    <Content Include="Resources\Images\menuBg.gif" />
+    <Content Include="Resources\Images\noavatar.png" />
+    <Content Include="Resources\Images\online_icon.png" />
+    <Content Include="Resources\Images\person_icon.png" />
+    <Content Include="Resources\Images\reloadpaf.png" />
+    <Content Include="Resources\Images\search_icon.png" />
+    <Content Include="Resources\Images\slide_ctrl.png" />
+    <Content Include="Resources\Images\social_icon.png" />
+    <Content Include="Resources\Images\social_network.jpg" />
+    <Content Include="Resources\Images\split_icon.png" />
+    <Content Include="Resources\Images\sprites_v2014.gif" />
+    <Content Include="Resources\Images\step_processBg.gif" />
+    <Content Include="Resources\Images\sub_menu_icon.png" />
+    <Content Include="Resources\Images\succe.jpg" />
+    <Content Include="Resources\Images\tab_cateBg.png" />
+    <Content Include="Resources\Images\themes.gif" />
+    <Content Include="Resources\Images\toolbar.png" />
+    <Content Include="Resources\Images\valid.png" />
+    <Content Include="Resources\Images\visitors_icon.png" />
+    <Content Include="Resources\Images\z-tabs-icons.png" />
+    <Content Include="Resources\Images\zoom_icon.png" />
+    <Content Include="Resources\Scripts\all_scripts.js" />
+    <Content Include="Resources\Scripts\BeatPicker.min.js" />
+    <Content Include="Resources\Scripts\jquery-1.11.1.min.js" />
+    <Content Include="Resources\Scripts\jquery-1.8.3.min.js" />
+    <Content Include="Resources\Scripts\jquery-noconflict.js" />
+    <Content Include="Resources\Scripts\owl.carousel.js" />
+    <Content Include="Resources\Scripts\scrolltopcontrol.js" />
+    <Content Include="Resources\Styles\base.css" />
+    <Content Include="Resources\Styles\BeatPicker.min.css" />
+    <Content Include="Resources\Styles\font-awesome.min.css" />
+    <Content Include="Resources\Styles\head_menu.css" />
+    <Content Include="Resources\Styles\icon.css" />
+    <Content Include="Resources\Styles\layout.css" />
+    <Content Include="Resources\Styles\menu_level.css" />
+    <Content Include="Resources\Styles\owl.carousel.css" />
+    <Content Include="Resources\Styles\owl.theme.css" />
+    <Content Include="Resources\Styles\skeleton.css" />
+    <Content Include="Resources\Styles\template.css" />
+    <Content Include="Usercontrols\AccessEmail.ascx" />
+    <Content Include="Usercontrols\BrandsFooter.ascx" />
+    <Content Include="Usercontrols\CateProductsHome.ascx" />
+    <Content Include="Usercontrols\CateProductsList.ascx" />
+    <Content Include="Usercontrols\CatesFooter.ascx" />
+    <Content Include="Usercontrols\Header.ascx" />
+    <Content Include="Usercontrols\ListProject.ascx" />
+    <Content Include="Usercontrols\MenuMobile.ascx" />
+    <Content Include="Usercontrols\Path.ascx" />
+    <Content Include="Usercontrols\ProjectDetail.ascx" />
+    <Content Include="Usercontrols\SearchResult.ascx" />
+    <Content Include="Usercontrols\SearchTool.ascx" />
+    <Content Include="Usercontrols\Slide.ascx" />
+    <Content Include="Usercontrols\Statistics.ascx" />
+    <Content Include="Usercontrols\Toolbar.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Components\clsFormat.cs" />
+    <Compile Include="Components\Pageindex_chage.cs" />
+    <Compile Include="Components\SendMail.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Masterpages\Default.Master.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Masterpages\Default.Master.designer.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Masterpages\Index.Master.cs">
+      <DependentUpon>Index.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Masterpages\Index.Master.designer.cs">
+      <DependentUpon>Index.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Addtocart.aspx.cs">
+      <DependentUpon>Addtocart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Addtocart.aspx.designer.cs">
+      <DependentUpon>Addtocart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Ajax-customer.aspx.cs">
+      <DependentUpon>Ajax-customer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Ajax-customer.aspx.designer.cs">
+      <DependentUpon>Ajax-customer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ajaxmoreprolist.aspx.cs">
+      <DependentUpon>ajaxmoreprolist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ajaxmoreprolist.aspx.designer.cs">
+      <DependentUpon>ajaxmoreprolist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\cart-result.aspx.cs">
+      <DependentUpon>cart-result.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\cart-result.aspx.designer.cs">
+      <DependentUpon>cart-result.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Payment.aspx.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Payment.aspx.designer.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Print.aspx.cs">
+      <DependentUpon>Print.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Print.aspx.designer.cs">
+      <DependentUpon>Print.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Usercontrols\AccessEmail.ascx.cs">
+      <DependentUpon>AccessEmail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\AccessEmail.ascx.designer.cs">
+      <DependentUpon>AccessEmail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\BrandsFooter.ascx.cs">
+      <DependentUpon>BrandsFooter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\BrandsFooter.ascx.designer.cs">
+      <DependentUpon>BrandsFooter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\CateProductsHome.ascx.cs">
+      <DependentUpon>CateProductsHome.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\CateProductsHome.ascx.designer.cs">
+      <DependentUpon>CateProductsHome.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\CateProductsList.ascx.cs">
+      <DependentUpon>CateProductsList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\CateProductsList.ascx.designer.cs">
+      <DependentUpon>CateProductsList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\CatesFooter.ascx.cs">
+      <DependentUpon>CatesFooter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\CatesFooter.ascx.designer.cs">
+      <DependentUpon>CatesFooter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\Header.ascx.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\Header.ascx.designer.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\ListProject.ascx.cs">
+      <DependentUpon>ListProject.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\ListProject.ascx.designer.cs">
+      <DependentUpon>ListProject.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\MenuMobile.ascx.cs">
+      <DependentUpon>MenuMobile.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\MenuMobile.ascx.designer.cs">
+      <DependentUpon>MenuMobile.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\Path.ascx.cs">
+      <DependentUpon>Path.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\Path.ascx.designer.cs">
+      <DependentUpon>Path.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\ProjectDetail.ascx.cs">
+      <DependentUpon>ProjectDetail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\ProjectDetail.ascx.designer.cs">
+      <DependentUpon>ProjectDetail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\SearchResult.ascx.cs">
+      <DependentUpon>SearchResult.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\SearchResult.ascx.designer.cs">
+      <DependentUpon>SearchResult.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\SearchTool.ascx.cs">
+      <DependentUpon>SearchTool.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\SearchTool.ascx.designer.cs">
+      <DependentUpon>SearchTool.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\Slide.ascx.cs">
+      <DependentUpon>Slide.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\Slide.ascx.designer.cs">
+      <DependentUpon>Slide.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\Statistics.ascx.cs">
+      <DependentUpon>Statistics.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\Statistics.ascx.designer.cs">
+      <DependentUpon>Statistics.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\Toolbar.ascx.cs">
+      <DependentUpon>Toolbar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\Toolbar.ascx.designer.cs">
+      <DependentUpon>Toolbar.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="data\aditems\" />
+    <Folder Include="data\configs\" />
+    <Folder Include="data\news\" />
+    <Folder Include="Logfiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\ComponentArt.UIFramework.lic" />
+    <Content Include="Pages\captchr.ashx" />
+    <Content Include="Masterpages\Index.Master" />
+    <Content Include="Masterpages\Default.Master" />
+    <None Include="Resources\fonts\fontawesome-webfont.eot" />
+    <None Include="Resources\fonts\fontawesome-webfont.ttf" />
+    <None Include="Resources\fonts\fontawesome-webfont.woff" />
+    <None Include="Resources\fonts\FontAwesome.otf" />
+    <None Include="Resources\Images\fonts\fontawesome-webfont.eot" />
+    <None Include="Resources\Images\fonts\fontawesome-webfont.ttf" />
+    <None Include="Resources\Images\fonts\fontawesome-webfont.woff" />
+    <None Include="Resources\Images\fonts\FontAwesome.otf" />
+    <None Include="Resources\Images\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Resources\Images\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="Resources\Images\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="Resources\Images\fonts\glyphicons-halflings-regular.woff2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Controller\Controller.csproj">
+      <Project>{CE1DABDD-1283-4F83-98FB-AFF7BBFAFFB1}</Project>
+      <Name>Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{A559BB6D-EC09-4E9B-88C3-40893DF23721}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>7243</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
