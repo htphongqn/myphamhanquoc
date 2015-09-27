@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="database_mau" Class="dbShopDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="WebSettings" ConnectionString="Data Source=.\sql2008r2;Initial Catalog=database_mau;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="database_mauConnectionString" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="dataweb_mau" Class="dbShopDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.;Initial Catalog=dataweb_mau;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="database_mauConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Category" Member="Categories">
     <Type Name="Category">
       <Column Name="category_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -669,6 +669,17 @@
       <Column Name="ORDER_PHONE" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
       <Column Name="ORDER_REMARK" Type="System.String" DbType="NVarChar(1550)" CanBeNull="true" />
       <Column Name="ODER_DATE" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_BRAND" Member="ESHOP_BRANDs">
+    <Type Name="ESHOP_BRAND">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="ORDERBY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ISACTIVE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IMAGE1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IMAGE2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IMAGE3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
   <Function Name="dbo.fClearUnicode" Method="fClearUnicode" IsComposable="true">

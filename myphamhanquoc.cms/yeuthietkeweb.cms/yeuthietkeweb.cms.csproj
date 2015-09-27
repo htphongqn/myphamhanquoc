@@ -38,7 +38,7 @@
       <HintPath>bin\AjaxControlToolkit.dll</HintPath>
     </Reference>
     <Reference Include="ComponentArt.Web.UI">
-      <HintPath>..\..\yeuthietkeweb.cms_mau\vpro.eshop.cpanel\bin\ComponentArt.Web.UI.dll</HintPath>
+      <HintPath>..\..\..\dichvuviettel.com.vn\dichvuviettel.com.vn.cpanel\vpro.eshop.cpanel\bin\ComponentArt.Web.UI.dll</HintPath>
     </Reference>
     <Reference Include="Karpach.WebControls, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -498,6 +498,7 @@
     <Content Include="Calendar\images\cal_nextMonth.gif" />
     <Content Include="Calendar\images\cal_prevMonth.gif" />
     <Content Include="Calendar\pickerAndCalendar.ascx" />
+    <Content Include="css\css.css" />
     <Content Include="Default.aspx" />
     <Content Include="dist\css\sb-admin-2.css" />
     <Content Include="dist\css\timeline.css" />
@@ -536,6 +537,9 @@
     <Content Include="pages\config_meta.aspx" />
     <Content Include="pages\contact_config.aspx" />
     <Content Include="pages\contact_list.aspx" />
+    <Content Include="pages\category_seo.aspx" />
+    <Content Include="pages\brand_list.aspx" />
+    <Content Include="pages\brand.aspx" />
     <Content Include="pages\default.aspx" />
     <Content Include="pages\groups.aspx" />
     <Content Include="pages\group_list.aspx" />
@@ -762,6 +766,27 @@
     </Compile>
     <Compile Include="pages\contact_list.aspx.designer.cs">
       <DependentUpon>contact_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\category_seo.aspx.cs">
+      <DependentUpon>category_seo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\category_seo.aspx.designer.cs">
+      <DependentUpon>category_seo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\brand_list.aspx.cs">
+      <DependentUpon>brand_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\brand_list.aspx.designer.cs">
+      <DependentUpon>brand_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\brand.aspx.cs">
+      <DependentUpon>brand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\brand.aspx.designer.cs">
+      <DependentUpon>brand.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
@@ -1214,6 +1239,7 @@
     <None Include="bower_components\raphael\bower.json" />
     <None Include="Calendar\images\vssver2.scc" />
     <None Include="js\JqueryCollapse\vssver2.scc" />
+    <Content Include="KeepAlive.ashx" />
     <None Include="less\mixins.less" />
     <None Include="less\sb-admin-2.less" />
     <None Include="less\variables.less" />

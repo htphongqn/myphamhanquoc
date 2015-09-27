@@ -1,4 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master/Site.Master" AutoEventWireup="true" CodeBehind="aditem.aspx.cs" Inherits="yeuthietkeweb.cms.pages.aditem" %>
+
+<%@ Register Assembly="ComponentArt.Web.UI" Namespace="ComponentArt.Web.UI" TagPrefix="ComponentArt" %>
 <%@ Register Src="../Calendar/pickerAndCalendar.ascx" TagName="pickerAndCalendar" TagPrefix="uc1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 <!-- DataTables CSS -->
@@ -76,15 +78,15 @@
                         <input type="text" name="txtOrder" id="txtOrder" runat="server" onblur="this.value=formatNumeric(this.value);"
                             maxlength="4" class="form-control" value="1" />
                     </div>
-                    <div class="form-group">
+                    <%--<div class="form-group">
                         <label>Ngày bắt đầu</label>
-                        <uc1:pickerAndCalendar ID="ucFromDate" runat="server" />
+                        <uc1:pickerAndCalendar ID="ucFromDate" runat="server" />                        
                     </div>
                     <div class="form-group">
                         <label>Ngày kết thúc</label>
                         <uc1:pickerAndCalendar ID="ucToDate" runat="server" />
-                    </div>
-                    <div class="form-group">
+                    </div>--%>
+                    <div class="form-group" style="display:none">
                         <label>Ngôn ngữ</label>
                         <asp:RadioButtonList ID="rblLanguage" runat="server" RepeatColumns="5">
                         </asp:RadioButtonList>

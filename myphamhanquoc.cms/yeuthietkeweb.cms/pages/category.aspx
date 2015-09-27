@@ -42,6 +42,8 @@
         <a href="category_list.aspx" class="btn btn-default btn-success btn-sm">
             Quay lại
         </a>
+        <a href="#" id="Hyperseo_cate" runat="server" class="btn btn-default btn-success btn-sm"><span class="glyphicon glyphicon-pencil"
+                        aria-hidden="true"></span>&nbsp;Seo chuyên mục </a>
         <asp:Literal ID="lbMessage" runat="server" Text=""></asp:Literal>
         <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" ShowMessageBox="True" ShowSummary="False" ValidationGroup="g1" />
     </div>
@@ -127,7 +129,7 @@
                     <textarea id="txtSeoDescription" runat="server" class="form-control"></textarea>
                 </div>
             </div>
-        </div>
+        </div>        
     </div>
     <div class="col-lg-6">   
         <div class="panel panel-default">                             

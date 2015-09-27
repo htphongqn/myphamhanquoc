@@ -22,7 +22,7 @@ namespace yeuthietkeweb.cms
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="database_mau")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="dataweb_mau")]
 	public partial class dbShopDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -156,6 +156,9 @@ namespace yeuthietkeweb.cms
     partial void InsertORDER_CONTACT(ORDER_CONTACT instance);
     partial void UpdateORDER_CONTACT(ORDER_CONTACT instance);
     partial void DeleteORDER_CONTACT(ORDER_CONTACT instance);
+    partial void InsertESHOP_BRAND(ESHOP_BRAND instance);
+    partial void UpdateESHOP_BRAND(ESHOP_BRAND instance);
+    partial void DeleteESHOP_BRAND(ESHOP_BRAND instance);
     #endregion
 		
 		public dbShopDataContext() : 
@@ -521,6 +524,14 @@ namespace yeuthietkeweb.cms
 			get
 			{
 				return this.GetTable<ORDER_CONTACT>();
+			}
+		}
+		
+		public System.Data.Linq.Table<ESHOP_BRAND> ESHOP_BRANDs
+		{
+			get
+			{
+				return this.GetTable<ESHOP_BRAND>();
 			}
 		}
 		
@@ -14426,6 +14437,212 @@ namespace yeuthietkeweb.cms
 					this._ODER_DATE = value;
 					this.SendPropertyChanged("ODER_DATE");
 					this.OnODER_DATEChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ESHOP_BRAND")]
+	public partial class ESHOP_BRAND : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ID;
+		
+		private string _NAME;
+		
+		private System.Nullable<int> _ORDERBY;
+		
+		private System.Nullable<int> _ISACTIVE;
+		
+		private string _IMAGE1;
+		
+		private string _IMAGE2;
+		
+		private string _IMAGE3;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(int value);
+    partial void OnIDChanged();
+    partial void OnNAMEChanging(string value);
+    partial void OnNAMEChanged();
+    partial void OnORDERBYChanging(System.Nullable<int> value);
+    partial void OnORDERBYChanged();
+    partial void OnISACTIVEChanging(System.Nullable<int> value);
+    partial void OnISACTIVEChanged();
+    partial void OnIMAGE1Changing(string value);
+    partial void OnIMAGE1Changed();
+    partial void OnIMAGE2Changing(string value);
+    partial void OnIMAGE2Changed();
+    partial void OnIMAGE3Changing(string value);
+    partial void OnIMAGE3Changed();
+    #endregion
+		
+		public ESHOP_BRAND()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NAME", DbType="NVarChar(250)")]
+		public string NAME
+		{
+			get
+			{
+				return this._NAME;
+			}
+			set
+			{
+				if ((this._NAME != value))
+				{
+					this.OnNAMEChanging(value);
+					this.SendPropertyChanging();
+					this._NAME = value;
+					this.SendPropertyChanged("NAME");
+					this.OnNAMEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ORDERBY", DbType="Int")]
+		public System.Nullable<int> ORDERBY
+		{
+			get
+			{
+				return this._ORDERBY;
+			}
+			set
+			{
+				if ((this._ORDERBY != value))
+				{
+					this.OnORDERBYChanging(value);
+					this.SendPropertyChanging();
+					this._ORDERBY = value;
+					this.SendPropertyChanged("ORDERBY");
+					this.OnORDERBYChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ISACTIVE", DbType="Int")]
+		public System.Nullable<int> ISACTIVE
+		{
+			get
+			{
+				return this._ISACTIVE;
+			}
+			set
+			{
+				if ((this._ISACTIVE != value))
+				{
+					this.OnISACTIVEChanging(value);
+					this.SendPropertyChanging();
+					this._ISACTIVE = value;
+					this.SendPropertyChanged("ISACTIVE");
+					this.OnISACTIVEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IMAGE1", DbType="NVarChar(50)")]
+		public string IMAGE1
+		{
+			get
+			{
+				return this._IMAGE1;
+			}
+			set
+			{
+				if ((this._IMAGE1 != value))
+				{
+					this.OnIMAGE1Changing(value);
+					this.SendPropertyChanging();
+					this._IMAGE1 = value;
+					this.SendPropertyChanged("IMAGE1");
+					this.OnIMAGE1Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IMAGE2", DbType="NVarChar(50)")]
+		public string IMAGE2
+		{
+			get
+			{
+				return this._IMAGE2;
+			}
+			set
+			{
+				if ((this._IMAGE2 != value))
+				{
+					this.OnIMAGE2Changing(value);
+					this.SendPropertyChanging();
+					this._IMAGE2 = value;
+					this.SendPropertyChanged("IMAGE2");
+					this.OnIMAGE2Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IMAGE3", DbType="NVarChar(50)")]
+		public string IMAGE3
+		{
+			get
+			{
+				return this._IMAGE3;
+			}
+			set
+			{
+				if ((this._IMAGE3 != value))
+				{
+					this.OnIMAGE3Changing(value);
+					this.SendPropertyChanging();
+					this._IMAGE3 = value;
+					this.SendPropertyChanged("IMAGE3");
+					this.OnIMAGE3Changed();
 				}
 			}
 		}

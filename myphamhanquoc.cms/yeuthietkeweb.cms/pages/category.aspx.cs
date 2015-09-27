@@ -17,7 +17,7 @@ namespace yeuthietkeweb.cms.pages
         private int m_cat_id = 0;
         int _count = 0;
         dbShopDataContext DB = new dbShopDataContext();
-
+        string m_pathFile = "";
         #endregion
 
         #region form event
@@ -31,8 +31,9 @@ namespace yeuthietkeweb.cms.pages
                 lbtDelete.Visible = false;
                 trImage1.Visible = false;
                 trImage2.Visible = false;
+                Hyperseo_cate.Visible = false;
             }
-
+            else Hyperseo_cate.HRef = "category_seo.aspx?cat_id=" + m_cat_id;
             if (!IsPostBack)
             {
                 getInfo();
@@ -618,7 +619,7 @@ namespace yeuthietkeweb.cms.pages
                 //    }
 
                 //}
-
+                
             }
             catch (Exception ex)
             {
@@ -695,5 +696,6 @@ namespace yeuthietkeweb.cms.pages
         }
 
         #endregion
+        
     }
 }

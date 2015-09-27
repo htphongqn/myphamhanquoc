@@ -40,6 +40,15 @@ namespace yeuthietkeweb.cms.pages {
         protected global::System.Web.UI.WebControls.LinkButton lbtSave;
         
         /// <summary>
+        /// Hyperseo_cate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor Hyperseo_cate;
+        
+        /// <summary>
         /// lbMessage control.
         /// </summary>
         /// <remarks>
