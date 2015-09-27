@@ -23,66 +23,15 @@ namespace Model.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=172.28.248.1;Initial Catalog=ipinternational_com_vn;Persist Security " +
-            "Info=True;User ID=ipinternational;Password=cG8ckhD79y")]
-        public string ipinternational_com_vnConnectionString {
-            get {
-                return ((string)(this["ipinternational_com_vnConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(local);Initial Catalog=dichvuchothue_com_vn;Persist Security Info=Tr" +
-            "ue;User ID=dichvuchothue;Password=v2qHkgP2EA")]
-        public string chuyenchothue_comConnectionString {
-            get {
-                return ((string)(this["chuyenchothue_comConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=118.69.60.176;Initial Catalog=baotrigianguyen_com ;Persist Security I" +
-            "nfo=True;User ID=baotrigianguyen;Password=UWG2mTvMtE")]
-        public string tuvannetviet_comConnectionString {
-            get {
-                return ((string)(this["tuvannetviet_comConnectionString"]));
-            }
-        }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\sqlexpress;Initial Catalog=database_mau;User ID=sa")]
-        public string database_mauConnectionString {
-            get {
-                return ((string)(this["database_mauConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\sqlexpress;Initial Catalog=database_mau;User ID=sa")]
-        public string dbShop_ConnectionString {
+        public string dbShop_ConnectionString
+        {
             get {
                 return ((string)(this["dbShop_ConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(local);Initial Catalog=dataweb_mau;User ID=sa;Password=123")]
-        public string dataweb_mauConnectionString {
-            get {
-                return ((string)(this["dataweb_mauConnectionString"]));
             }
         }
     }

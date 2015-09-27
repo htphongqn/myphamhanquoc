@@ -161,8 +161,8 @@ namespace Model
     partial void DeleteESHOP_BRAND(ESHOP_BRAND instance);
     #endregion
 		
-		public dbShopDataContext() : 
-				base(global::Model.Properties.Settings.Default.dataweb_mauConnectionString, mappingSource)
+		public dbShopDataContext() :
+        base(global::Model.Properties.Settings.Default.dbShop_ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
