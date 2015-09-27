@@ -1,0 +1,9 @@
+E:\WWW\myphamhanquoc\myphamhanquoc.web\yeuthietkeweb.web\obj\Debug\myphamhanquoc.web.csprojResolveAssemblyReference.cache
+E:\WWW\myphamhanquoc\myphamhanquoc.web\yeuthietkeweb.web\obj\Debug\yeuthietkeweb.web.dll
+E:\WWW\myphamhanquoc\myphamhanquoc.web\yeuthietkeweb.web\obj\Debug\yeuthietkeweb.web.pdb
+E:\WWW\myphamhanquoc\myphamhanquoc.web\yeuthietkeweb.web\bin\yeuthietkeweb.web.dll
+E:\WWW\myphamhanquoc\myphamhanquoc.web\yeuthietkeweb.web\bin\yeuthietkeweb.web.pdb
+E:\WWW\myphamhanquoc\myphamhanquoc.web\yeuthietkeweb.web\bin\Controller.dll
+E:\WWW\myphamhanquoc\myphamhanquoc.web\yeuthietkeweb.web\bin\Model.dll
+E:\WWW\myphamhanquoc\myphamhanquoc.web\yeuthietkeweb.web\bin\Controller.pdb
+E:\WWW\myphamhanquoc\myphamhanquoc.web\yeuthietkeweb.web\bin\Model.pdb

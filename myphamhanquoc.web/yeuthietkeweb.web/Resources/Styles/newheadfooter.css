@@ -1,0 +1,214 @@
+/* nav style */
+.sitenav {
+    position: absolute;
+    z-index: 11;
+    display: inline-block;
+    top: 0;
+    left: 0;
+}
+li.homecatalog {
+    width: 228px;
+    height: 50px;
+    position: relative;
+}
+.homecataloglabel {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c5243d+0,8f1528+100 */
+background: #c5243d; /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover, #c5243d 0%, #8f1528 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#c5243d), color-stop(100%,#8f1528)); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover, #c5243d 0%,#8f1528 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover, #c5243d 0%,#8f1528 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover, #c5243d 0%,#8f1528 100%); /* IE10+ */
+background: radial-gradient(ellipse at center, #c5243d 0%,#8f1528 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c5243d', endColorstr='#8f1528',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	-webkit-border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+    height: 45px;
+    width: 228px;
+    display: block;
+    cursor: pointer;
+    line-height: 45px;
+    font-size: 16px;
+    text-indent: 30px;
+    color: #FFFFFF;
+    margin-top: 5px;
+}
+.shapes.round {
+	width: 20px;
+	height: 20px;
+	border-radius: 100%;
+	background-color: #c57063;
+	top: 25%;
+	right: 15px;
+}
+.shapes {
+	background-color: transparent;
+	position: absolute;
+	top: 50%;
+	width: 0px;
+	height: 0px;
+}
+.shapes.bottom {
+	border-top: 7px solid #ffffff;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	left: 0px;
+	top: 8px;
+	right: 0px;
+	margin: 0px auto;
+}
+.nav_menu {	
+	display: none;
+    background: #ebebeb;
+    border: 1px solid #bfbfbd;
+    width: 226px;
+    height: 360px;
+    position: absolute;
+    left: 0;
+    top: 45px;
+    z-index: 50;
+    border-top: 0px solid #fbab00;
+}
+li.homecatalog:hover .nav_menu {
+	display: block;
+}
+.m_li {
+	cursor: pointer;
+	float: left;
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	border-bottom: 1px dotted #cacaca;
+}
+.m_li:last-child {
+	border: none
+}
+.m_li a {
+	font-weight: 700;
+}
+.pc_menu a {
+	font-weight: normal;
+}
+.m_li:hover {
+	text-decoration: none;
+	z-index: 999999999;
+	background: #FFFFFF
+}
+.m_li:hover a.t_menu {
+	color: #d53666;
+}
+.t_menu {
+	color: #3e3e3e;
+	display: block;
+	font-weight: bold;
+	line-height: 21px;
+	padding: 8px 7px 8px 5px;
+	text-decoration: none;
+}
+.t_menu:hover {
+	text-decoration: none;
+}
+.list_categories img {
+	margin-top: 4px;
+}
+.list_categories a {
+	font-size: 12px;
+	font-weight: normal;
+	padding: 2px 20px;
+	text-transform: capitalize;
+}
+.list_categories ul {
+	list-style-type: none;
+}
+.list_categories {
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	background: none repeat scroll 0 0 #FFFFFF;
+	display: none;
+	padding-bottom: 10px;
+	position: absolute;
+	top: 0;
+	left: 100% !important;	
+	width: auto;
+	z-index: 999999999;
+	background: #FFFFFF;
+	height: 360px;
+	overflow: auto;
+	padding: 10px 0;
+	border-bottom: 1px solid #c1c1c1;
+}
+.list_categories ul li {
+	float: left;
+	font-weight: normal;
+	line-height: 20px;
+	width: 100%;	
+}
+.pc_menu {
+	float: left;
+	width: 100%;
+}
+.list_categories p {
+	color: #000000;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 4px 0;
+	padding: 1px 0;
+}
+.list_categories p a {
+	color: #111111;
+	font-size: 12px;
+	font-weight: 500;
+	white-space: nowrap
+}
+.list_categories .backgroundMenu {
+	bottom: 0;
+	position: absolute;
+	right: 0;
+	z-index: 1;
+}
+.subcatwrapper {
+	overflow: hidden;
+	position: relative;
+	z-index: 5;
+	min-width: 201px;
+	padding-right: 320px;
+}
+.pc_menu ul li a {
+	display: block;
+	color: #6e686e;
+	padding-left: 30px;
+	font-size: 0.9em;
+	white-space: nowrap
+}
+.m_li .icon_cate {
+	float: left;
+	width: 45px;
+	background-color: #FFFFFF;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	height: 28px;
+	width: 28px;
+	z-index: 2;
+	margin: 5px 5px 0 8px;
+	overflow:hidden;
+	text-align:center;
+}
+.m_li .icon_cate img {
+	position: relative;
+	max-width: 100%;
+	margin-top: 3px;
+}
+.m_li:hover .icon_cate img {
+	top:-40px;
+}
+.list_categories .backgroundMenu {
+  bottom: 0;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}

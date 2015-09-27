@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteVI.master.cs" Inherits="yeuthietkeweb.Master.SiteVI" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<%@ Register src="../Usercontrols/hotline.ascx" tagname="hotline" tagprefix="uc1" %>
+<%@ Register src="../Usercontrols/top_menu.ascx" tagname="top_menu" tagprefix="uc1" %>
+<%@ Register src="../Usercontrols/header.ascx" tagname="header" tagprefix="uc1" %>
+<%@ Register src="../Usercontrols/silde_main.ascx" tagname="silde_main" tagprefix="uc1" %>
+<%@ Register src="../Usercontrols/top_main.ascx" tagname="top_main" tagprefix="uc1" %>
+<%@ Register src="../Usercontrols/Footer.ascx" tagname="Footer" tagprefix="uc1" %>
+<%@ Register src="../Usercontrols/support.ascx" tagname="support" tagprefix="uc1" %>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link rel="stylesheet" href="/Resources/Styles/template.css" type="text/css" />
+    <link rel="stylesheet" href="/Resources/Styles/skeleton.css" type="text/css" />
+    <!--Menu-->
+    <link rel="stylesheet" href="/Resources/Styles/newheadfooter.css" type="text/css" />
+    <link type="text/css" href="/Resources/Styles/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+    <link rel="stylesheet" href="/Resources/Styles/jquery.bxslider.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/Resources/Styles/detail_product.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/Resources/Styles/colorbox.css" type="text/css" />
+    <link rel="stylesheet" href="/Resources/Styles/contact.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>   
+</head>
+<body>
+    <form id="form1" runat="server">
+    <!--Top Page-->
+    <div class="top_page">
+      <div class="container">
+        <uc1:hotline ID="hotline1" runat="server" />
+        <uc1:top_menu ID="top_menu1" runat="server" />    
+      </div>
+    </div>
+    <!--End Top Page-->
+    <!--#begin Header-->
+    <uc1:header ID="header1" runat="server" />
+    <!--#end Header-->
+    <!--Main Slide-->
+    <uc1:silde_main ID="silde_main1" runat="server" />
+    <!--end Main Slide-->
+    <!--Top Main-->
+    <uc1:top_main ID="top_main1" runat="server" />
+    <!--End Top Main-->
+    <div class="cf"> </div>
+    <div class="container">
+      <asp:ContentPlaceHolder ID="ContentRight" runat="server">
+      </asp:ContentPlaceHolder>
+      <uc1:Footer ID="Footer1" runat="server" />
+      <div class="cf"> </div>
+      <div class="copyright"> Copyright &copy; 2015 By Amazona.vn - Bản quyền thuộc về Mỹ phẩm.</div>
+    </div>
+    <!--End Page-->
+    <!--Support-->
+    <uc1:support ID="support1" runat="server" />
+    <!--end Support-->
+    <script type="text/javascript" src="/Resources/Scripts/jquery-1.11.3.min.js"></script>
+    <script type='text/javascript' src="/Resources/Scripts/jquery.bxslider.js"></script>
+    <script type="text/javascript" src="/Resources/Scripts/jquery.carouFredSel-5.6.0-packed.js"></script>
+    <script type="text/javascript" src="/Resources/Scripts/jquery.slimscroll.js"></script>
+    <script type="text/javascript" src="/Resources/Scripts/elevatezoom-min.js"></script>
+    <script type="text/javascript" src="/Resources/Scripts/jquery.colorbox.js"></script>
+    <script type="text/javascript" src="/Resources/Scripts/jquery.sticky.js"></script>
+    <script type="text/javascript" src="/Resources/Scripts/all_scripts.js"></script>
+    </form>
+</body>
+</html>
