@@ -10,7 +10,7 @@
 namespace yeuthietkeweb.UIs {
     
     
-    public partial class New {
+    public partial class new_detail {
         
         /// <summary>
         /// Toolbar1 control.
@@ -22,13 +22,22 @@ namespace yeuthietkeweb.UIs {
         protected global::GiaNguyen.UIs.Toolbar Toolbar1;
         
         /// <summary>
-        /// lbTitle control.
+        /// path1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal lbTitle;
+        protected global::yeuthietkeweb.UIs.Path path1;
+        
+        /// <summary>
+        /// left_news1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::yeuthietkeweb.UIs.left_news left_news1;
         
         /// <summary>
         /// lbNewsTitle control.
@@ -38,6 +47,15 @@ namespace yeuthietkeweb.UIs {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal lbNewsTitle;
+        
+        /// <summary>
+        /// lbNewsDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal lbNewsDate;
         
         /// <summary>
         /// liHtml control.
@@ -94,12 +112,12 @@ namespace yeuthietkeweb.UIs {
         protected global::System.Web.UI.WebControls.Repeater RpNewsOther;
         
         /// <summary>
-        /// lbCommentFace control.
+        /// hplViewmore control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal lbCommentFace;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor hplViewmore;
     }
 }

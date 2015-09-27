@@ -56,7 +56,7 @@
                             <script type="text/javascript"  language="Javascript">
                                 function Catpc() {
                                     var img = document.getElementById("icp");
-                                    img.src = "/Resources/captchr.ashx?query=" + Math.random();
+                                    img.src = "/Pages/captchr.ashx?query=" + Math.random();
                                 }
                             </script>                    
                             <img id="icp" align="absmiddle" src='/Resources/captchr.ashx?query=<%= querys() %>' alt="Mã  an toàn" />
@@ -175,7 +175,7 @@
                                     <script type="text/javascript"  language="Javascript">
                                         function Catpc2() {
                                             var img = document.getElementById("icp2");
-                                            img.src = "/Resources/captchr.ashx?query=" + Math.random();
+                                            img.src = "/Pages/captchr.ashx?query=" + Math.random();
                                         }
                                 </script>                    
                                 <img id="icp2" align="absmiddle" src='/Resources/captchr.ashx?query=<%= querys() %>' alt="Mã  an toàn" />

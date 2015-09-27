@@ -43,7 +43,7 @@
         <asp:Literal ID="ltrHtml" runat="server"></asp:Literal>
       </div>
     </div>
-    <p align="center">Copyright 2015 by dichvuviettel.com.vn - <a href="http://www.yeuthietkeweb.com" target="_blank" tabindex="0"> Thiết kế website</a> bởi <a href="http://yeuthietkeweb.com" title="Website yêu thiết kế web" target="_blank" tabindex="0"> Yêu thiết kế web</a></p>
+    <p align="center">Copyright 2015 by myphamhanquoc - <a href="http://www.yeuthietkeweb.com" target="_blank" tabindex="0"> Thiết kế website</a> bởi <a href="http://yeuthietkeweb.com" title="Website yêu thiết kế web" target="_blank" tabindex="0"> Yêu thiết kế web</a></p>
   </div>
 </form>
 </body>

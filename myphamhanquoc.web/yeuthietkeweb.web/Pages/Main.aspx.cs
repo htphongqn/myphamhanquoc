@@ -25,8 +25,8 @@ namespace yeuthietkeweb
 
                 UserControl product_list = Page.LoadControl("../Usercontrols/product_list.ascx") as UserControl;
                 UserControl product_detail = Page.LoadControl("../Usercontrols/product_detail.ascx") as UserControl;
-                //UserControl list_news = Page.LoadControl("../Usercontrols/News.ascx") as UserControl;
-                //UserControl details_news = Page.LoadControl("../Usercontrols/New.ascx") as UserControl;
+                UserControl news_list = Page.LoadControl("../Usercontrols/news_list.ascx") as UserControl;
+                UserControl new_detail = Page.LoadControl("../Usercontrols/new_detail.ascx") as UserControl;
                 UserControl search = Page.LoadControl("../Usercontrols/SearchResult.ascx") as UserControl;
                 int _type = Utils.CIntDef(Request["type"]);
                 string _catSeoUrl = Utils.CStrDef(Request.QueryString["curl"]);
@@ -45,9 +45,9 @@ namespace yeuthietkeweb
                         {
                             if (Utils.CIntDef(Session["Cat_showitem"]) == 1)
                             {
-                                //phdMain.Controls.Add(uNew);
+                                phdMain.Controls.Add(new_detail);
                             }
-                            //else phdMain.Controls.Add(uNews);
+                            else phdMain.Controls.Add(news_list);
                         }
                         break;
                     case 5:
@@ -65,7 +65,7 @@ namespace yeuthietkeweb
                         }
                         else
                         {
-                            //phdMain.Controls.Add(uTin);
+                            phdMain.Controls.Add(new_detail);
                         }
                         break;
                     default:

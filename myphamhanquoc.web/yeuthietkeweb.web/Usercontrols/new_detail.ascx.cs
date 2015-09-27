@@ -10,7 +10,7 @@ using vpro.functions;
 
 namespace yeuthietkeweb.UIs
 {
-    public partial class New : System.Web.UI.UserControl
+    public partial class new_detail : System.Web.UI.UserControl
     {
         #region Declare
 
@@ -27,7 +27,7 @@ namespace yeuthietkeweb.UIs
             _sNews_Seo_Url = Utils.CStrDef(Request.QueryString["purl"]);
             Show_File_HTML();
             hplPrint.HRef = "/in/" + _sNews_Seo_Url + ".html";
-            //Get_ViewMore();
+            Get_ViewMore();
             Tinkhac();
             gettitle();
             LoadTitle();
@@ -40,7 +40,7 @@ namespace yeuthietkeweb.UIs
                 string page_name = page_nameUrl[page_nameUrl.Length - 1];
                 if (page_name == "Contact.aspx")
                 {
-                    lbTitle.Text = "Liên hệ";
+                    //lbTitle.Text = "Liên hệ";
                 }
                 else
                 {
@@ -48,7 +48,7 @@ namespace yeuthietkeweb.UIs
                     var item = per.GetCatalogryByID(cat_ID);
                     if (item != null)
                     {
-                        lbTitle.Text = item.CAT_NAME;
+                        //lbTitle.Text = item.CAT_NAME;
                     }
                 }
             }
@@ -58,7 +58,7 @@ namespace yeuthietkeweb.UIs
                 var item = per.GetCatalogryByID(cat_ID);
                 if (item != null)
                 {
-                    lbTitle.Text = item.CAT_NAME;
+                    //lbTitle.Text = item.CAT_NAME;
                 }
             }
 
@@ -82,7 +82,7 @@ namespace yeuthietkeweb.UIs
             try
             {
                 int _newsID = Utils.CIntDef(Session["news_id"]);
-                //hplViewmore.HRef = ndetail.Get_ViewMore(_newsID);
+                hplViewmore.HRef = ndetail.Get_ViewMore(_newsID);
             }
             catch (Exception ex)
             {
@@ -100,13 +100,13 @@ namespace yeuthietkeweb.UIs
                     _sNews_Seo_Url = ndetail.Get_News_seo_url(_sCat_Seo_Url);
                 }
                 liHtml.Text = ndetail.Showfilehtm(_sCat_Seo_Url, _sNews_Seo_Url);
-                //var list = ndetail.Load_details(_sNews_Seo_Url);
-                //if (list.Count > 0)
-                //{
-                //    //lbDesc.Text = list[0].NEWS_DESC;
-                //    //lbDate.Text = getDate(list[0].NEWS_PUBLISHDATE);
-                //}
-                lbCommentFace.Text = "<div class='fb-comments' data-href='http://dichvuviettel.com.vn" + Request.RawUrl + "' data-numposts='5' data-colorscheme='light' data-width='100%'></div>";
+                var list = ndetail.Load_details(_sNews_Seo_Url);
+                if (list.Count > 0)
+                {
+                    //lbDesc.Text = list[0].NEWS_DESC;
+                    lbNewsDate.Text = getDate(list[0].NEWS_PUBLISHDATE);
+                }
+                //lbCommentFace.Text = "<div class='fb-comments' data-href='http://dichvuviettel.com.vn" + Request.RawUrl + "' data-numposts='5' data-colorscheme='light' data-width='100%'></div>";
             }
             catch (Exception ex)
             {

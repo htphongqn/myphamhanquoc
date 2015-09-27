@@ -10,7 +10,7 @@ using GiaNguyen.Components;
 
 namespace yeuthietkeweb.UIs
 {
-    public partial class News : System.Web.UI.UserControl
+    public partial class news_list : System.Web.UI.UserControl
     {
         #region Declare
         List_news lnews = new List_news();
@@ -88,7 +88,7 @@ namespace yeuthietkeweb.UIs
                         Rplistnews.DataBind();
                     }
 
-                    ltrPage.Text = change.result(list.Count, sotin, _cat_seo_url, 0, _page, 1);
+                    ltrPage.Text = change.result(list.Count, sotin, _cat_seo_url, "", 0, "",0, "", 0, _page, 1);
 
                 }
 

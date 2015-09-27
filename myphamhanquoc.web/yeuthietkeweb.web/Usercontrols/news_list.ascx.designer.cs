@@ -10,7 +10,25 @@
 namespace yeuthietkeweb.UIs {
     
     
-    public partial class News {
+    public partial class news_list {
+        
+        /// <summary>
+        /// path1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::yeuthietkeweb.UIs.Path path1;
+        
+        /// <summary>
+        /// left_news1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::yeuthietkeweb.UIs.left_news left_news1;
         
         /// <summary>
         /// lbTitle control.

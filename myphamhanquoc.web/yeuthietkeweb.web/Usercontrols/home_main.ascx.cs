@@ -141,7 +141,7 @@ namespace yeuthietkeweb.web.Usercontrols
         {
             try
             {
-                Rpmenu.DataSource = per.Loadmenu(2, 50, 1, -1, -1);
+                Rpmenu.DataSource = per.Load_danhmuc_position(1, 1, 2);
                 Rpmenu.DataBind();
             }
             catch (Exception ex)

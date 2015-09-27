@@ -228,12 +228,15 @@
     <Content Include="Resources\Styles\skeleton.css" />
     <Content Include="Resources\Styles\template.css" />
     <Content Include="Resources\Styles\toolbar.css" />
+    <Content Include="Usercontrols\left_news.ascx" />
     <Content Include="Usercontrols\left_cate.ascx" />
     <Content Include="Usercontrols\footer.ascx" />
     <Content Include="Usercontrols\forgetpass.ascx" />
     <Content Include="Usercontrols\header.ascx" />
     <Content Include="Usercontrols\hotline.ascx" />
     <Content Include="Usercontrols\home_main.ascx" />
+    <Content Include="Usercontrols\new_detail.ascx" />
+    <Content Include="Usercontrols\news_list.ascx" />
     <Content Include="Usercontrols\path.ascx" />
     <Content Include="Usercontrols\product_detail.ascx" />
     <Content Include="Usercontrols\product_list.ascx" />
@@ -388,6 +391,13 @@
       <DependentUpon>userinfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Usercontrols\left_news.ascx.cs">
+      <DependentUpon>left_news.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\left_news.ascx.designer.cs">
+      <DependentUpon>left_news.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Usercontrols\left_cate.ascx.cs">
       <DependentUpon>left_cate.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -429,6 +439,20 @@
     </Compile>
     <Compile Include="Usercontrols\home_main.ascx.designer.cs">
       <DependentUpon>home_main.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\new_detail.ascx.cs">
+      <DependentUpon>new_detail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\new_detail.ascx.designer.cs">
+      <DependentUpon>new_detail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\news_list.ascx.cs">
+      <DependentUpon>news_list.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\news_list.ascx.designer.cs">
+      <DependentUpon>news_list.ascx</DependentUpon>
     </Compile>
     <Compile Include="Usercontrols\path.ascx.cs">
       <DependentUpon>path.ascx</DependentUpon>
