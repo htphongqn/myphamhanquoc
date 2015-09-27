@@ -153,14 +153,16 @@
                     <label>Kiểu hiển thị</label>
                     <asp:RadioButtonList ID="rblCatType" runat="server" RepeatColumns="5">
                         <asp:ListItem Text="Tin tức" Value="0" Selected="True"></asp:ListItem>
+                        <asp:ListItem Text="Sản phẩm" Value="1"></asp:ListItem>
                     </asp:RadioButtonList>
                 </div>
                 <div class="form-group">
                     <label>Vị trí</label>
-                    <asp:RadioButtonList ID="rblPos" runat="server" RepeatColumns="3">
-                        <asp:ListItem Selected="True" Text="Trên" Value="0"></asp:ListItem>
-                        <asp:ListItem Text="Trái" Value="1"></asp:ListItem>
-                        <asp:ListItem Text="Phải" Value="2"></asp:ListItem>
+                    <asp:RadioButtonList ID="rblPos" runat="server" RepeatColumns="4">
+                        <asp:ListItem Text="Trên" Value="0" Selected="True"></asp:ListItem>
+                        <asp:ListItem Text="Dưới" Value="1"></asp:ListItem>
+                        <asp:ListItem Text="Chính" Value="2"></asp:ListItem>
+                        <asp:ListItem Text="Khác" Value="20"></asp:ListItem>
                     </asp:RadioButtonList>
                 </div>
                 <div class="form-group">
@@ -177,7 +179,7 @@
                         <asp:ListItem Text="Có" Value="1"></asp:ListItem>
                     </asp:RadioButtonList>
                 </div>
-                <div class="form-group">
+                <div class="form-group" style="display:none">
                     <label>Ngôn ngữ</label>
                     <asp:RadioButtonList ID="rblLanguage" runat="server" RepeatColumns="2">
                     </asp:RadioButtonList>

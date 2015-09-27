@@ -47,7 +47,7 @@
             </a>
             <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" ShowMessageBox="True" ShowSummary="False" ValidationGroup="g1" />        
         </div>
-        <div class="col-lg-6 panel-body">
+        <div class="col-lg-6 panel-body"  id="trNewsFunction" runat="server">
             <a href="#" id="hplCatNews" runat="server" class="btn btn-default btn-sm">Chọn chuyên mục </a>
             <a href="#" id="hplEditorHTMl" runat="server" class="btn btn-default btn-sm">Soạn  tin HTML </a>
             <a href="#" id="hplNewsAtt" runat="server" class="btn btn-default btn-sm">File  đính kèm </a>
@@ -73,7 +73,7 @@
                         <asp:RadioButtonList ID="rblNewsType" runat="server" RepeatColumns="5" AutoPostBack="True" class="form-control"
                             OnSelectedIndexChanged="rblNewsType_SelectedIndexChanged">
                             <asp:ListItem Text="Tin tức" Value="0" Selected="True"></asp:ListItem>
-                            <%--<asp:ListItem Text="Dịch vụ" Value="1"></asp:ListItem>--%>
+                            <asp:ListItem Text="Sản phẩm" Value="1"></asp:ListItem>
                         </asp:RadioButtonList>
                     </div>
                     <div class="form-group">
@@ -181,8 +181,9 @@
                         <label>Hiển thị trang chủ</label>
                         <asp:RadioButtonList ID="rblNewsPeriod" runat="server" RepeatColumns="4" 
                             RepeatDirection="Horizontal">
-                            <asp:ListItem Text="Khuyến mãi" Value="1"></asp:ListItem>   
-                            <asp:ListItem Text="Nổi bật" Value="2"></asp:ListItem>
+                            <asp:ListItem Text="Nổi bật" Value="1"></asp:ListItem>   
+                            <asp:ListItem Text="Bán chạy" Value="2"></asp:ListItem> 
+                            <asp:ListItem Text="Mua nhiều" Value="3"></asp:ListItem>
                             <asp:ListItem Selected="True" Text="Khác" Value="20"></asp:ListItem>  
                         </asp:RadioButtonList>
                     </div>

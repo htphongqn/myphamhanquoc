@@ -33,7 +33,7 @@ namespace yeuthietkeweb.cms.pages
             {
                 lbtDelete.Visible = false;
                 //trImage1.Visible = false;
-                //trNewsFunction.Visible = false;
+                trNewsFunction.Visible = false;
                 trImage3.Visible = false;
             }
             else

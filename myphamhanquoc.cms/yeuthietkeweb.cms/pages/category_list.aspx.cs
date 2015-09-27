@@ -136,7 +136,9 @@ namespace yeuthietkeweb.cms.pages
                     break;
                 case 1: str = "Dưới";
                     break;
-                case 2: str = "Trên + Dưới";
+                case 2: str = "Chính";
+                    break;
+                case 20: str = "Khác";
                     break;
             }
             return str;
