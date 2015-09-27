@@ -128,3 +128,4 @@ E:\WWW\myphamhanquoc\myphamhanquoc.web\Model\bin\Debug\Model.dll
 E:\WWW\myphamhanquoc\myphamhanquoc.web\Model\bin\Debug\Model.pdb
 E:\WWW\myphamhanquoc\myphamhanquoc.web\Model\obj\Debug\Model.dll
 E:\WWW\myphamhanquoc\myphamhanquoc.web\Model\obj\Debug\Model.pdb
+E:\WWW\myphamhanquoc\myphamhanquoc.web\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
