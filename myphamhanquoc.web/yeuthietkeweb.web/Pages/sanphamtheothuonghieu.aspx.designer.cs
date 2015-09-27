@@ -22,6 +22,15 @@ namespace yeuthietkeweb.Pages {
         protected global::System.Web.UI.WebControls.Literal ltrFavicon;
         
         /// <summary>
+        /// Lbtitle2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal Lbtitle2;
+        
+        /// <summary>
         /// rptBrands control.
         /// </summary>
         /// <remarks>

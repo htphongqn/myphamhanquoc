@@ -60,7 +60,7 @@ namespace Controller
         {
             try
             {
-                var list = db.ESHOP_CATEGORies.Where(n => n.CAT_PERIOD == 1 && n.CAT_TYPE == type).Take(limit).ToList();
+                var list = db.ESHOP_CATEGORies.Where(n => n.CAT_PERIOD == 1 && n.CAT_TYPE == type).OrderByDescending(n=>n.CAT_PERIOD_ORDER).Take(limit).ToList();
                 return list;
             }
             catch (Exception)

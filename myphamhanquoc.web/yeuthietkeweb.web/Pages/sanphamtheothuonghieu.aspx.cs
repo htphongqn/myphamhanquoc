@@ -53,6 +53,7 @@ namespace yeuthietkeweb.Pages
             {
                 header.Title = brand.NAME;
                 Lbtitle.Text = brand.NAME;
+                Lbtitle2.Text = brand.NAME;
             }
             Loadlist();
             loadBrand();

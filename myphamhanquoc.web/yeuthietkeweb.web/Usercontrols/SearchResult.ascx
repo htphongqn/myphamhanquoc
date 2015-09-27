@@ -1,45 +1,14 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SearchResult.ascx.cs" Inherits="yeuthietkeweb.UIs.SearchResult" %>
-            
-    <%--<div class="eleven columns" id="main_content">
-      <!--Breadcrumbs-->
-      <ul class="breadcrumbs">
-        <li class="home"><a href="/trang-chu.html">Trang chủ</a></li>
-        <li class="current">Tìm kiếm</li>
-      </ul>
-      <!--end Breadcrumbs-->
-      <h2 class="page_title">
-      <asp:Label ID="lbTitle" runat="server" Text="Kết quả tìm kiếm"></asp:Label>
-      </h2>
-      <!--List News-->
-      <section id="list_news_page" class="news_body">
-       <asp:Repeater ID="Rplistnews" runat="server">
-                <ItemTemplate>
-                    <article>
-                      <figure class="img_post fl"> <a href="<%# GetLink(Eval("NEWS_URL"),Eval("NEWS_SEO_URL"),Eval("CAT_SEO_URL")) %>" title="<%# Eval("NEWS_TITLE") %>"><img alt="<%# Eval("NEWS_TITLE") %>" src="<%# GetImageT(Eval("NEWS_ID"),Eval("NEWS_IMAGE3")) %>" /></a> </figure>
-                      <h3><a href="<%# GetLink(Eval("NEWS_URL"),Eval("NEWS_SEO_URL"),Eval("CAT_SEO_URL")) %>" title="<%# Eval("NEWS_TITLE") %>"><%# Eval("NEWS_TITLE") %></a></h3>
-                      <span class="date_post"><%# getDate(Eval("NEWS_PUBLISHDATE"))%></span> 
-                      <p class="text"> <%# Eval("NEWS_DESC") %></p>
-                      </article>                  
-                </ItemTemplate>
-            </asp:Repeater>
-      </section>
-      <div class="pagination"><asp:Literal ID="ltrPage" runat="server"></asp:Literal></div>
-      <!--end List News-->
-    </div>--%>
 
-
-    <%@ Register src="path.ascx" tagname="path" tagprefix="uc1" %>
-<%--<%@ Register src="side_left.ascx" tagname="side_left" tagprefix="uc2" %>--%>
-
-  <%@ Register src="cate_seo.ascx" tagname="cate_seo" tagprefix="uc3" %>
+<%@ Register src="../Usercontrols/left_cate.ascx" tagname="left_cate" tagprefix="uc1" %>
 
   <div class="main cf">
-    <uc1:path ID="path1" runat="server" />      
-<%--    <!--Sidebar-->
-    <uc2:side_left ID="side_left1" runat="server" />
-    <!--end Sidebar-->--%>
+    <div class="path"><a href="/trang-chu.html">Trang chủ</a> » <a href="javascript:void(0)">Tìm kiếm</a></div>      
+    <!--Sidebar-->
+    <uc1:left_cate ID="left_cate1" runat="server" />
+    <!--end Sidebar-->
     <!--Main Content-->
-    <div id="main_content">
+    <div id="main_content" class="thirteen columns">
       <div class="inner_col">
         <div class="box_ct padd10 whiteBg list_products">
           <div class="title_page">
@@ -59,7 +28,7 @@
           <ul>
             <asp:Repeater ID="rptProducts" runat="server">
                 <ItemTemplate>
-                    <li>
+                    <li class="mtf columns">
                         <div class="product">
                         <div class="img_product"> <a href="<%# GetLink(Eval("NEWS_URL"),Eval("NEWS_SEO_URL"),Eval("CAT_SEO_URL")) %>" title=" <%#Eval("NEWS_TITLE") %>"> <img src="<%# GetImageT(Eval("NEWS_ID"),Eval("NEWS_IMAGE3")) %>" alt=" <%#Eval("NEWS_TITLE") %>"  /> </a></div>
                         <div class='reducephantram'><%#Getgiamgia(Eval("News_Price1"), Eval("News_Price2"))%></div>
@@ -74,13 +43,6 @@
           </ul>
         </div>
         <div class="pagination"><asp:Literal ID="ltrPage" runat="server"></asp:Literal></div>
-		<!--Info SEO-->
-<%--        <div class="box">
-          <div class="box_ct whiteBg padd10" id="SEO_home">          
-              <uc3:cate_seo ID="cate_seo1" runat="server" />          
-          </div>
-        </div>--%>
-        <!--end Info SEO-->
       </div>
     </div>
     <!--end Main Content-->

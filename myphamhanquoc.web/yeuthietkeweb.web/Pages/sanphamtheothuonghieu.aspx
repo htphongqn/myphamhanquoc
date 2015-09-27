@@ -6,7 +6,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentRight" runat="server">
     
   <div class="main cf">
-    <div class="path"><a href="/trang-chu.html">Trang chủ</a> » <a href="/san-pham-yeu-thich.html">Sản phẩm yêu thích</a></div>
+    <div class="path"><a href="/trang-chu.html">Trang chủ</a> » <a href="javascript:void(0)"><asp:Literal ID="Lbtitle2" runat="server" Text="" ></asp:Literal></a></div>
     <!--Sidebar-->
     <div id="sidebar" class="three columns">            
       <div class="box_ct whiteBg most-viewed">

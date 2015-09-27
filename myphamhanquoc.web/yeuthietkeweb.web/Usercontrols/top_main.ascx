@@ -12,10 +12,11 @@
                 <ItemTemplate>
                     <li class="m_li">
                         <i class="icon_cate"> 
-                            <img src="<%#GetImage_Cat(Eval("CAT_ID"),Eval("CAT_IMAGE1"))%>"></i><a href="<%#GetLink_Cat(Eval("Cat_Url"),Eval("Cat_Seo_Url")) %>"  title="<%#Eval("CAT_NAME") %>" class="t_menu"<%#Eval("CAT_NAME") %></a>
-                            <div class="list_categories"> 
+                        <img src="<%#GetImage_Cat(Eval("CAT_ID"),Eval("CAT_IMAGE1"))%>" /></i>
+                        <a href="<%#GetLink_Cat(Eval("Cat_Url"),Eval("Cat_Seo_Url")) %>"  title="<%#Eval("CAT_NAME") %>" class="t_menu"><%#Eval("CAT_NAME") %></a>
+                        <div class="list_categories"> 
                             <span class="backgroundMenu"> <img src="<%#GetImage_Cat(Eval("CAT_ID"),Eval("CAT_IMAGE2"))%>" width="100%"> </span>
-                            &nbsp;<div class="subcatwrapper">
+                            <div class="subcatwrapper">
                                 <asp:Repeater ID="Repeater1" runat="server" DataSource='<%# Load_Menu2(Eval("Cat_ID")) %>'>
                                     <ItemTemplate>
                                         <div class="pc_menu">
@@ -25,7 +26,7 @@
                                     </ItemTemplate>
                                 </asp:Repeater>
                             </div>
-                            </div>
+                        </div>
                         </li>
                 </ItemTemplate>
             </asp:Repeater>

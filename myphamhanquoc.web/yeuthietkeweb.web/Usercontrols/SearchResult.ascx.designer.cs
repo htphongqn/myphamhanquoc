@@ -13,13 +13,13 @@ namespace yeuthietkeweb.UIs {
     public partial class SearchResult {
         
         /// <summary>
-        /// path1 control.
+        /// left_cate1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::yeuthietkeweb.UIs.Path path1;
+        protected global::yeuthietkeweb.UIs.left_cate left_cate1;
         
         /// <summary>
         /// Lbtitle control.
