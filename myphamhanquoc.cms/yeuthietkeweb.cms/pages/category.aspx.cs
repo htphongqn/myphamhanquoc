@@ -572,7 +572,7 @@ namespace yeuthietkeweb.cms.pages
                 {
                     if (!string.IsNullOrEmpty(fileImage1.PostedFile.FileName))
                     {
-                        string pathfile = Server.MapPath("../data/categories/" + m_cat_id);
+                        string pathfile = Server.MapPath("/data/categories/" + m_cat_id);
                         string fullpathfile = pathfile + "/" + Cat_Image1;
 
                         if (!Directory.Exists(pathfile))
@@ -590,7 +590,7 @@ namespace yeuthietkeweb.cms.pages
                 {
                     if (!string.IsNullOrEmpty(fileImage2.PostedFile.FileName))
                     {
-                        string pathfile = Server.MapPath("../data/categories/" + m_cat_id);
+                        string pathfile = Server.MapPath("/data/categories/" + m_cat_id);
                         string fullpathfile = pathfile + "/" + Cat_Image2;
 
                         if (!Directory.Exists(pathfile))
