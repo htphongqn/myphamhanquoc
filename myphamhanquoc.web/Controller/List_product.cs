@@ -165,12 +165,12 @@ namespace Controller
                         select new { b.NEWS_ID}).ToList();
             return list.Count();
         }
-        public int GetCountProductByBrandId(int brandid, string _cat_seo_url)
+        public int GetCountProductByBrandId(int brandid, int catid)
         {
             var list = (from a in db.ESHOP_NEWS_CATs
                         join b in db.ESHOP_NEWs on a.NEWS_ID equals b.NEWS_ID
                         join c in db.ESHOP_CATEGORies on a.CAT_ID equals c.CAT_ID
-                        where b.UNIT_ID1 == brandid && c.CAT_SEO_URL == _cat_seo_url
+                        where b.UNIT_ID1 == brandid && (c.CAT_ID == catid || c.CAT_PARENT_PATH.Contains(catid.ToString()))
                         select new { b.NEWS_ID }).ToList();
             return list.Count();
         }

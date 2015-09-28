@@ -53,7 +53,7 @@ namespace yeuthietkeweb.UIs
             List<string[]> l = new List<string[]>();
             foreach (var item in list)
             {
-                int count = lpro.GetCountProductByBrandId(item.ID, _cat_seo_url);
+                int count = lpro.GetCountProductByBrandId(item.ID, _Catid);
                 l.Add(new string[] { item.ID.ToString(), item.NAME, item.NAME + " (" + count + ")"});
             }
             var brands = from obj in l

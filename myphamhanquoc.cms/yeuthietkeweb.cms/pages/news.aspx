@@ -70,7 +70,7 @@
                     </div>
                     <div class="form-group">
                         <label>Loại thông tin</label>
-                        <asp:RadioButtonList ID="rblNewsType" runat="server" RepeatColumns="5" AutoPostBack="True" class="form-control"
+                        <asp:RadioButtonList ID="rblNewsType" runat="server" RepeatColumns="5" AutoPostBack="True"
                             OnSelectedIndexChanged="rblNewsType_SelectedIndexChanged">
                             <asp:ListItem Text="Tin tức" Value="0" Selected="True"></asp:ListItem>
                             <asp:ListItem Text="Sản phẩm" Value="1"></asp:ListItem>
@@ -96,6 +96,11 @@
                         <label>Mô tả</label>
                         <textarea id="txtDesc" runat="server" class="form-control" onkeyup="ParseDesc(this);"
                             onblur="ParseDesc(this);"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Thương hiệu</label>
+                        <asp:DropDownList ID="ddlBrand" runat="server" class="form-control">
+                        </asp:DropDownList>
                     </div>
                     <div class="form-group">
                         <label>Liên kết</label>

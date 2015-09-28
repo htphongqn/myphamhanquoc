@@ -23,8 +23,6 @@ namespace yeuthietkeweb.Pages
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            _iUserID = Utils.CIntDef(Session["USER_ID"]);
-            if (_iUserID == 0) Response.Redirect("/");
             Guid _guid = (Guid)Session["news_guid"];
             if (!IsPostBack)
             {

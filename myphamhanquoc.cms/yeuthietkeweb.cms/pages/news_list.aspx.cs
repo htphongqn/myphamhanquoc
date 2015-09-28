@@ -406,7 +406,8 @@ namespace yeuthietkeweb.cms.pages
                 int id = Utils.CIntDef(ddlCategory.SelectedValue);
                 var list = (from a in DB.ESHOP_NEWs
                             join b in DB.ESHOP_NEWS_CATs on a.NEWS_ID equals b.NEWS_ID
-                            where b.CAT_ID == id
+                            join c in DB.ESHOP_CATEGORies on b.CAT_ID equals c.CAT_ID
+                            where (c.CAT_ID == id || c.CAT_PARENT_PATH.Contains(id.ToString()))
                             select a).OrderByDescending(n => n.NEWS_PUBLISHDATE).ToList();
                 Session["NewsList"] = DataUtil.LINQToDataTable(list);
 

@@ -63,7 +63,7 @@
             <asp:LinkButton CssClass="submitMail" ID="lbregisemail" runat="server"  ValidationGroup="GRegEmail"
                                 OnClick="lbregisemail_Click"><span class="icon_mail">Đăng ký</span></asp:LinkButton>
                 <br /><br />
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="<br/>Vui lòng nhập Email!" Display="None"
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Vui lòng nhập e-mail!" Display="None"
                     Text="Vui lòng nhập e-mail!" ControlToValidate="txtEmail" CssClass="required"  ValidationGroup="GRegEmail"></asp:RequiredFieldValidator>
                 <asp:RegularExpressionValidator ID="regexEmailValid" runat="server" ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
                     ControlToValidate="txtEmail" ErrorMessage="E-mail không đúng định dạng!" CssClass="required"  Display="None"
