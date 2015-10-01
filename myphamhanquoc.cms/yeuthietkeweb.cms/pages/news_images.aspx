@@ -16,6 +16,7 @@
         <div class="col-lg-12 panel-body">
             <asp:LinkButton ID="lbtDelete" runat="server" OnClick="lbtDelete_Click" OnClientClick="return confirm('Bạn có chắc chắn xóa không?');"
                 CssClass="btn btn-default btn-success btn-sm" CausesValidation="false">Xóa</asp:LinkButton>
+            <asp:LinkButton ID="Lnupload" runat="server" CssClass="btn btn-default btn-success btn-sm" onclick="Lnupload_Click">Lưu</asp:LinkButton>
             <a href="#" id="hplBack" runat="server" class="btn btn-default btn-success btn-sm">Quay lại</a>
         </div>
         <div class="col-lg-12 panel-body">
@@ -60,35 +61,35 @@
                         <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                             <thead>
                                 <tr>
-                                    <th>STT</th>
-                                    <th>Hình</th>
+                                    <th class="center" style="width:100px">STT</th>
+                                    <th class="center">Hình</th>
                                     <th>Mô tả</th>
-                                    <th>#</th>
-                                    <th>Xóa</th>
+                                    <%--<th>#</th>--%>
+                                    <th class="center">Xóa</th>
                                 </tr>
                             </thead>
                             <tbody>                                
-                                <asp:Repeater ID="rptList" runat="server">
+                                <asp:Repeater ID="rptList" runat="server" OnItemCommand="rptList_ItemCommand">
                                     <ItemTemplate>
                                         <tr class="odd gradeX">
-                                            <td>
+                                            <td class="center">
                                                 <asp:Label ID="lblSTT" runat="server" EnableViewState="False" Text='<%# getOrder() %>'></asp:Label>
                                                 <asp:Label ID="lblID" runat="server" Text='<%# Eval("NEWS_IMG_ID")%>' Visible="false"></asp:Label>
                                             </td>
-                                            <td>
-                                                <a href='<%# getLink(DataBinder.Eval(Container.DataItem, "NEWS_IMG_ID")) %>'>
+                                            <td class="center">
+                                                <%--<a href='<%# getLink(DataBinder.Eval(Container.DataItem, "NEWS_IMG_ID")) %>'>--%>
                                                     <%# getImage(DataBinder.Eval(Container.DataItem, "NEWS_IMG_ID"), DataBinder.Eval(Container.DataItem, "NEWS_IMG_IMAGE1")) %>
-                                                </a>
+                                                <%--</a>--%>
                                             </td>
                                             <td>
                                                 <a href='<%# getLink(DataBinder.Eval(Container.DataItem, "NEWS_IMG_ID")) %>'>
                                                     <%#DataBinder.Eval(Container.DataItem, "NEWS_IMG_DESC") %>
                                                 </a>
                                             </td>
-                                            <td>
+                                            <%--<td>
                                                 <a href='<%# getLink(DataBinder.Eval(Container.DataItem, "NEWS_IMG_ID")) %>'>Chỉnh sửa</a>
-                                            </td>
-                                            <td>
+                                            </td>--%>
+                                            <td class="center">
                                                 <asp:LinkButton ID="lnkbtnDel" runat="server" CommandName="Delete" OnClientClick="return confirm('Bạn có chắc chắn xóa?');">
                                                     <img src="../images/icon_delete.png" title="Xóa" border="0">
                                                 </asp:LinkButton>

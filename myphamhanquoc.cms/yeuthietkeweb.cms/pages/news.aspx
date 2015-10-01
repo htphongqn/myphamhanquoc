@@ -42,7 +42,7 @@
                 Lưu và thêm mới
             </asp:LinkButton>
             <asp:LinkButton ID="lbtSave" runat="server" OnClick="lbtSave_Click" class="btn btn-default btn-success btn-sm">Lưu</asp:LinkButton>
-            <a href="category_list.aspx" class="btn btn-default btn-success btn-sm">
+            <a href="news_list.aspx" class="btn btn-default btn-success btn-sm">
                 Quay lại
             </a>
             <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" ShowMessageBox="True" ShowSummary="False" ValidationGroup="g1" />        
