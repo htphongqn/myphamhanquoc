@@ -155,7 +155,7 @@ namespace yeuthietkeweb.Pages
             decimal _dPrice2 = Utils.CDecDef(Price2);
             if (_dPrice2 != 0)
             {
-                return Utils.CIntDef(100 - (_dPrice2 * 100 / _dPrice1)) + "%";
+                return "<div class='reducephantram'>" + Utils.CIntDef(100 - (_dPrice2 * 100 / _dPrice1)) + "%</div>";
             }
             return "";
         }

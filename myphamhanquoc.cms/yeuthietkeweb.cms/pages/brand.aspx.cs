@@ -116,8 +116,8 @@ namespace yeuthietkeweb.cms.pages
                     {
                         trUploadImage1.Visible = false;
                         trImage1.Visible = true;
-                        Image1.Src = "/data/brand/" + G_info.ToList()[0].IMAGE1;
-                        hplImage1.NavigateUrl = "/data/brand/" + G_info.ToList()[0].IMAGE1;
+                        Image1.Src = "/data/brand/" + brandId + "/" + G_info.ToList()[0].IMAGE1;
+                        hplImage1.NavigateUrl = "/data/brand/" + brandId + "/" + G_info.ToList()[0].IMAGE1;
                         hplImage1.Text = G_info.ToList()[0].IMAGE1;
                     }
                     else

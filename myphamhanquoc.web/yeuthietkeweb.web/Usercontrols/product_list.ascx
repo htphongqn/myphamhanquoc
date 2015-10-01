@@ -35,7 +35,7 @@
                     <li class="mtf columns">
                         <div class="product">
                         <div class="img_product"> <a href="<%# GetLink(Eval("NEWS_URL"),Eval("NEWS_SEO_URL"),Eval("CAT_SEO_URL")) %>" title=" <%#Eval("NEWS_TITLE") %>"> <img src="<%# GetImageT(Eval("NEWS_ID"),Eval("NEWS_IMAGE3")) %>" alt=" <%#Eval("NEWS_TITLE") %>"  /> </a></div>
-                        <div class='reducephantram'><%#Getgiamgia(Eval("News_Price1"), Eval("News_Price2"))%></div>
+                        <%#Getgiamgia(Eval("News_Price1"), Eval("News_Price2"))%>
                         <h3 class="product_name"> <a href="<%# GetLink(Eval("NEWS_URL"),Eval("NEWS_SEO_URL"),Eval("CAT_SEO_URL")) %>" title=" <%#Eval("NEWS_TITLE") %>"><%#Eval("NEWS_TITLE") %></a></h3>
                         <div class="price"><%#GetPrice2(Eval("News_Price1"), Eval("News_Price2"))%></div>
                         <div class="f_price"><%#GetPrice1(Eval("News_Price1"), Eval("News_Price2"))%></div>

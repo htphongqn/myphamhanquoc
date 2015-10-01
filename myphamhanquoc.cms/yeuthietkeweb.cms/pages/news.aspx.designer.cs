@@ -337,6 +337,15 @@ namespace yeuthietkeweb.cms.pages {
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtPrice;
         
         /// <summary>
+        /// txtPriceNew control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtPriceNew;
+        
+        /// <summary>
         /// trUploadImage3 control.
         /// </summary>
         /// <remarks>

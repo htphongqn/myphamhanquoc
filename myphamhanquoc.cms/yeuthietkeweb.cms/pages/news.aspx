@@ -207,8 +207,12 @@
                 </div>
                 <div class="panel-body">
                     <div class="form-group">
-                        <label>Giá</label>
+                        <label>Giá cũ</label>
                         <input type="text" name="txtPrice" id="txtPrice" runat="server" onkeyup="this.value=formatNumeric(this.value);"
+                                onblur="this.value=formatNumeric(this.value);" maxlength="20" value="0" class="form-control" />
+                    </div><div class="form-group">
+                        <label>Giá mới</label>
+                        <input type="text" name="txtPriceNew" id="txtPriceNew" runat="server" onkeyup="this.value=formatNumeric(this.value);"
                                 onblur="this.value=formatNumeric(this.value);" maxlength="20" value="0" class="form-control" />
                     </div>
                 </div>
