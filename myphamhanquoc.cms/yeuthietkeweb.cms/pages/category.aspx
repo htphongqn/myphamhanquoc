@@ -73,7 +73,7 @@
                 </div>
                 <div class="form-group">
                     <label>Mô tả</label>
-                    <textarea id="txtDesc" runat="server" onkeyup="ParseDesc(this);" class="form-control"
+                    <textarea id="txtDesc" runat="server" onkeyup="ParseDesc(this);" class="form-control" rows="6"
                     onblur="ParseDesc(this);"></textarea>
                 </div>                                
                 <div class="form-group">
@@ -126,7 +126,7 @@
                 </div>
                 <div class="form-group">
                     <label>SEO Description</label>
-                    <textarea id="txtSeoDescription" runat="server" class="form-control"></textarea>
+                    <textarea id="txtSeoDescription" runat="server" rows="6" class="form-control"></textarea>
                 </div>
             </div>
         </div>        

@@ -68,14 +68,14 @@ namespace yeuthietkeweb.cms.pages
                 {
                     if (!string.IsNullOrEmpty(n_info.ToList()[0].IMAGE1))
                     {
-                        string imagePath = Server.MapPath(PathFiles.GetPathCategory(brandId) + n_info.ToList()[0].IMAGE1);
+                        string imagePath = Server.MapPath("/data/brand/" + brandId + "/" + n_info.ToList()[0].IMAGE1);
                         n_info.ToList()[0].IMAGE1 = "";
                         DB.SubmitChanges();
 
                         if (File.Exists(imagePath))
                             File.Delete(imagePath);
 
-                        strLink = "brand.aspx?cat_id=" + brandId;
+                        strLink = "brand.aspx?id=" + brandId;
                     }
                 }
             }
@@ -116,8 +116,8 @@ namespace yeuthietkeweb.cms.pages
                     {
                         trUploadImage1.Visible = false;
                         trImage1.Visible = true;
-                        Image1.Src = "../data/brand/" + G_info.ToList()[0].IMAGE1;
-                        hplImage1.NavigateUrl = "../data/brand/" + G_info.ToList()[0].IMAGE1;
+                        Image1.Src = "/data/brand/" + G_info.ToList()[0].IMAGE1;
+                        hplImage1.NavigateUrl = "/data/brand/" + G_info.ToList()[0].IMAGE1;
                         hplImage1.Text = G_info.ToList()[0].IMAGE1;
                     }
                     else
@@ -284,7 +284,7 @@ namespace yeuthietkeweb.cms.pages
                 {
                     if (!string.IsNullOrEmpty(fileImage1.PostedFile.FileName))
                     {
-                        string pathfile = Server.MapPath("../data/brand/" + brandId);
+                        string pathfile = Server.MapPath("/data/brand/" + brandId);
                         string fullpathfile = pathfile + "/" + IMAGE1;
 
                         if (!Directory.Exists(pathfile))
@@ -354,7 +354,7 @@ namespace yeuthietkeweb.cms.pages
                 DB.SubmitChanges();
 
                 //delete folder
-                string fullpath = Server.MapPath(PathFiles.GetPathCategory(brandId));
+                string fullpath = Server.MapPath("/data/brand/" + brandId);
                 if (Directory.Exists(fullpath))
                 {
                     DeleteAllFilesInFolder(fullpath);

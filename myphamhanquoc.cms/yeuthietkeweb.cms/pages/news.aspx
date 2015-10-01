@@ -94,7 +94,7 @@
                     </div>                                
                     <div class="form-group">
                         <label>Mô tả</label>
-                        <textarea id="txtDesc" runat="server" class="form-control" onkeyup="ParseDesc(this);"
+                        <textarea id="txtDesc" runat="server" class="form-control" onkeyup="ParseDesc(this);" rows="6"
                             onblur="ParseDesc(this);"></textarea>
                     </div>
                     <div class="form-group">
@@ -155,7 +155,7 @@
                     </div>
                     <div class="form-group">
                         <label>SEO Description</label>
-                        <textarea id="txtSeoDescription" runat="server" class="form-control"></textarea>
+                        <textarea id="txtSeoDescription" runat="server" rows="6" class="form-control"></textarea>
                     </div>
                 </div>
             </div>
@@ -201,6 +201,18 @@
                     </div>
                 </div>
             </div>
+            <div class="panel panel-default" id="div_price" runat="server">
+                <div class="panel-heading">
+                    Thông tin giá
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label>Giá</label>
+                        <input type="text" name="txtPrice" id="txtPrice" runat="server" onkeyup="this.value=formatNumeric(this.value);"
+                                onblur="this.value=formatNumeric(this.value);" maxlength="20" value="0" class="form-control" />
+                    </div>
+                </div>
+            </div>            
             <div class="panel panel-default">
                 <div class="panel-heading">
                     Hình ảnh

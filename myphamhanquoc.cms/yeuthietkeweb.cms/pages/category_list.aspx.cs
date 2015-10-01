@@ -216,8 +216,8 @@ namespace yeuthietkeweb.cms.pages
                     txtOrder = (HtmlInputText)item.FindControl("txtOrder");
                     txtOrderPeriod = (HtmlInputText)item.FindControl("txtOrderPeriod");
 
-                    if (chkSelect.Checked)
-                    {
+                    //if (chkSelect.Checked)
+                    //{
                         int catId = Utils.CIntDef(lblID.Text, 0);
                         var c_update = DB.GetTable<ESHOP_CATEGORy>().Where(g => g.CAT_ID == catId);
 
@@ -228,7 +228,7 @@ namespace yeuthietkeweb.cms.pages
 
                             DB.SubmitChanges();
                         }
-                    }
+                    //}
                     i++;
                 }
             }

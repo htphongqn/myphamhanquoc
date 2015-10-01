@@ -151,8 +151,8 @@ namespace yeuthietkeweb.cms.pages
                     Label lblID = (Label)item.FindControl("lblID");
                     txtOrder = (HtmlInputText)item.FindControl("txtOrder");
 
-                    if (chkSelect.Checked)
-                    {
+                    //if (chkSelect.Checked)
+                    //{
                         int Id = Utils.CIntDef(lblID.Text, 0);
                         var c_update = DB.GetTable<ESHOP_BRAND>().Where(g => g.ID == Id);
 
@@ -162,7 +162,7 @@ namespace yeuthietkeweb.cms.pages
 
                             DB.SubmitChanges();
                         }
-                    }
+                    //}
                     i++;
                 }
             }
