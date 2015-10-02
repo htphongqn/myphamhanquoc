@@ -45,10 +45,10 @@ namespace yeuthietkeweb.cms.pages
 
             hplCatNews.HRef = "news_category.aspx?news_id=" + m_news_id;
             hplEditorHTMl.HRef = "news_editor.aspx?news_id=" + m_news_id;
-            //hplNewsAtt.HRef = "news_attachment.aspx?news_id=" + m_news_id;
+            hplNewsAtt.HRef = "news_attachment.aspx?news_id=" + m_news_id; hplNewsAtt.Visible = false;
             hplAlbum.HRef = "news_images.aspx?news_id=" + m_news_id;
             //bplNewsCopy.HRef = "news_copy.aspx?news_id=" + m_news_id;
-            hplComment.HRef = "news_comment.aspx?news_id=" + m_news_id;
+            hplComment.HRef = "news_comment.aspx?news_id=" + m_news_id; hplComment.Visible = false;
             //hplCatProducts.HRef = "news_news.aspx?news_id=" + m_news_id;
 
         }
@@ -401,7 +401,7 @@ namespace yeuthietkeweb.cms.pages
         public string getImage(object obj_id, object obj_image1)
         {
             if (!string.IsNullOrEmpty(Utils.CStrDef(obj_id)) && Utils.CIntDef(obj_id) > 0)
-                return "<img src='" + PathFiles.GetPathNews(m_news_id) + Utils.CStrDef(obj_image1) + "' width='40px' border='0' />";
+                return "<img src='" + PathFiles.GetPathNews(m_news_id) + Utils.CStrDef(obj_image1) + "' width='120px' border='0' />";
 
             return "";
         }
@@ -450,6 +450,7 @@ namespace yeuthietkeweb.cms.pages
 
         protected void Lnupload_Click(object sender, EventArgs e)
         {
+            string strLink = "";
             try
             {
                 // Get the HttpFileCollection
@@ -477,10 +478,17 @@ namespace yeuthietkeweb.cms.pages
                     }
                 }
                 SearchResult();
+                strLink = "news_images.aspx?news_id=" + m_news_id;
+
             }
             catch (Exception ex)
             {
                 clsVproErrorHandler.HandlerError(ex);
+            }
+            finally
+            {
+                if (!string.IsNullOrEmpty(strLink))
+                    Response.Redirect(strLink);
             }
         }
     }

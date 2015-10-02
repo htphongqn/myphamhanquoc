@@ -118,7 +118,7 @@ namespace Controller
                                      join a in db.ESHOP_NEWs on c.NEWS_ID equals a.NEWS_ID
                                      where a.NEWS_TYPE == _vCatID.ToList()[0].NEWS_TYPE && (c.CAT_ID == _vCatID.ToList()[0].CAT_ID || c.CAT_ID == _vCatID.ToList()[0].CAT_PARENT_ID)
                                      && a.NEWS_SHOWINDETAIL == 1 && a.NEWS_SEO_URL != News_Seo_Url
-                                     select new { a.NEWS_ID, a.NEWS_TITLE, a.NEWS_IMAGE3, a.NEWS_DESC, a.NEWS_SEO_URL, a.NEWS_URL, a.NEWS_ORDER, a.NEWS_ORDER_PERIOD, a.NEWS_PUBLISHDATE, a.NEWS_PRICE1, a.NEWS_PRICE2,a.NEWS_FIELD3 }).Distinct().OrderByDescending(n=>n.NEWS_PUBLISHDATE).Take(limit);
+                                     select new { a.NEWS_ID, a.NEWS_TITLE, a.NEWS_IMAGE3, a.NEWS_DESC, a.NEWS_SEO_URL, a.NEWS_URL, a.NEWS_ORDER, a.NEWS_ORDER_PERIOD, a.NEWS_PUBLISHDATE, c.ESHOP_CATEGORy.CAT_SEO_URL, a.NEWS_PRICE1, a.NEWS_PRICE2, a.NEWS_FIELD3 }).Distinct().OrderByDescending(n => n.NEWS_PUBLISHDATE).Take(limit);
                     foreach (var i in _vProduct)
                     {
                         Pro_details_entity pro = new Pro_details_entity();
@@ -128,6 +128,7 @@ namespace Controller
                         pro.NEWS_DESC = i.NEWS_DESC;
                         pro.NEWS_SEO_URL = i.NEWS_SEO_URL;
                         pro.NEWS_URL = i.NEWS_URL;
+                        pro.CAT_SEO_URL = i.CAT_SEO_URL;
                         pro.NEWS_ORDER = Utils.CIntDef(i.NEWS_ORDER);
                         pro.NEWS_ORDER_PERIOD = Utils.CIntDef(i.NEWS_ORDER_PERIOD);
                         pro.NEWS_PUBLISHDATE = Utils.CDateDef(i.NEWS_PUBLISHDATE, DateTime.Now);
@@ -155,7 +156,7 @@ namespace Controller
                         join b in db.ESHOP_NEWs on a.NEWS_ID equals b.NEWS_ID
                         join c in db.ESHOP_CATEGORies on a.CAT_ID equals c.CAT_ID
                               where b.NEWS_SEO_URL!=_new_seo && b.NEWS_TYPE==1
-                        select new { b.NEWS_ID, b.NEWS_TITLE, b.NEWS_IMAGE3, b.NEWS_PRICE1, b.NEWS_PRICE2, b.NEWS_DESC, b.NEWS_SEO_URL, b.NEWS_URL, b.NEWS_ORDER, b.NEWS_ORDER_PERIOD, b.NEWS_PUBLISHDATE, b.NEWS_CODE, b.NEWS_FIELD2, b.NEWS_FIELD3 }) .Distinct().OrderByDescending(n => n.NEWS_PUBLISHDATE).OrderByDescending(n => n.NEWS_ORDER).ToList();
+                        select new { b.NEWS_ID, b.NEWS_TITLE, b.NEWS_IMAGE3, b.NEWS_PRICE1, b.NEWS_PRICE2, b.NEWS_DESC, b.NEWS_SEO_URL, b.NEWS_URL, b.NEWS_ORDER, b.NEWS_ORDER_PERIOD, b.NEWS_PUBLISHDATE, b.NEWS_CODE, b.NEWS_FIELD2, b.NEWS_FIELD3, c.CAT_SEO_URL }) .Distinct().OrderByDescending(n => n.NEWS_PUBLISHDATE).OrderByDescending(n => n.NEWS_ORDER).ToList();
             if (getallList.Count > 0)
             {
                 for (int i = 0; i < limit; i++)
@@ -172,6 +173,7 @@ namespace Controller
                         pro.NEWS_DESC = getallList[pos].NEWS_DESC;
                         pro.NEWS_SEO_URL = getallList[pos].NEWS_SEO_URL;
                         pro.NEWS_URL = getallList[pos].NEWS_URL;
+                        pro.CAT_SEO_URL = getallList[pos].CAT_SEO_URL;
                         pro.NEWS_ORDER = Utils.CIntDef(getallList[pos].NEWS_ORDER);
                         pro.NEWS_ORDER_PERIOD = Utils.CIntDef(getallList[pos].NEWS_ORDER_PERIOD);
                         pro.NEWS_PUBLISHDATE = Utils.CDateDef(getallList[pos].NEWS_PUBLISHDATE, DateTime.Now);
