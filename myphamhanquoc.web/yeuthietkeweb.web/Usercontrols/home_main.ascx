@@ -155,7 +155,8 @@
                     <ul>
                       <asp:Repeater ID="Repeater1" runat="server" DataSource='<%# Load_Menu2(Eval("Cat_ID")) %>'>
                             <ItemTemplate>
-                                <li class='<%#GetStyleActive(Eval("cat_seo_url"),Eval("cat_url")) %>'> <a href="<%#GetLink_Cat(Eval("Cat_Url"),Eval("Cat_Seo_Url")) %>" title="<%#Eval("CAT_NAME") %>"> <%#Eval("CAT_NAME") %></a> </li>
+                                <%--<li class='<%#GetStyleActive(Eval("cat_seo_url"),Eval("cat_url")) %>'> <a href="<%#GetLink_Cat(Eval("Cat_Url"),Eval("Cat_Seo_Url")) %>" title="<%#Eval("CAT_NAME") %>"> <%#Eval("CAT_NAME") %></a> </li>--%>
+                                <li class='<%#GetStyleActive(Eval("cat_seo_url"),Eval("cat_url")) %>'> <a href="javascript:void(0)" onclick="showProducts(<%# Eval("CAT_ID")%>,3,<%# getidcapcha(Eval("CAT_PARENT_PATH"))%>);" title="<%#Eval("CAT_NAME") %>"> <%#Eval("CAT_NAME") %></a> </li>
                             </ItemTemplate>
                         </asp:Repeater>
                     </ul>
@@ -173,7 +174,7 @@
                   </ul>
                 </div>
                 <div class="homesubcatcontainer">
-                  <div class="sl_pro slide_cate_Pro">
+                  <div class="sl_pro slide_cate_Pro" id='showcat_<%# Eval("CAT_ID") %>'>
                     <ul>
                       <asp:Repeater ID="Repeater2" runat="server" DataSource='<%#Load_proindex(Eval("CAT_ID"), 20) %>'>
                         <ItemTemplate>
@@ -200,3 +201,16 @@
     </div>
   </div>
   <!--End Main-->
+  <script type="text/javascript">
+      function showProducts(catid, position, idcapcha) {
+          $.ajax({
+              url: '../Pages/ProductsHome.aspx',
+              data: 'catid=' + catid + '&position=' + position + '',
+              success: function (e) {
+                  if (position == 3) {
+                      $("#showcat_" + idcapcha + "").html(e);
+                  }
+              }
+          });
+      }
+</script>

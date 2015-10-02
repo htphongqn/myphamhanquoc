@@ -145,20 +145,11 @@ namespace yeuthietkeweb.Pages
                 return null;
             }
         }
-        //public string Getgiam(object News_Price1, object News_Price2)
-        //{
-        //    return fun.Getgiamgia(News_Price1, News_Price2);
-        //}
-        public string Getgiamgia(object Price1, object Price2)
+        public string Getgiamgia(object News_Price1, object News_Price2)
         {
-            decimal _dPrice1 = Utils.CDecDef(Price1);
-            decimal _dPrice2 = Utils.CDecDef(Price2);
-            if (_dPrice2 != 0)
-            {
-                return "<div class='reducephantram'>" + Utils.CIntDef(100 - (_dPrice2 * 100 / _dPrice1)) + "%</div>";
-            }
-            return "";
+            return fun.Getgiamgia(News_Price1, News_Price2);
         }
+
         public string GetLink(object News_Url, object News_Seo_Url, object Cat_Seo_Url)
         {
             try

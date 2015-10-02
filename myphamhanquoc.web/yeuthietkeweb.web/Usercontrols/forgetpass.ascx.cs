@@ -53,5 +53,23 @@ namespace yeuthietkeweb.web.Usercontrols
                 clsVproErrorHandler.HandlerError(ex);
             }
         }
+
+        public string querys()
+        {
+            return LookCookie();
+        }
+
+        private string LookCookie()
+        {
+            HttpCookie Cookie = new HttpCookie("slmsrcd1");
+            Cookie = Request.Cookies["slmsrcd1"];
+            string strUser = "";
+            if (Cookie != null && Cookie.Value != "" &&
+                 Cookie.Value != null)
+            {
+                strUser = Cookie.Value.ToString();
+            }
+            return strUser;
+        }
     }
 }
