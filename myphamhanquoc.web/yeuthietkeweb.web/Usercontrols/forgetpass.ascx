@@ -2,36 +2,41 @@
     Inherits="yeuthietkeweb.web.Usercontrols.forgetpass" %>
 <%@ Register Assembly="MSCaptcha" Namespace="MSCaptcha" TagPrefix="cc2" %>
 <asp:Panel ID="Panel3" runat="server" CssClass="hidden panelforget">
-    <div style="width: 1349px; height: 15347px; display: block;" id="dShadow" class="shadows">
+    <div style="width: 2349px; height: 15347px; display: block;" id="dShadow" class="shadows">
     </div>
     <div style="top: 70px; position: absolute; left: 27%; z-index: 99999" class="popup"
         id="dPopUp">
         <div class="popup-bg" style="height: 350px">
-            <div class="popup-title">
-               
-                    Lấy lại mật khẩu
+            <div class="popup-title">               
+                <h3 style="font-size: 20px; margin-top: 20px; margin-left: 20px;">  Cấp lại mật khẩu</h3>
             </div>
             <div class="popup-form">
                 <div id="div3" runat="server">
                     <p class="text input-text">
                         <label>
-                            Email * :</label>
+                            E-mail * :</label>
                         <input type="text" name="txtemail" id="Txtmailforget" runat="server" style="width: 230px" />
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Chưa nhập Email"
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Chưa nhập e-mail!"
                             ControlToValidate="Txtmailforget" Display="Dynamic" ForeColor="Red" ValidationGroup="G7"
                             CssClass="tlp-error">*</asp:RequiredFieldValidator>
                     </p>
                     <p class="text input-text">
-                        <label>
-                        </label>
-                        <asp:Image ID="Image1" runat="server" ImageUrl="../Pages/CImage.aspx" Width="170px"
-                            alt="" />
+                    <label>
+                            Captcha :</label>
+                        <script type="text/javascript"  language="Javascript">
+                            function Catpc() {
+                                var img = document.getElementById("icp");
+                                img.src = "/Pages/captchr.ashx?query=" + Math.random();
+                            }
+                    </script>                    
+                    <img style="float: left; margin-left: 10px; width: 100px; height:32px" id="icp" src='/Pages/captchr.ashx?query=<%= querys() %>' alt="Mã  an toàn" />
+                    <a href="javascript:void(0)" onclick="javascript:Catpc();"><img title="Refresh" src="/Resources/images/reloadpaf.png" /></a>
                     </p>
                     <p class="text input-text">
                         <label>
-                            Nhập vào chuỗi :</label>
+                            Nhập captcha :</label>
                         <asp:TextBox ID="Textcapchaforget" runat="server" Width="235px"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Chưa nhập mã bảo mật"
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Chưa nhập mã captcha!"
                             ControlToValidate="Textcapchaforget" Display="Dynamic" ForeColor="Red" ValidationGroup="G7">*</asp:RequiredFieldValidator>
                     </p>
                     <div class="button">
@@ -40,7 +45,7 @@
                             border-radius: 5px;"><b>Gửi</b></asp:LinkButton>
                         <p id="P2" class="text-error">
                             <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="Txtmailforget"
-                                ErrorMessage="Email Định Dạng Chưa Đúng" ForeColor="Red" SetFocusOnError="True"
+                                ErrorMessage="E-mail định dạng chưa đúng!" ForeColor="Red" SetFocusOnError="True"
                                 ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGroup="G8"></asp:RegularExpressionValidator>
                             <br />
                             <asp:Label ID="Lbforgeterrors" runat="server" Text=""></asp:Label>

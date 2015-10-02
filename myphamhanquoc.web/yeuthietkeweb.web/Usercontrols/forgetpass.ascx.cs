@@ -28,30 +28,45 @@ namespace yeuthietkeweb.web.Usercontrols
             try
             {
                 Panel3.CssClass = Panel3.CssClass.Replace("hidden", "");
-                string _email=Txtmailforget.Value;
-                if (this.Textcapchaforget.Text == this.Session["CaptchaImageText"].ToString())
+                string _email = Txtmailforget.Value;
+                string strSecView = LookCookie().ToLower();
+                string strSecurity = Textcapchaforget.Text.ToString().ToLower();
+                if (strSecurity != strSecView)
                 {
-
-                    if (acc.Check_email(_email))
-                    {
-                         string _matKhau = fm.TaoChuoiTuDong(7);
-                         acc.Sendpass(_email, _matKhau);
-                         send.SendMail_RecoverPassword(_email, _matKhau, acc.Name);
-                         div3.Visible = false;
-                         div5.Visible = true;
-                    }
-                    else Lbforgeterrors.Text = "Email không tồn tại";
+                    Response.Write("<script>alert('Nhập mã bảo mật sai!');</script>");
+                    return;
                 }
-                else
+                if (acc.Check_email(_email))
                 {
-                    Lbforgeterrors.Text = "Mã Xác Nhận Không Đúng";
+                    string _matKhau = fm.TaoChuoiTuDong(7);
+                    acc.Sendpass(_email, _matKhau);
+                    send.SendMail_RecoverPassword(_email, _matKhau, acc.Name);
+                    div3.Visible = false;
+                    div5.Visible = true;
                 }
-
+                else Lbforgeterrors.Text = "Email không tồn tại";
             }
             catch (Exception ex)
             {
                 clsVproErrorHandler.HandlerError(ex);
             }
+        }
+        public string querys()
+        {
+            return LookCookie();
+        }
+
+        private string LookCookie()
+        {
+            HttpCookie Cookie = new HttpCookie("slmsrcd1");
+            Cookie = Request.Cookies["slmsrcd1"];
+            string strUser = "";
+            if (Cookie != null && Cookie.Value != "" &&
+                 Cookie.Value != null)
+            {
+                strUser = Cookie.Value.ToString();
+            }
+            return strUser;
         }
     }
 }
