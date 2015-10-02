@@ -45,7 +45,7 @@
             <asp:DropDownList ID="ddlBrand" runat="server" AppendDataBoundItems="true" onchange="changeweb(this);">
                 <asp:ListItem Value="0" Text="Chọn thương hiệu"></asp:ListItem>
             </asp:DropDownList> 
-            <script>
+            <script language="javascript">
                 function changeweb(e) {
                     if (e.value != 0) {
                         window.open(e.value, "_blank");

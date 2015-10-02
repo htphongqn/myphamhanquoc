@@ -242,5 +242,18 @@ namespace yeuthietkeweb.cms.Components
             SourceString = Regex.Replace(SourceString, "[đĐ]", "d");
             return SourceString;
         }
+        public static string FormatMoney(object Expression)
+        {
+            try
+            {
+                string Money = String.Format("{0:0,#}", Expression);
+                return Money;
+            }
+            catch (Exception ex)
+            {
+                clsVproErrorHandler.HandlerError(ex);
+                return null;
+            }
+        }
     }
 }

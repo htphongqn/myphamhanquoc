@@ -9,6 +9,7 @@ using vpro.functions;
 using System.Data;
 using System.IO;
 using System.Web.UI.HtmlControls;
+using yeuthietkeweb.cms.Components;
 
 namespace yeuthietkeweb.cms.pages
 {
@@ -262,9 +263,9 @@ namespace yeuthietkeweb.cms.pages
                     txtDesc.Value = G_info.ToList()[0].n.NEWS_DESC;
                     txtUrl.Value = G_info.ToList()[0].n.NEWS_URL;
                     ddlTarget.SelectedValue = G_info.ToList()[0].n.NEWS_TARGET;
-                    txtPrice.Value = Utils.CStrDef(Utils.CIntDef(G_info.ToList()[0].n.NEWS_PRICE1));
+                    txtPrice.Value = CpanelUtils.FormatMoney(G_info.ToList()[0].n.NEWS_PRICE1);
+                    txtPriceNew.Value = CpanelUtils.FormatMoney(G_info.ToList()[0].n.NEWS_PRICE2);
                     //TextBox1.Text = Utils.CStrDef(Utils.CIntDef(G_info.ToList()[0].n.NEWS_PRICE3));
-                    txtPriceNew.Value = Utils.CStrDef(Utils.CIntDef(G_info.ToList()[0].n.NEWS_PRICE2));
                     ddlBrand.SelectedValue = Utils.CStrDef(G_info.ToList()[0].n.UNIT_ID1);
 
                     rblNewsType.SelectedValue = Utils.CStrDef(G_info.ToList()[0].n.NEWS_TYPE);
@@ -455,8 +456,8 @@ namespace yeuthietkeweb.cms.pages
                         news_insert.NEWS_ORDER_PERIOD = Utils.CIntDef(txtOrderPeriod.Value);
 
                         //news_insert.UNIT_ID2 = Utils.CIntDef(ddlUnit2.SelectedValue);
-                        news_insert.NEWS_PRICE1 = Utils.CDecDef(txtPrice.Value);
-                        news_insert.NEWS_PRICE2 = Utils.CDecDef(txtPriceNew.Value);
+                        news_insert.NEWS_PRICE1 = Utils.CDecDef(txtPrice.Value.Replace(",", ""));
+                        news_insert.NEWS_PRICE2 = Utils.CDecDef(txtPriceNew.Value.Replace(",", ""));
                         //news_insert.NEWS_IMAGE1 = News_Image1;
                         //news_insert.NEWS_IMAGE2 = News_Image2;
                         news_insert.NEWS_IMAGE3 = News_Image3;
@@ -507,8 +508,8 @@ namespace yeuthietkeweb.cms.pages
                             c_update.ToList()[0].NEWS_ORDER_PERIOD = Utils.CIntDef(txtOrderPeriod.Value);
                             c_update.ToList()[0].UNIT_ID1 = Utils.CIntDef(ddlBrand.SelectedValue);
                             //c_update.ToList()[0].UNIT_ID2 = Utils.CIntDef(ddlUnit2.SelectedValue);
-                            c_update.ToList()[0].NEWS_PRICE1 = Utils.CDecDef(txtPrice.Value);
-                            c_update.ToList()[0].NEWS_PRICE2 = Utils.CDecDef(txtPriceNew.Value);
+                            c_update.ToList()[0].NEWS_PRICE1 = Utils.CDecDef(txtPrice.Value.Replace(",", ""));
+                            c_update.ToList()[0].NEWS_PRICE2 = Utils.CDecDef(txtPriceNew.Value.Replace(",", ""));
 
                             //c_update.ToList()[0].NEWS_IMAGE1 = News_Image1;
                             //c_update.ToList()[0].NEWS_IMAGE2 = News_Image2;
@@ -605,8 +606,8 @@ namespace yeuthietkeweb.cms.pages
                             news_insert.NEWS_COUNT = Utils.CIntDef(txtCount.Value);
                             news_insert.NEWS_ORDER = Utils.CIntDef(txtOrder.Value);
                             news_insert.NEWS_ORDER_PERIOD = Utils.CIntDef(txtOrderPeriod.Value);
-                            news_insert.NEWS_PRICE1 = Utils.CDecDef(txtPrice.Value);
-                            news_insert.NEWS_PRICE2 = Utils.CDecDef(txtPriceNew.Value);
+                            news_insert.NEWS_PRICE1 = Utils.CDecDef(txtPrice.Value.Replace(",", ""));
+                            news_insert.NEWS_PRICE2 = Utils.CDecDef(txtPriceNew.Value.Replace(",", ""));
                             //news_insert.NEWS_PRICE3 = Utils.CDecDef(TextBox1.Text);
                             //news_insert.NEWS_PRICE2 = Utils.CDecDef(txtgiamgia.Value);
                             //news_insert.UNIT_ID2 = Utils.CIntDef(ddlUnit2.SelectedValue);
@@ -665,8 +666,8 @@ namespace yeuthietkeweb.cms.pages
                                 c_update.ToList()[0].NEWS_ORDER = Utils.CIntDef(txtOrder.Value);
                                 c_update.ToList()[0].NEWS_ORDER_PERIOD = Utils.CIntDef(txtOrderPeriod.Value);
                                 c_update.ToList()[0].UNIT_ID1 = Utils.CIntDef(ddlBrand.SelectedValue);
-                                c_update.ToList()[0].NEWS_PRICE1 = Utils.CDecDef(txtPrice.Value);
-                                c_update.ToList()[0].NEWS_PRICE2 = Utils.CDecDef(txtPriceNew.Value);
+                                c_update.ToList()[0].NEWS_PRICE1 = Utils.CDecDef(txtPrice.Value.Replace(",", ""));
+                                c_update.ToList()[0].NEWS_PRICE2 = Utils.CDecDef(txtPriceNew.Value.Replace(",", ""));
                                 //c_update.ToList()[0].NEWS_PRICE2 = Utils.CDecDef(txtgiamgia.Value);
                                 //c_update.ToList()[0].NEWS_PRICE3 = Utils.CDecDef(TextBox1.Text);
                                 //c_update.ToList()[0].NEWS_IMAGE1 = News_Image1;

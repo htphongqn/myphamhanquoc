@@ -160,8 +160,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-6">           
-
+        <div class="col-lg-6">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     Thông tin hiển thị
@@ -208,12 +207,10 @@
                 <div class="panel-body">
                     <div class="form-group">
                         <label>Giá cũ</label>
-                        <input type="text" name="txtPrice" id="txtPrice" runat="server" onkeyup="this.value=formatNumeric(this.value);"
-                                onblur="this.value=formatNumeric(this.value);" maxlength="20" value="0" class="form-control" />
+                        <input type="text" name="txtPrice" id="txtPrice" runat="server" onkeyup="FormatNumber(this);" onblur="FormatNumber(this);" maxlength="20" class="form-control" />
                     </div><div class="form-group">
                         <label>Giá mới</label>
-                        <input type="text" name="txtPriceNew" id="txtPriceNew" runat="server" onkeyup="this.value=formatNumeric(this.value);"
-                                onblur="this.value=formatNumeric(this.value);" maxlength="20" value="0" class="form-control" />
+                        <input type="text" name="txtPriceNew" id="txtPriceNew" runat="server" onkeyup="FormatNumber(this);" onblur="FormatNumber(this);" maxlength="20" class="form-control" />
                     </div>
                 </div>
             </div>            
