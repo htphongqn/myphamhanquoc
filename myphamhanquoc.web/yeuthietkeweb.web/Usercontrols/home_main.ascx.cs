@@ -33,7 +33,7 @@ namespace yeuthietkeweb.web.Usercontrols
         {
             try
             {
-                rptProNoibat.DataSource = index.Loadindex(1, 1, -1, 20);
+                rptProNoibat.DataSource = index.Loadindex(1, 1, -1, 15);
                 rptProNoibat.DataBind();
             }
             catch
@@ -45,7 +45,7 @@ namespace yeuthietkeweb.web.Usercontrols
         {
             try
             {
-                rptProBanchay.DataSource = index.Loadindex(1, 2, -1, 20);
+                rptProBanchay.DataSource = index.Loadindex(1, 2, -1, 15);
                 rptProBanchay.DataBind();
             }
             catch
@@ -57,7 +57,7 @@ namespace yeuthietkeweb.web.Usercontrols
         {
             try
             {
-                rptPromuanhieu.DataSource = index.Loadindex(1, 3, -1, 20);
+                rptPromuanhieu.DataSource = index.Loadindex(1, 3, -1, 15);
                 rptPromuanhieu.DataBind();
             }
             catch

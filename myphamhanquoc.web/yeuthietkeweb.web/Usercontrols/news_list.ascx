@@ -18,7 +18,7 @@
           <ul>
             <asp:Repeater ID="Rplistnews" runat="server">
                 <ItemTemplate>                    
-                    <li><a href="<%# GetLink(Eval("NEWS_URL"),Eval("NEWS_SEO_URL"),Eval("CAT_SEO_URL")) %>" title="<%# Eval("NEWS_TITLE") %>"> <img class="img_general" alt="<%# Eval("NEWS_TITLE") %>" src="<%# GetImageT(Eval("NEWS_ID"),Eval("NEWS_IMAGE3")) %>" ></a>
+                    <li><a href="<%# GetLink(Eval("NEWS_URL"),Eval("NEWS_SEO_URL"),Eval("CAT_SEO_URL")) %>" title="<%# Eval("NEWS_TITLE") %>" style="<%# DisplayGetImageT(Eval("NEWS_ID"),Eval("NEWS_IMAGE3")) %>"> <img class="img_general" alt="<%# Eval("NEWS_TITLE") %>" src="<%# GetImageT(Eval("NEWS_ID"),Eval("NEWS_IMAGE3")) %>" ></a>
                       <h2> <a href="<%# GetLink(Eval("NEWS_URL"),Eval("NEWS_SEO_URL"),Eval("CAT_SEO_URL")) %>" title="<%# Eval("NEWS_TITLE") %>" class="link_title"><%# Eval("NEWS_TITLE") %></a></h2>
                       <p><%# Eval("NEWS_DESC") %></p>
                       <a href="<%# GetLink(Eval("NEWS_URL"),Eval("NEWS_SEO_URL"),Eval("CAT_SEO_URL")) %>" class="view_more"> Chi tiết...</a> </li>                 

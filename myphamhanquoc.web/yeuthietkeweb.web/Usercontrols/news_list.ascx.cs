@@ -143,6 +143,26 @@ namespace yeuthietkeweb.UIs
             }
         }
 
+        public string DisplayGetImageT(object News_Id, object News_Image1)
+        {
+            try
+            {
+                string src = fun.GetImageT_News(News_Id, News_Image1);
+                if(src == null || src == "" )
+                {
+                    return "display:none";
+                }
+                else
+                {
+                    return "display:block";
+                }
+            }
+            catch (Exception ex)
+            {
+                clsVproErrorHandler.HandlerError(ex);
+                return "display:none";
+            }
+        }
         public string getDate(object News_PublishDate)
         {
             return fun.getDate(News_PublishDate);

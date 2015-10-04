@@ -78,6 +78,22 @@ namespace yeuthietkeweb.web.Usercontrols
                 return null;
             }
         }
+        protected bool DisplayLoad_Menu2(object cat_parent_id)
+        {
+            try
+            {
+                var list = per.Menu2(cat_parent_id);
+                if (list != null && list.ToList().Count > 0)
+                    return true;
+                else
+                    return false;
+            }
+            catch (Exception ex)
+            {
+                clsVproErrorHandler.HandlerError(ex);
+                return false;
+            }
+        }
         public string GetImage_Cat(object Cat_id, object Cat_img)
         {
             return fun.Getimages_Cat(Cat_id, Cat_img);
