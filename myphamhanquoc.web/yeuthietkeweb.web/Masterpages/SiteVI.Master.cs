@@ -11,6 +11,10 @@ namespace yeuthietkeweb.Master
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Request.Browser["IsMobileDevice"] == "true")
+            {
+                Response.Redirect("http://m.websitemypham.com");
+            }
             if (!IsPostBack) 
                 form1.Action = Request.RawUrl;
         }

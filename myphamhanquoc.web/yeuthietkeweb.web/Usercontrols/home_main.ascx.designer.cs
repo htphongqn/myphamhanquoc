@@ -49,15 +49,6 @@ namespace yeuthietkeweb.web.Usercontrols {
         protected global::System.Web.UI.WebControls.DropDownList ddlBrand;
         
         /// <summary>
-        /// rptProNoibat control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptProNoibat;
-        
-        /// <summary>
         /// rptProBanchay control.
         /// </summary>
         /// <remarks>
@@ -67,13 +58,13 @@ namespace yeuthietkeweb.web.Usercontrols {
         protected global::System.Web.UI.WebControls.Repeater rptProBanchay;
         
         /// <summary>
-        /// rptPromuanhieu control.
+        /// rptProNoibat control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptPromuanhieu;
+        protected global::System.Web.UI.WebControls.Repeater rptProNoibat;
         
         /// <summary>
         /// rptCatHome control.

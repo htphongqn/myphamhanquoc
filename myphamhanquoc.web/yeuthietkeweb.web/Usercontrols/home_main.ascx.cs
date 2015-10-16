@@ -24,7 +24,6 @@ namespace yeuthietkeweb.web.Usercontrols
                 loadBrand();
                 loadSpNoibat();
                 loadSpBanchay();
-                loadSpMuanhieu();
                 loadCatHome();
             }
         }
@@ -53,17 +52,6 @@ namespace yeuthietkeweb.web.Usercontrols
             }
         }
 
-        private void loadSpMuanhieu()
-        {
-            try
-            {
-                rptPromuanhieu.DataSource = index.Loadindex(1, 3, -1, 15);
-                rptPromuanhieu.DataBind();
-            }
-            catch
-            {
-            }
-        }
         #endregion
         #region load cathome
         private void loadCatHome()

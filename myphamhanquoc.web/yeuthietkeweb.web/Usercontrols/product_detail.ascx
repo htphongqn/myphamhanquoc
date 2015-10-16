@@ -11,14 +11,14 @@
           <div class="img_dtp"> 
             <asp:Repeater ID="Rpimg" runat="server">
                 <ItemTemplate>                    
-                    <a href="<%# GetImageT(Eval("NEWS_ID"),Eval("NEWS_IMG_IMAGE1")) %>" title="<%# Eval("NEWS_IMG_DESC") %>" class="imagezoom group_colorbox"> <img itemprop="image" src="<%# GetImageT(Eval("NEWS_ID"),Eval("NEWS_IMG_IMAGE1")) %>" id="image"  data-zoom-image="<%# GetImageT(Eval("NEWS_ID"),Eval("NEWS_IMG_IMAGE1")) %>" class="product-image-zoom img-responsive"/> </a>
+                    <a href="<%# GetImageT(Eval("NEWS_ID"),Eval("NEWS_IMG_IMAGE1")) %>" title="<%# Eval("NEWS_IMG_DESC") %>" class="main_img imagezoom"> <img itemprop="image" src="<%# GetImageT(Eval("NEWS_ID"),Eval("NEWS_IMG_IMAGE1")) %>" id="image"  data-zoom-image="<%# GetImageT(Eval("NEWS_ID"),Eval("NEWS_IMG_IMAGE1")) %>" class="product-image-zoom img-responsive"/> </a>
                 </ItemTemplate>
             </asp:Repeater>
             <div id="image-additional-carousel">
               <ul>                
                 <asp:Repeater ID="Rpimgsmall" runat="server">
                     <ItemTemplate>
-                        <li><a href="<%# GetImageT(Eval("NEWS_ID"),Eval("NEWS_IMG_IMAGE1")) %>" class="imagezoom group_colorbox" data-zoom-image="<%# GetImageT(Eval("NEWS_ID"),Eval("NEWS_IMG_IMAGE1")) %>" data-image="<%# GetImageT(Eval("NEWS_ID"),Eval("NEWS_IMG_IMAGE1")) %>" title="<%# Eval("NEWS_IMG_DESC") %>"> <img src="<%# GetImageT(Eval("NEWS_ID"),Eval("NEWS_IMG_IMAGE1")) %>" data-zoom-image="<%# GetImageT(Eval("NEWS_ID"),Eval("NEWS_IMG_IMAGE1")) %>" class="product-image-zoom img-responsive" /> </a></li>
+                        <li><a href="<%# GetImageT(Eval("NEWS_ID"),Eval("NEWS_IMG_IMAGE1")) %>" class="imagezoom" data-zoom-image="<%# GetImageT(Eval("NEWS_ID"),Eval("NEWS_IMG_IMAGE1")) %>" data-image="<%# GetImageT(Eval("NEWS_ID"),Eval("NEWS_IMG_IMAGE1")) %>" title="<%# Eval("NEWS_IMG_DESC") %>"> <img src="<%# GetImageT(Eval("NEWS_ID"),Eval("NEWS_IMG_IMAGE1")) %>" data-zoom-image="<%# GetImageT(Eval("NEWS_ID"),Eval("NEWS_IMG_IMAGE1")) %>" class="product-image-zoom img-responsive" /> </a></li>
                     </ItemTemplate>
                 </asp:Repeater>
               </ul>
@@ -124,7 +124,7 @@
                         <div class="product">
                         <div class="img_product"> <a href="<%# GetLink(Eval("NEWS_URL"),Eval("NEWS_SEO_URL"),Eval("CAT_SEO_URL")) %>" title=" <%#Eval("NEWS_TITLE") %>"> <img src="<%# GetImageT(Eval("NEWS_ID"),Eval("NEWS_IMAGE3")) %>" alt=" <%#Eval("NEWS_TITLE") %>"  /> </a></div>
                         <%#Getgiamgia(Eval("News_Price1"), Eval("News_Price2"))%>
-                        <h3 class="product_name"> <a href="<%# GetLink(Eval("NEWS_URL"),Eval("NEWS_SEO_URL"),Eval("CAT_SEO_URL")) %>" title=" <%#Eval("NEWS_TITLE") %>"><%#Eval("NEWS_TITLE") %></a></h3>
+                        <h2 class="product_name"> <a href="<%# GetLink(Eval("NEWS_URL"),Eval("NEWS_SEO_URL"),Eval("CAT_SEO_URL")) %>" title=" <%#Eval("NEWS_TITLE") %>"><%#Eval("NEWS_TITLE") %></a></h2>
                         <div class="price"><%#GetPrice2(Eval("News_Price1"), Eval("News_Price2"))%></div>
                         <div class="f_price"><%#GetPrice1(Eval("News_Price1"), Eval("News_Price2"))%></div>
                         <a href="<%# "../Pages/addtocart.aspx?id=" + Eval("NEWS_ID") %>" class="addtocart">Mua hàng</a>
@@ -149,8 +149,8 @@
                     <li>
                       <!--Start Product-->
                       <div class="product"> <a class="img_product" href="<%# GetLink(Eval("NEWS_URL"),Eval("NEWS_SEO_URL"),Eval("CAT_SEO_URL")) %>" title=" <%#Eval("NEWS_TITLE") %>"> <img src="<%# GetImageT(Eval("NEWS_ID"),Eval("NEWS_IMAGE3")) %>" alt=" <%#Eval("NEWS_TITLE") %>" ></a>
-                        <h3 class="product_name"> <a href="<%# GetLink(Eval("NEWS_URL"),Eval("NEWS_SEO_URL"),Eval("CAT_SEO_URL")) %>" title=" <%#Eval("NEWS_TITLE") %>"> <%#Eval("NEWS_TITLE") %></a></h3>
-                        <div class="info_price"> <span class="f_price"><del><%#GetPrice2(Eval("News_Price1"), Eval("News_Price2"))%></del></span> <span class="main_price"> <%#GetPrice1(Eval("News_Price1"), Eval("News_Price2"))%></span> </div>
+                        <h2 class="product_name"> <a href="<%# GetLink(Eval("NEWS_URL"),Eval("NEWS_SEO_URL"),Eval("CAT_SEO_URL")) %>" title=" <%#Eval("NEWS_TITLE") %>"> <%#Eval("NEWS_TITLE") %></a></h2>
+                        <div class="info_price"> <span class="price"><del><%#GetPrice2(Eval("News_Price1"), Eval("News_Price2"))%></del></span> <span class="f_price"> <%#GetPrice1(Eval("News_Price1"), Eval("News_Price2"))%></span> </div>
                       </div>
                       <!--End Product-->
                     </li>
