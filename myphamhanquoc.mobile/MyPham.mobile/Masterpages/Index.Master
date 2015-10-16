@@ -55,9 +55,9 @@
                 <!--CateProductsHome-->
                 <uc5:CateProductsHome ID="CateProductsHome1" runat="server" />
                 <!--End CateProductsHome-->
-                <!--CateProductsList-->
+                <div style="display: none"><!--CateProductsList-->
                 <uc6:CateProductsList ID="CateProductsList1" runat="server" />
-                <!--End CateProductsList-->
+                <!--End CateProductsList--></div>
             </div>
         </div>
         <div id="footer" class="cf">
@@ -76,8 +76,8 @@
                 <!--End AccessEmail-->
             </div>
         </div>
-        <div id="copyright" class="cf">Copyright © 2015 mypham. All rights reserved
-            <p> <a id="Lbdevice" class="change-device" href="javascript:__doPostBack(&#39;ctl00$Lbdevice&#39;,&#39;&#39;)">Chuyển sang sử dụng phiên bản desktop</a> </p>
+        <div id="copyright" class="cf">Copyright © 2015 Websitemypham.com. Bản quyền thuộc về Websitemypham.com. 
+            <p> <a id="Lbdevice" class="change-device" href="http://www.websitemypham.com">Chuyển sang sử dụng phiên bản desktop</a> </p>
         </div>
     </div>
     <!-- back to top -->

@@ -20,12 +20,14 @@ namespace MyPham.Usercontrols
             if (!string.IsNullOrEmpty(Utils.CStrDef(Session["User_ID"])))
             {
                 Dangnhap.Visible = false;
+                DangKy.Visible = false;
                 DangXuat1.Visible = true;
                 DangXuat2.Visible = true;
             }
             else
             {
                 Dangnhap.Visible = true;
+                DangKy.Visible = true;
                 DangXuat1.Visible = false;
                 DangXuat2.Visible = false;
             }
@@ -41,7 +43,7 @@ namespace MyPham.Usercontrols
         {
             try
             {
-                Rpmenu.DataSource = per.Loadmenu3(1, 2, 10);
+                Rpmenu.DataSource = per.Loadmenu3(1, 1, 10);
                 Rpmenu.DataBind();
             }
             catch (Exception ex)

@@ -349,7 +349,7 @@ namespace Controller
                         _sResult += "<a href='" + Utils.CStrDef(Nickname) + "' target='_blank' title='" + Utils.CStrDef(Description) + "' ><span class='icon_gplus'></span></a>";
                         break;
                     case 5:
-                        _sResult += "<a href='" + Utils.CStrDef(Nickname) + "' target='_blank' title='" + Utils.CStrDef(Description) + "' class='twitter'><i class='fa fa-twitter'></i></a>";
+                        _sResult += "<a href='" + Utils.CStrDef(Nickname) + "' target='_blank' title='" + Utils.CStrDef(Description) + "' ><span class='icon_twitter'></span></a>";
                         break;
                     case 6:
                         _sResult += "<a href='" + Utils.CStrDef(Nickname) + "' target='_blank' title='" + Utils.CStrDef(Description) + "'><span class='icon_youtube'></span></a>";

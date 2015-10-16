@@ -15,22 +15,22 @@ namespace MyPham.Usercontrols
         Propertity per = new Propertity();
         Function fun = new Function();
         List_product list_pro = new List_product();
+        Home index = new Home();
         #endregion
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                Load_Menu1();
+                loadSpBanchay();
             }
         }
 
-        #region Load data Menu
-
+        #region LoadData
         protected void Load_Menu1()
         {
             try
             {
-                Rpmenu1.DataSource = per.Loadmenu1(1, 1, 2, 10);
+                Rpmenu1.DataSource = per.Loadmenu1(1, 1, 1, 10);
                 Rpmenu1.DataBind();
             }
             catch (Exception ex)
@@ -52,6 +52,18 @@ namespace MyPham.Usercontrols
                 return null;
             }
 
+        }
+
+        private void loadSpBanchay()
+        {
+            try
+            {
+                rptProBanchay.DataSource = index.Loadindex(1, 2, -1, 15);
+                rptProBanchay.DataBind();
+            }
+            catch
+            {
+            }
         }
         #endregion
 
@@ -176,7 +188,7 @@ namespace MyPham.Usercontrols
 
         protected IQueryable sanpham(object cat_parent_id)
         {
-            var list = list_pro.sanpham(cat_parent_id, 16);
+            var list = list_pro.sanpham(cat_parent_id, 8);
             return list;
         }
     }

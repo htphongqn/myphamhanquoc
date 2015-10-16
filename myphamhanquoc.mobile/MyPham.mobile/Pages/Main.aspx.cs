@@ -33,13 +33,13 @@ namespace MyPham.Pages
                 UserControl prodetails = null;
                 //UserControl list_news = null;
                 //UserControl details_news = null;
-                //UserControl search = null;
+                UserControl search = null;
 
                 list_pro = Page.LoadControl("../Usercontrols/ListProject.ascx") as UserControl;
                 prodetails = Page.LoadControl("../Usercontrols/ProjectDetail.ascx") as UserControl;
                 //list_news = Page.LoadControl("../Usercontrols/ListNews.ascx") as UserControl;
                 //details_news = Page.LoadControl("../Usercontrols/NewsDetail.ascx") as UserControl;
-                //search = Page.LoadControl("../Usercontrols/Search.ascx") as UserControl;
+                search = Page.LoadControl("../Usercontrols/SearchResult.ascx") as UserControl;
                 int _type = Utils.CIntDef(Request["type"]);
                 string _catSeoUrl = Utils.CStrDef(Request.QueryString["curl"]);
                 string _newsSeoUrl = Utils.CStrDef(Request.QueryString["purl"]);
@@ -64,9 +64,9 @@ namespace MyPham.Pages
                         //}
                         break;
                     case 5:
-                        //phdMain.Controls.Add(search);
-                        //HtmlHead header = base.Header;
-                        //header.Title = "Tìm kiếm";
+                        phdMain.Controls.Add(search);
+                        HtmlHead header = base.Header;
+                        header.Title = "Tìm kiếm";
                         break;
                     case 6:
                         getsession.LoadNewsInfo(_newsSeoUrl);

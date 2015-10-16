@@ -6,9 +6,7 @@
 <div class="path"> <a href="/">Trang chủ</a> &gt; <a href="#" class="aLink1">Đăng nhập</a> </div>
 <!--Register Page-->
 <div class="box" id="account">
-<div class="box_Tab">
-    <h1 class="tt_tab"><span>Đăng ký</span></h1>
-</div>
+<h1 class="box_Tab">Đăng ký</h1>
 <!--Form Login-->
 <div class="box_ct regis_form form_web">
     <div class="row_account">
@@ -50,10 +48,10 @@
         <script type="text/javascript"  language="Javascript">
             function Catpc() {
                 var img = document.getElementById("icp");
-                img.src = "/Resources/captchr.ashx?query=" + Math.random();
+                img.src = "/Pages/captchr.ashx?query=" + Math.random();
             }
             </script>                    
-            <img id="icp" src='/Resources/captchr.ashx?query=<%= querys() %>' alt="Mã  an toàn" style="width:170px;"/>
+            <img id="icp" src='/Pages/captchr.ashx?query=<%= querys() %>' alt="Mã  an toàn" style="width:170px;"/>
             <a href="javascript:void(0)" onclick="javascript:Catpc();"><img title="Refresh" src="/Resources/Images/reloadpaf.png" /></a>
     </div>
     <div class="row_account text">

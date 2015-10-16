@@ -8,7 +8,7 @@ using vpro.functions;
 using GiaNguyen.Components;
 using Controller;
 
-namespace yeuthietkeweb.UIs
+namespace MyPham.UIs
 {
     public partial class SearchResult : System.Web.UI.UserControl
     {
@@ -24,7 +24,7 @@ namespace yeuthietkeweb.UIs
         protected void Page_Load(object sender, EventArgs e)
         {
             _page = Utils.CIntDef(Request.QueryString["page"]);
-            _txt = Utils.CStrDef(Request.QueryString["keyword"]);
+            _txt = Utils.CStrDef(Request.QueryString["key"]);
             if (!IsPostBack)
             {
                 Load_list();
@@ -46,21 +46,20 @@ namespace yeuthietkeweb.UIs
                     if (!_txt.Contains("%"))
                         _txt = "%" + _txt + "%";
                 }
-                var _vNews = search.Load_search_result(_txt, -1);
+                var _vNews = search.Load_search_resultM(_txt, 1, 0, 10);
                 if (_vNews.ToList().Count > 0)
                 {
                     if (_page != 0)
                     {
 
-                        Rplistnews.DataSource = _vNews.Skip(_sotin * _page - _sotin).Take(_sotin);
-                        Rplistnews.DataBind();
+                        Rplistpro.DataSource = _vNews.Skip(_sotin * _page - _sotin).Take(_sotin);
+                        Rplistpro.DataBind();
                     }
                     else
                     {
-                        Rplistnews.DataSource = _vNews.Take(_sotin);
-                        Rplistnews.DataBind();
+                        Rplistpro.DataSource = _vNews.Take(_sotin);
+                        Rplistpro.DataBind();
                     }
-                    ltrPage.Text = change.result(_vNews.ToList().Count, _sotin, _txt, 0, _page, 2);
                 }
 
 
@@ -71,18 +70,18 @@ namespace yeuthietkeweb.UIs
                 clsVproErrorHandler.HandlerError(ex);
             }
         }
-
-        public string GetPrice(object News_Price1)
+        public int getCountList()
         {
-            try
-            {
-                return fun.Getprice(News_Price1);
-            }
-            catch (Exception ex)
-            {
-                clsVproErrorHandler.HandlerError(ex);
-                return null;
-            }
+            var list = search.Load_search_resultM(_txt, 1, 0, 999);
+            return list.Count;
+        }
+        public int getId()
+        {
+            return 0;
+        }
+        public string getKey()
+        {
+            return _txt;
         }
         public string GetLink(object News_Url, object News_Seo_Url, object cat_seo)
         {
@@ -109,13 +108,64 @@ namespace yeuthietkeweb.UIs
                 return null;
             }
         }
-        public string getDate(object News_PublishDate)
+        public string getdate(object date)
         {
-            return fun.getDate(News_PublishDate);
+            return fun.getDate(date);
         }
-        public string Getprice(object price)
+        public string GetPrice(object News_Price1, object News_Price2)
         {
-            return fun.Getprice(price);
+            try
+            {
+                decimal _dPrice1 = Utils.CDecDef(News_Price1);
+                decimal _dPrice2 = Utils.CDecDef(News_Price2);
+                if (_dPrice1 == 0)
+                {
+                    return "Liên hệ";
+                }
+                else
+                {
+                    if (_dPrice2 != 0)
+                    {
+                        return fun.Getprice(_dPrice2);
+                    }
+                    else
+                    {
+                        return fun.Getprice(_dPrice1);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                clsVproErrorHandler.HandlerError(ex);
+                return null;
+            }
+        }
+        public string hienthigia(object gia1, object gia2)
+        {
+            int giam = tinh_phantram(gia1, gia2);
+            if (giam > 0)
+            {
+                return "<div class='reduce'>-" + giam + "%</div>";
+            }
+            else
+                return "";
+
+        }
+        public int tinh_phantram(object News_Price1, object News_Price2)
+        {
+            if (Utils.CIntDef(News_Price1) == 0 || Utils.CIntDef(News_Price2) == 0)
+            {
+                return 0;
+            }
+            else
+            {
+                decimal _dPrice1 = Utils.CDecDef(News_Price1);
+                decimal _dPrice2 = Utils.CDecDef(News_Price2);
+                decimal s = (_dPrice1 * 100) / _dPrice2;
+                s = 100 - s;
+                int d = Utils.CIntDef(s);
+                return d;
+            }
         }
         #endregion
         protected void Rplistnews_ItemCommand(object source, RepeaterCommandEventArgs e)

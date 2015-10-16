@@ -28,7 +28,7 @@ namespace MyPham.Pages
         protected void Page_Load(object sender, EventArgs e)
         {
             _iUserID = Utils.CIntDef(Session["USER_ID"]);
-            if (_iUserID == 0) Response.Redirect("/");
+            //if (_iUserID == 0) Response.Redirect("/");
             var _configs = cf.Config_meta();
 
             if (_configs.ToList().Count > 0)

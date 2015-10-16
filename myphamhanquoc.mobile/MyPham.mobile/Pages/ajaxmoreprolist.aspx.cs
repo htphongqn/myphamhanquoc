@@ -32,7 +32,6 @@ namespace MyPham.Pages
 
             _page = Utils.CIntDef(Request.QueryString["page"]);
             _txt = Utils.CStrDef(Request.QueryString["key"]);
-            _cat = Utils.CIntDef(Request.QueryString["cat"]);
             if (!IsPostBack)
             {
                 switch (_code)
@@ -75,7 +74,7 @@ namespace MyPham.Pages
                     if (!_txt.Contains("%"))
                         _txt = "%" + _txt + "%";
                 }
-                var _vNews = search.Load_search_resultM(_txt, _cat, 1, _skip, 10);
+                var _vNews = search.Load_search_resultM(_txt, 1, _skip, 10);
                 if (_vNews.ToList().Count > 0)
                 {
                     Rplistpro.DataSource = _vNews;

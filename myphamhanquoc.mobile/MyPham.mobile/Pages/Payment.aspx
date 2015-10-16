@@ -6,9 +6,7 @@
     <div class="path"> <a href="/">Trang chủ</a> &gt; <a class="aLink1" href="#">Thông tin giao hàng</a> </div>
       <!--Step 2-->
       <div class="box">
-        <div class="box_Tab">
-          <h1 class="tt_tab"><span>Thông tin giao hàng</span></h1>
-        </div>
+        <h1 class="box_Tab">Thông tin giao hàng</h1>       
         <div class="box_ct form_web" id="pay_form">
           <!--Section-->
           <div class="section">

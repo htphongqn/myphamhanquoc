@@ -6,9 +6,7 @@
 <div class="path"> <a href="/">Trang chủ</a> &gt; <a href="#" class="aLink1">Đăng nhập</a> </div>
 <!--Login Page-->
 <div class="box" id="account">
-<div class="box_Tab">
-    <h1 class="tt_tab"><span>Đăng nhập</span></h1>
-</div>
+<h1 class="box_Tab">Đăng nhập</h1>
 <!--Form Login-->
 <div class="box_ct login_form form_web">
     <div class="row_account">
