@@ -98,5 +98,60 @@ namespace Controller
             }
             return false;
         }
+
+        public List<ESHOP_CONFIG> config()
+        {
+            try
+            {
+                var _cus = db.GetTable<ESHOP_CONFIG>().OrderBy(c => c.CONFIG_ID).Take(1);
+                if (_cus != null)
+                    return _cus.ToList();
+                return null;
+            }
+            catch (Exception ex)
+            {
+                clsVproErrorHandler.HandlerError(ex);
+                return null;
+            }
+        }
+        public List<ESHOP_CUSTOMER> loadUser(int id)
+        {
+            try
+            {
+                var _cus = db.GetTable<ESHOP_CUSTOMER>().Where(a => a.CUSTOMER_ID == id);
+                if (_cus != null)
+                    return _cus.ToList();
+                return null;
+            }
+            catch (Exception ex)
+            {
+                clsVproErrorHandler.HandlerError(ex);
+                return null;
+            }
+        }
+        public bool updateUserInfo(int id, string name, string phone, string add)
+        {
+            try
+            {
+                var _vUser = db.GetTable<ESHOP_CUSTOMER>().Where(a => a.CUSTOMER_ID == id);
+                if (_vUser.ToList().Count > 0)
+                {
+                    foreach (var i in _vUser)
+                    {
+                        i.CUSTOMER_FULLNAME = name;
+                        i.CUSTOMER_PHONE1 = phone;
+                        i.CUSTOMER_ADDRESS = add;
+                        db.SubmitChanges();
+                    }
+                    return true;
+                }
+                else { return false; }
+            }
+            catch (Exception ex)
+            {
+                clsVproErrorHandler.HandlerError(ex);
+                return false;
+            }
+        }
     }
 }

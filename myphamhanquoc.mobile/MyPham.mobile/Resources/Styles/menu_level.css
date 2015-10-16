@@ -1,3 +1,28 @@
+/** HOME CATEGORY **/
+.cate_bot{overflow: hidden;padding: 5px;box-sizing: border-box;}
+.cate_bot li {background: white;display: block;overflow: hidden;-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;float: left;width: 49%;padding: 10px;margin: 0 1% 5px 0;
+	-webkit-box-shadow: 0 1px 2px #d7d7d7;
+	-moz-box-shadow: 0 1px 2px #d7d7d7;
+	box-shadow: 0 1px 2px #d7d7d7;
+	border: 1px solid #d7d7d7;
+}
+.cate_bot li:nth-child(2n){margin: 0 0 5px 1%;}
+.cate_bot h3 {display: table-cell; height: 70px;color: #505561; vertical-align: middle; font-weight: 500}
+.cate_bot .ico_cate {
+	float: right;     
+	display: inline-block;
+    vertical-align: middle;
+}
+.cate_bot .ico_cate img {
+    width: 70px;
+    height: 70px;
+}
+@media screen and (min-width: 640px) {
+.cate_bot li {
+    width: 23.5%;
+}
 /*Menu level*/
 #all_categories {
 	padding: 0

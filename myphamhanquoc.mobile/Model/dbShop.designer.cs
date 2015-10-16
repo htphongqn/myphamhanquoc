@@ -20,9 +20,9 @@ namespace Model
 	using System.Linq.Expressions;
 	using System.ComponentModel;
 	using System;
-	
-	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="myphamhanquoc")]
+
+
+    [global::System.Data.Linq.Mapping.DatabaseAttribute(Name = "web93ccf_db")]
 	public partial class dbShopDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -161,8 +161,8 @@ namespace Model
     partial void DeleteORDER_CONTACT(ORDER_CONTACT instance);
     #endregion
 		
-		public dbShopDataContext() : 
-				base(global::Model.Properties.Settings.Default.myphamhanquocConnectionString, mappingSource)
+		public dbShopDataContext() :
+        base(global::Model.Properties.Settings.Default.dbShop_ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}

@@ -40,6 +40,15 @@ namespace MyPham.Usercontrols {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl DangXuat1;
         
         /// <summary>
+        /// DangKy control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl DangKy;
+        
+        /// <summary>
         /// DangXuat2 control.
         /// </summary>
         /// <remarks>
