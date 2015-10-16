@@ -22,18 +22,18 @@ namespace yeuthietkeweb.web.Usercontrols
                 Load_ads();
                 Load_Menu1();
                 loadBrand();
-                loadSpNoibat();
+                loadSpKhuyenmai();
                 loadSpBanchay();
                 loadCatHome();
             }
         }
         #region producthome
-        private void loadSpNoibat()
+        private void loadSpKhuyenmai()
         {
             try
             {
-                rptProNoibat.DataSource = index.Loadindex(1, 1, -1, 15);
-                rptProNoibat.DataBind();
+                rptProKhuyenmai.DataSource = index.Loadindex(1, 1, -1, 15);
+                rptProKhuyenmai.DataBind();
             }
             catch
             {

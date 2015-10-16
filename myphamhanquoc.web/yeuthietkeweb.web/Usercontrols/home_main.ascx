@@ -92,7 +92,7 @@
           <!--Slide Products-->
           <div class="sl_pro slide_tab_Pro">
             <ul>
-              <asp:Repeater ID="rptProNoibat" runat="server">
+              <asp:Repeater ID="rptProKhuyenmai" runat="server">
                 <ItemTemplate>
                   <li>
                     <div class="product">

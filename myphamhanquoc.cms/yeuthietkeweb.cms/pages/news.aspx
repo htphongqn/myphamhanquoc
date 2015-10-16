@@ -185,9 +185,8 @@
                         <label>Hiển thị trang chủ</label>
                         <asp:RadioButtonList ID="rblNewsPeriod" runat="server" RepeatColumns="4" 
                             RepeatDirection="Horizontal">
-                            <asp:ListItem Text="Nổi bật" Value="1"></asp:ListItem>   
-                            <asp:ListItem Text="Bán chạy" Value="2"></asp:ListItem> 
-                            <asp:ListItem Text="Mua nhiều" Value="3"></asp:ListItem>
+                            <asp:ListItem Text="Khuyến mãi" Value="1"></asp:ListItem>   
+                            <asp:ListItem Text="Bán chạy" Value="2"></asp:ListItem>
                             <asp:ListItem Selected="True" Text="Khác" Value="20"></asp:ListItem>  
                         </asp:RadioButtonList>
                     </div>

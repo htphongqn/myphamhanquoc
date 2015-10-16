@@ -58,13 +58,13 @@ namespace yeuthietkeweb.web.Usercontrols {
         protected global::System.Web.UI.WebControls.Repeater rptProBanchay;
         
         /// <summary>
-        /// rptProNoibat control.
+        /// rptProKhuyenmai control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptProNoibat;
+        protected global::System.Web.UI.WebControls.Repeater rptProKhuyenmai;
         
         /// <summary>
         /// rptCatHome control.
