@@ -27,7 +27,7 @@
                                     <label>Phone/URL</label>
                                     <input type="text" name="txtName" id="txtName" runat="server" class="form-control"/>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group" style="display:none">
                                     <label>Nick skype</label>
                                     <input type="text" name="txtName" id="txtSkype" runat="server" class="form-control"/>
                                 </div>
@@ -36,7 +36,7 @@
                                     <asp:RadioButtonList ID="rblType" runat="server" RepeatColumns="6" 
                                         RepeatDirection="Horizontal">
                                         <asp:ListItem Selected="True" Value="0" Text="Hotline"></asp:ListItem>
-                                        <asp:ListItem Value="7" Text="Mua hàng"></asp:ListItem>
+                                        <%--<asp:ListItem Value="7" Text="Mua hàng"></asp:ListItem>--%>
                                         <%--<asp:ListItem Value="8" Text="Mail"></asp:ListItem>--%>
                                         <%--<asp:ListItem Value="1" Text="Yahoo"></asp:ListItem>
                                         <asp:ListItem Value="2" Text="Skype"></asp:ListItem> --%>                      

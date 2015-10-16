@@ -7,5 +7,5 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="/pages/default.aspx">CMS V1.0</a>
+    <a class="navbar-brand" href="default.aspx">CMS V1.0</a>
 </div>

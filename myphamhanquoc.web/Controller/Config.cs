@@ -58,11 +58,30 @@ namespace Controller
                 CONTACT_PUBLISHDATE = DateTime.Now,
                 CONTACT_ADDRESS = address,
                 CONTACT_PHONE = phone,
-                CONTACT_TYPE = 0
+                CONTACT_TYPE = 0,
+                
             };
             db.ESHOP_CONTACTs.InsertOnSubmit(add);
             db.SubmitChanges();
             return true;
+        }
+        public int Insert_contact(string name, string email, string title, string content, string address, string phone, string att)
+        {
+            ESHOP_CONTACT add = new ESHOP_CONTACT
+            {
+                CONTACT_NAME = name,
+                CONTACT_EMAIL = email,
+                CONTACT_TITLE = title,
+                CONTACT_CONTENT = content,
+                CONTACT_PUBLISHDATE = DateTime.Now,
+                CONTACT_ADDRESS = address,
+                CONTACT_PHONE = phone,
+                CONTACT_TYPE = 1,
+                CONTACT_ATT1 = att
+            };
+            db.ESHOP_CONTACTs.InsertOnSubmit(add);
+            db.SubmitChanges();
+            return add.CONTACT_ID;
         }
         //Config mail
         public List<ESHOP_EMAIL> Getemail(int stt)

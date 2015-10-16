@@ -172,6 +172,7 @@ namespace yeuthietkeweb.UIs
                     Show_File_HTML();
                     Lbtitle_details.Text = list[0].NEWS_TITLE;
                     Lbdesc_details.Text = setBr(list[0].NEWS_DESC);
+                    lbTinhtrang.Text = list[0].NEWS_FIELD1 == "1" ? "Còn hàng" : "Hết hàng";
                     var brand = per.GetBrandById(Utils.CIntDef(list[0].UNIT_ID1));
                     if(brand != null)
                         lbThuonghieu.Text = "<a href='/thuong-hieu.html?thuonghieu=" + brand.ID + "' style='color: #d32571'>" + brand.NAME + "</a>";

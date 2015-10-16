@@ -18,7 +18,7 @@
     <link type="text/css" href="/Resources/Styles/jquery.jscrollpane.css" rel="stylesheet" media="all" />
     <link rel="stylesheet" href="/Resources/Styles/jquery.bxslider.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="/Resources/Styles/detail_product.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="/Resources/Styles/colorbox.css" type="text/css" />
+    <link rel="stylesheet" href="/Resources/Styles/jquery.fancybox.css" type="text/css" />
     <link rel="stylesheet" href="/Resources/Styles/contact.css" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>   
@@ -60,7 +60,7 @@
       </asp:ContentPlaceHolder>
       <uc1:Footer ID="Footer1" runat="server" />
       <div class="cf"> </div>
-      <div class="copyright"> Copyright &copy; 2015 By Amazona.vn - Bản quyền thuộc về Mỹ phẩm.</div>
+      <div class="copyright">Copyright © 2015 Websitemypham.com. Bản quyền thuộc về Websitemypham.com.</div>
     </div>
     <!--End Page-->
     <!--Support-->
@@ -71,7 +71,7 @@
     <script type="text/javascript" src="/Resources/Scripts/jquery.carouFredSel-5.6.0-packed.js"></script>
     <script type="text/javascript" src="/Resources/Scripts/jquery.slimscroll.js"></script>
     <script type="text/javascript" src="/Resources/Scripts/elevatezoom-min.js"></script>
-    <script type="text/javascript" src="/Resources/Scripts/jquery.colorbox.js"></script>
+    <script type="text/javascript" src="/Resources/Scripts/jquery.fancybox.js"></script>
     <script type="text/javascript" src="/Resources/Scripts/jquery.sticky.js"></script>
     <script type="text/javascript" src="/Resources/Scripts/all_scripts.js"></script>
     </form>

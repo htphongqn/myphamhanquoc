@@ -319,6 +319,15 @@ namespace yeuthietkeweb.cms.pages {
         protected global::System.Web.UI.WebControls.RadioButtonList rblShowDetail;
         
         /// <summary>
+        /// rdTinhtrang control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList rdTinhtrang;
+        
+        /// <summary>
         /// div_price control.
         /// </summary>
         /// <remarks>
