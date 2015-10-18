@@ -1,5 +1,52 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master/Site.Master" AutoEventWireup="true" CodeBehind="news_category.aspx.cs" Inherits="yeuthietkeweb.cms.pages.news_category" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<script language="javascript">
+				<!--
+    function ToggleAll(e, action) {
+        if (e.checked) {
+            CheckAll();
+        }
+        else {
+            ClearAll();
+        }
+    }
+
+    function CheckAll() {
+        var ml = document.forms[0];
+        var len = ml.elements.length;
+        for (var i = 1; i < len; i++) {
+            var e = ml.elements[i];
+
+            if (e.name.toString().indexOf("chkSelect") > 0)
+                e.checked = true;
+        }
+        ml.MainContent_GridItemList_toggleSelect.checked = true;
+    }
+
+    function ClearAll() {
+        var ml = document.forms[0];
+        var len = ml.elements.length;
+        for (var i = 1; i < len; i++) {
+            var e = ml.elements[i];
+            if (e.name.toString().indexOf("chkSelect") > 0)
+                e.checked = false;
+        }
+        ml.MainContent_GridItemList_toggleSelect.checked = false;
+    }
+
+    function selectChange() {
+        var radioButtons = document.getElementsByName("rblType");
+        for (var x = 0; x < radioButtons.length; x++) {
+            if (radioButtons[x].checked) {
+                if (radioButtons[x].value == 1)
+                { CheckAll(); }
+            }
+        }
+
+    }
+				    
+				// -->
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentMain" runat="server">
 <div class="row">
@@ -30,7 +77,10 @@
                             <thead>
                                 <tr>
                                     <th class="center">STT</th>
-                                    <th class="center">#</th>
+                                    <th class="center">
+                                        <input type="checkbox" id="toggleSelect" runat="server" onclick="javascript: ToggleAll(this,0);"
+                                            name="toggleSign">
+                                    </th>
                                     <th>Chuyên mục</th>
                                 </tr>
                             </thead>
@@ -73,7 +123,10 @@
      <script>
          $(document).ready(function () {
              $('#dataTables-example').DataTable({
-                 responsive: true
+                 responsive: true,
+                 "paging": false,
+                 "ordering": false,
+                 "info": false
              });
          });
     </script>

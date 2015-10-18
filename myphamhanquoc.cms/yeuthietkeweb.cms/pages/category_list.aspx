@@ -166,20 +166,23 @@
          $(document).ready(function () {
              $('#dataTables-example').DataTable({
                  responsive: true,
-                 aoColumnDefs: [
-                  {
-                      bSortable: false,
-                      aTargets: [1]
-                  },
-                  {
-                      bSortable: false,
-                      aTargets: [6]
-                  },
-                  {
-                      bSortable: false,
-                      aTargets: [7]
-                  }
-                ]
+                 "paging": false,
+                 "ordering": false,
+                 "info": false
+                 //                 aoColumnDefs: [
+                 //                  {
+                 //                      bSortable: false,
+                 //                      aTargets: [1]
+                 //                  },
+                 //                  {
+                 //                      bSortable: false,
+                 //                      aTargets: [6]
+                 //                  },
+                 //                  {
+                 //                      bSortable: false,
+                 //                      aTargets: [7]
+                 //                  }
+                 //                ]
              });
          });
     </script>
