@@ -247,11 +247,14 @@ namespace yeuthietkeweb.Pages
                 {
                     _sEmailCC = _ccMail.ToList()[0].EMAIL_TO;
                 }
-                if (pay.Payment_cart_rs(_iUserID, _guid, rscart.Total_Amount(_guid), _sEmail, _sName, _sPhone, _sAddress, _iPaymentID, _hinhtuc, _sDesc, _webname, _url))
+                int orderIdF= pay.Payment_cart_rs(_iUserID, _guid, rscart.Total_Amount(_guid), _sEmail, _sName, _sPhone, _sAddress, _iPaymentID, _hinhtuc, _sDesc, _webname, _url);
+                if (orderIdF > 0)
                 {
                     sm.SendEmailSMTP("Thông báo: Bạn đã đặt hàng thành công", _sEmail, _sEmailCC, "", pay._Mailbody, true, false);
                     pay.Delete_basket(_guid);
-                    Response.Write("<script LANGUAGE='JavaScript' >alert('Thông báo: Xác nhận thành công. Cảm ơn bạn đã mua hàng tại cửa hàng của chúng tôi!');document.location='" + ResolveClientUrl("/trang-chu.html") + "';</script>");
+                    //Response.Write("<script LANGUAGE='JavaScript' >alert('Thông báo: Xác nhận thành công. Cảm ơn bạn đã mua hàng tại cửa hàng của chúng tôi!');document.location='" + ResolveClientUrl("/trang-chu.html") + "';</script>");
+                    Session["orderIdF"] = orderIdF;
+                    Response.Write("<script LANGUAGE='JavaScript' >document.location='" + ResolveClientUrl("/thanks.html") + "';</script>");
                 }
                 else Response.Write("<script LANGUAGE='JavaScript' >alert('Lỗi!');document.location='" + ResolveClientUrl("/trang-chu.html") + "';</script>");
 

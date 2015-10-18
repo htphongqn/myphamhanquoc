@@ -67,13 +67,13 @@
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Chưa nhập mã bảo vệ!"
                                     ControlToValidate="txtCapcha" Display="None" ForeColor="Red" ValidationGroup="G40">*</asp:RequiredFieldValidator>
                     <script type="text/javascript"  language="Javascript">
-                        function Catpc() {
-                            var img = document.getElementById("icp");
+                        function CatpcContact() {
+                            var img = document.getElementById("icpContact");
                             img.src = "/Pages/captchr.ashx?query=" + Math.random();
                         }
                     </script>                    
-                    <img style="float: left; margin-left: 10px; width: 100px; height:32px" id="icp" src='/Pages/captchr.ashx?query=<%= querys() %>' alt="Mã  an toàn" />
-                    <a href="javascript:void(0)" onclick="javascript:Catpc();"><img title="Refresh" src="/Resources/images/reloadpaf.png" /></a>
+                    <img style="float: left; margin-left: 10px; width: 100px; height:32px" id="icpContact" src='/Pages/captchr.ashx?query=<%= querys() %>' alt="Mã  an toàn" />
+                    <a href="javascript:void(0)" onclick="javascript:CatpcContact();"><img title="Refresh" src="/Resources/images/reloadpaf.png" /></a>
                 </div>
             </div>
             <div class="row_account row_button">
