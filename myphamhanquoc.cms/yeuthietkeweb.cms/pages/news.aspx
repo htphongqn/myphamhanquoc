@@ -197,6 +197,13 @@
                             <asp:ListItem Selected="True" Text="Có" Value="1"></asp:ListItem>
                         </asp:RadioButtonList>
                     </div>
+                    <div class="form-group">
+                        <label>Tình trạng</label>
+                        <asp:RadioButtonList ID="rdTinhtrang" runat="server" RepeatColumns="5">
+                            <asp:ListItem Text="Hết hàng" Value="0"></asp:ListItem>
+                            <asp:ListItem Selected="True" Text="Còn hàng" Value="1"></asp:ListItem>
+                        </asp:RadioButtonList>
+                    </div>
                 </div>
             </div>
             <div class="panel panel-default" id="div_price" runat="server">

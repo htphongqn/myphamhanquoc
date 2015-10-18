@@ -272,7 +272,7 @@ namespace yeuthietkeweb.cms.pages
                     rblNewsType.SelectedValue = Utils.CStrDef(G_info.ToList()[0].n.NEWS_TYPE);
                     rblStatus.SelectedValue = Utils.CStrDef(G_info.ToList()[0].n.NEWS_SHOWTYPE);
                     rblNewsPeriod.SelectedValue = Utils.CStrDef(G_info.ToList()[0].n.NEWS_PERIOD);
-                    //rblField1.SelectedValue = Utils.CStrDef(G_info.ToList()[0].n.NEWS_FIELD1);
+                    rdTinhtrang.SelectedValue = Utils.CStrDef(G_info.ToList()[0].n.NEWS_FIELD1);
                     //txtWebsite.Value = Utils.CStrDef(G_info.ToList()[0].n.NEWS_FIELD2);
                     rblFeefback.SelectedValue = Utils.CStrDef(G_info.ToList()[0].n.NEWS_FEEDBACKTYPE);
                     txtOrder.Value = Utils.CStrDef(G_info.ToList()[0].n.NEWS_ORDER, "1");
@@ -445,10 +445,10 @@ namespace yeuthietkeweb.cms.pages
                         news_insert.NEWS_SEO_DESC = txtSeoDescription.Value;
 
                         news_insert.UNIT_ID1 = Utils.CIntDef(ddlBrand.SelectedValue);
+                        news_insert.NEWS_FIELD1 = Utils.CStrDef(rdTinhtrang.SelectedValue);
                         news_insert.NEWS_TYPE = Utils.CIntDef(rblNewsType.SelectedValue);
                         news_insert.NEWS_SHOWTYPE = Utils.CIntDef(rblStatus.SelectedValue);
-                        news_insert.NEWS_PERIOD = Utils.CIntDef(rblNewsPeriod.SelectedValue);
-                        //news_insert.NEWS_FIELD1 = Utils.CStrDef(rblField1.SelectedValue);
+                        news_insert.NEWS_PERIOD = Utils.CIntDef(rblNewsPeriod.SelectedValue);                        
                         //news_insert.NEWS_FIELD2 = Utils.CStrDef(txtWebsite.Value);
                         news_insert.NEWS_SHOWINDETAIL = Utils.CIntDef(rblShowDetail.SelectedValue);
                         news_insert.NEWS_FEEDBACKTYPE = Utils.CIntDef(rblFeefback.SelectedValue);
@@ -500,7 +500,6 @@ namespace yeuthietkeweb.cms.pages
                             c_update.ToList()[0].NEWS_TYPE = Utils.CIntDef(rblNewsType.SelectedValue);
                             c_update.ToList()[0].NEWS_SHOWTYPE = Utils.CIntDef(rblStatus.SelectedValue);
                             c_update.ToList()[0].NEWS_PERIOD = Utils.CIntDef(rblNewsPeriod.SelectedValue);
-                            //c_update.ToList()[0].NEWS_FIELD1 = Utils.CStrDef(rblField1.SelectedValue);
                             //c_update.ToList()[0].NEWS_FIELD2 = Utils.CStrDef(txtWebsite.Value);
                             c_update.ToList()[0].NEWS_SHOWINDETAIL = Utils.CIntDef(rblShowDetail.SelectedValue);
                             c_update.ToList()[0].NEWS_FEEDBACKTYPE = Utils.CIntDef(rblFeefback.SelectedValue);
@@ -508,6 +507,7 @@ namespace yeuthietkeweb.cms.pages
                             c_update.ToList()[0].NEWS_ORDER = Utils.CIntDef(txtOrder.Value);
                             c_update.ToList()[0].NEWS_ORDER_PERIOD = Utils.CIntDef(txtOrderPeriod.Value);
                             c_update.ToList()[0].UNIT_ID1 = Utils.CIntDef(ddlBrand.SelectedValue);
+                            c_update.ToList()[0].NEWS_FIELD1 = Utils.CStrDef(rdTinhtrang.SelectedValue);
                             //c_update.ToList()[0].UNIT_ID2 = Utils.CIntDef(ddlUnit2.SelectedValue);
                             c_update.ToList()[0].NEWS_PRICE1 = Utils.CDecDef(txtPrice.Value.Replace(",", ""));
                             c_update.ToList()[0].NEWS_PRICE2 = Utils.CDecDef(txtPriceNew.Value.Replace(",", ""));
@@ -596,11 +596,11 @@ namespace yeuthietkeweb.cms.pages
                             news_insert.NEWS_SEO_DESC = txtSeoDescription.Value;
 
                             news_insert.UNIT_ID1 = Utils.CIntDef(ddlBrand.SelectedValue);
+                            news_insert.NEWS_FIELD1 = Utils.CStrDef(rdTinhtrang.SelectedValue);
 
                             news_insert.NEWS_TYPE = Utils.CIntDef(rblNewsType.SelectedValue);
                             news_insert.NEWS_SHOWTYPE = Utils.CIntDef(rblStatus.SelectedValue);
                             news_insert.NEWS_PERIOD = Utils.CIntDef(rblNewsPeriod.SelectedValue);
-                            //news_insert.NEWS_FIELD1 = Utils.CStrDef(rblField1.SelectedValue);
                             //news_insert.NEWS_FIELD2 = Utils.CStrDef(txtWebsite.Value);
                             news_insert.NEWS_SHOWINDETAIL = Utils.CIntDef(rblShowDetail.SelectedValue);
                             news_insert.NEWS_FEEDBACKTYPE = Utils.CIntDef(rblFeefback.SelectedValue);
@@ -659,7 +659,6 @@ namespace yeuthietkeweb.cms.pages
                                 c_update.ToList()[0].NEWS_TYPE = Utils.CIntDef(rblNewsType.SelectedValue);
                                 c_update.ToList()[0].NEWS_SHOWTYPE = Utils.CIntDef(rblStatus.SelectedValue);
                                 c_update.ToList()[0].NEWS_PERIOD = Utils.CIntDef(rblNewsPeriod.SelectedValue);
-                                //c_update.ToList()[0].NEWS_FIELD1 = Utils.CStrDef(rblField1.SelectedValue);
                                 //c_update.ToList()[0].NEWS_FIELD2 = Utils.CStrDef(txtWebsite.Value);
                                 c_update.ToList()[0].NEWS_SHOWINDETAIL = Utils.CIntDef(rblShowDetail.SelectedValue);
                                 c_update.ToList()[0].NEWS_FEEDBACKTYPE = Utils.CIntDef(rblFeefback.SelectedValue);
@@ -667,6 +666,7 @@ namespace yeuthietkeweb.cms.pages
                                 c_update.ToList()[0].NEWS_ORDER = Utils.CIntDef(txtOrder.Value);
                                 c_update.ToList()[0].NEWS_ORDER_PERIOD = Utils.CIntDef(txtOrderPeriod.Value);
                                 c_update.ToList()[0].UNIT_ID1 = Utils.CIntDef(ddlBrand.SelectedValue);
+                                c_update.ToList()[0].NEWS_FIELD1 = Utils.CStrDef(rdTinhtrang.SelectedValue);
                                 c_update.ToList()[0].NEWS_PRICE1 = Utils.CDecDef(txtPrice.Value.Replace(",", ""));
                                 c_update.ToList()[0].NEWS_PRICE2 = Utils.CDecDef(txtPriceNew.Value.Replace(",", ""));
                                 //c_update.ToList()[0].NEWS_PRICE2 = Utils.CDecDef(txtgiamgia.Value);

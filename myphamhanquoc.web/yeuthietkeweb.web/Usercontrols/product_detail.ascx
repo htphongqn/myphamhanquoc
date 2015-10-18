@@ -33,7 +33,7 @@
             <div class="dtp_row_infoP"> <span id="ContentPlaceHolder1_ctl00_Lbdesc_details"><asp:Label ID="Lbdesc_details" runat="server" Text=""></asp:Label></span> </div>
             <div class="dtp_row_infoP"> <b class="tt_info">Mã sản phẩm:</b> <asp:Label ID="Lbcode" runat="server" Text=""></asp:Label> </div>
             <div class="dtp_row_infoP"> <b class="tt_info">Thương hiệu:</b> <asp:Literal ID="lbThuonghieu" runat="server" Text=""></asp:Literal></div>
-            <div class="dtp_row_infoP"> <b class="tt_info">Tình trạng:</b> <span id="ContentPlaceHolder1_ctl00_lbtinhtrang">Còn hàng</span> </div>
+            <div class="dtp_row_infoP"> <b class="tt_info">Tình trạng:</b> <asp:Label ID="lbTinhtrang" runat="server" Text=""></asp:Label> </div>
             <div class="dtp_row_infoP"> <b class="tt_info">Giá bán:</b> <del> <asp:Label ID="Lbprice2" runat="server" Text=""></asp:Label> </del> <br />
               <b class="new_price"> <span style="color:Red;"><asp:Literal ID="Lbprice1" runat="server" Text=""></asp:Literal></span> </b> </div>
             <div class="dtp_row_infoP"> Chọn số lượng:
@@ -59,7 +59,7 @@
                     <asp:ListItem Value="19" Text="19"></asp:ListItem>
                     <asp:ListItem Value="20" Text="20"></asp:ListItem>
                 </asp:DropDownList>              
-                <span class="status_product available">Còn hàng</span>
+                <%--<span class="status_product available">Còn hàng</span>--%>
               <!--unavailable-->
             </div>
             <div class="dtp_row_infoP">

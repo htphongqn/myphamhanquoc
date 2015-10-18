@@ -24,7 +24,7 @@ namespace Controller
                             join b in db.ESHOP_NEWs on a.NEWS_ID equals b.NEWS_ID
                             join c in db.ESHOP_CATEGORies on a.CAT_ID equals c.CAT_ID
                             where (b.NEWS_SEO_URL==_News_seo_url)
-                            select new { b.NEWS_ID, b.NEWS_TITLE, b.NEWS_IMAGE3,b.NEWS_PRICE1,b.NEWS_PRICE2, b.NEWS_DESC, b.NEWS_SEO_URL, b.NEWS_URL, b.NEWS_ORDER, b.NEWS_ORDER_PERIOD, b.NEWS_PUBLISHDATE,b.NEWS_CODE, c.CAT_SEO_URL, b.NEWS_FIELD2, b.UNIT_ID1 }).OrderByDescending(n => n.NEWS_PUBLISHDATE).OrderByDescending(n => n.NEWS_ORDER).ToList();
+                            select new { b.NEWS_ID, b.NEWS_TITLE, b.NEWS_IMAGE3, b.NEWS_PRICE1, b.NEWS_PRICE2, b.NEWS_DESC, b.NEWS_SEO_URL, b.NEWS_URL, b.NEWS_ORDER, b.NEWS_ORDER_PERIOD, b.NEWS_PUBLISHDATE, b.NEWS_CODE, c.CAT_SEO_URL, b.NEWS_FIELD2, b.NEWS_FIELD1, b.UNIT_ID1 }).OrderByDescending(n => n.NEWS_PUBLISHDATE).OrderByDescending(n => n.NEWS_ORDER).ToList();
                 foreach (var i in list)
                 {
                     Pro_details_entity pro = new Pro_details_entity();
@@ -42,6 +42,7 @@ namespace Controller
                     pro.NEWS_CODE = i.NEWS_CODE;
                     pro.CAT_SEO_URL = i.CAT_SEO_URL;
                     pro.NEWS_FIELD2 = i.NEWS_FIELD2;
+                    pro.NEWS_FIELD1 = i.NEWS_FIELD1;
                     pro.UNIT_ID1 = Utils.CIntDef(i.UNIT_ID1);
                     l.Add(pro);
                 }

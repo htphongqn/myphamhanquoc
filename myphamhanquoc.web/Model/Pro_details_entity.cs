@@ -21,6 +21,7 @@ namespace Model
         public string NEWS_CODE { get; set; }
         public string CAT_SEO_URL { get; set; }
         public string NEWS_FIELD2 { get; set; }
+        public string NEWS_FIELD1 { get; set; }
         public int NEWS_COUNT { get; set; }
         public int UNIT_ID1 { get; set; }
         public string CAT_PARENT_PATH { get; set; }
