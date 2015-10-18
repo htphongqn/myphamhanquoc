@@ -47,7 +47,7 @@ namespace MyPham.Pages
             try
             {
                 int sotin = list_pro.Getsotin(_Catid);
-                var list = list_pro.Load_listproM(_Catid, _skip, 10);
+                var list = list_pro.Load_listproM(_Catid, _skip, 12);
                 if (list.Count > 0)
                 {
                     Rplistpro.DataSource = list;
@@ -74,7 +74,7 @@ namespace MyPham.Pages
                     if (!_txt.Contains("%"))
                         _txt = "%" + _txt + "%";
                 }
-                var _vNews = search.Load_search_resultM(_txt, 1, _skip, 10);
+                var _vNews = search.Load_search_resultM(_txt, 1, _skip, 12);
                 if (_vNews.ToList().Count > 0)
                 {
                     Rplistpro.DataSource = _vNews;

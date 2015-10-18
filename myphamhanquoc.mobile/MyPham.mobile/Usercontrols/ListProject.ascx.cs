@@ -50,7 +50,7 @@ namespace MyPham.Usercontrols
             try
             {
                 int sotin = list_pro.Getsotin(_Catid);
-                var list = list_pro.Load_listproM(_Catid, 0, 10);
+                var list = list_pro.Load_listproM(_Catid, 0, 12);
                 if (list.Count > 0)
                 {
                     if (_page != 0)

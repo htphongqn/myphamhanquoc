@@ -7,63 +7,63 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MyPham.Usercontrols {
+namespace MyPham.Pages {
     
     
-    public partial class CateProductsHome {
+    public partial class thank {
         
         /// <summary>
-        /// rptProBanchay control.
+        /// ltrFavicon control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptProBanchay;
+        protected global::System.Web.UI.WebControls.Literal ltrFavicon;
         
         /// <summary>
-        /// rptProGiamGia control.
+        /// lblName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptProGiamGia;
+        protected global::System.Web.UI.WebControls.Label lblName;
         
         /// <summary>
-        /// Rpmenu control.
+        /// lblCode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater Rpmenu;
+        protected global::System.Web.UI.WebControls.Label lblCode;
         
         /// <summary>
-        /// rptProGoiY control.
+        /// lblName1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptProGoiY;
+        protected global::System.Web.UI.WebControls.Label lblName1;
         
         /// <summary>
-        /// rptNewsTop control.
+        /// lblPayment control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptNewsTop;
+        protected global::System.Web.UI.WebControls.Label lblPayment;
         
         /// <summary>
-        /// rptNews control.
+        /// lblPayAll control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptNews;
+        protected global::System.Web.UI.WebControls.Label lblPayAll;
     }
 }

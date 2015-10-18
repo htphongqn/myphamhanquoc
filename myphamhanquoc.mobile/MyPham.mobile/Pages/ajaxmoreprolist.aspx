@@ -10,20 +10,20 @@
     <form id="form1" runat="server">
         <asp:Repeater ID="Rplistpro" runat="server">
         <ItemTemplate>
-            <div class="item_P">
-                <div class="product">
-                    <div class="img_product"> 
-                        <a href="<%# GetLink(Eval("NEWS_URL"),Eval("NEWS_SEO_URL"),Eval("CAT_SEO_URL")) %>"> 
-                            <img src="<%# GetImageT(Eval("NEWS_ID"),Eval("NEWS_IMAGE3")) %>" alt="<%# Eval("NEWS_TITLE") %>" /> 
-                        </a>
-                    </div>
-                    <div class="info_P">
-                        <h3 class="product_name"> <a href="<%# GetLink(Eval("NEWS_URL"),Eval("NEWS_SEO_URL"),Eval("CAT_SEO_URL")) %>"><%# Eval("NEWS_TITLE") %></a></h3>
-                        <div class="first_price"> <del><%# GetPrice(Eval("News_Price2"), Eval("News_Price1"))%></del></div>
-                        <price><%# GetPrice(Eval("News_Price1"), Eval("News_Price2"))%></price>
-                    </div>
+        <li>
+            <div class="s_item">
+                <div class="img_s_item"> 
+                    <a href="<%# GetLink(Eval("NEWS_URL"),Eval("NEWS_SEO_URL"),Eval("CAT_SEO_URL")) %>"> 
+                        <img src="<%# GetImageT(Eval("NEWS_ID"),Eval("NEWS_IMAGE3")) %>" alt="<%# Eval("NEWS_TITLE") %>" /> 
+                    </a>
+                </div>
+                <div class="info_P">
+                    <h3 class="s_item_name"> <a href="<%# GetLink(Eval("NEWS_URL"),Eval("NEWS_SEO_URL"),Eval("CAT_SEO_URL")) %>"><%# Eval("NEWS_TITLE") %></a></h3>
+                    <div class="first_price"> <del><%# GetPrice(Eval("News_Price2"), Eval("News_Price1"))%></del></div>
+                    <price><%# GetPrice(Eval("News_Price1"), Eval("News_Price2"))%></price>
                 </div>
             </div>
+        </li>
         </ItemTemplate>
         </asp:Repeater>
     </form>

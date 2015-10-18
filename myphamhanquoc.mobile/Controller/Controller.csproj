@@ -50,6 +50,7 @@
     <Compile Include="Addto_cart.cs" />
     <Compile Include="Album_images.cs" />
     <Compile Include="Attfile.cs" />
+    <Compile Include="Order_now.cs" />
     <Compile Include="Cart_result.cs" />
     <Compile Include="Comment.cs" />
     <Compile Include="Config.cs" />

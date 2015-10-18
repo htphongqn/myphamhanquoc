@@ -46,7 +46,7 @@ namespace MyPham.UIs
                     if (!_txt.Contains("%"))
                         _txt = "%" + _txt + "%";
                 }
-                var _vNews = search.Load_search_resultM(_txt, 1, 0, 10);
+                var _vNews = search.Load_search_resultM(_txt, 1, 0, 12);
                 if (_vNews.ToList().Count > 0)
                 {
                     if (_page != 0)

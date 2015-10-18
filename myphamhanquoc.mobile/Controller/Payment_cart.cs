@@ -303,6 +303,7 @@ namespace Controller
             {
                 int _orderID = Insert_Order1(userId, _totalmoney, _sName, Getorder_code(), _sEmail, _sAddress, _iPaymentID, _guid, _sDesc, DateTime.Now, _sPhone);
                 //Lấy thông tin sản phẩm trong bảng giỏ hàng 
+                _idorder = _orderID;
                 var _product = from a in db.ESHOP_BASKETs
                                join b in db.ESHOP_NEWs on a.NEWS_ID equals b.NEWS_ID
                                where a.CUSTOMER_OID == _guid

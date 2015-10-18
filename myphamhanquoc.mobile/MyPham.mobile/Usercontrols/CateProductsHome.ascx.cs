@@ -15,54 +15,83 @@ namespace MyPham.Usercontrols
         Propertity per = new Propertity();
         Function fun = new Function();
         List_product list_pro = new List_product();
+        List_news lnews = new List_news();
         Home index = new Home();
         #endregion
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
+                Load_Menu1();
                 loadSpBanchay();
+                loadSpGiamGia();
+                loadSpGoiY();
+                loadNews();
             }
         }
 
         #region LoadData
-        protected void Load_Menu1()
-        {
-            try
-            {
-                Rpmenu1.DataSource = per.Loadmenu1(1, 1, 1, 10);
-                Rpmenu1.DataBind();
-            }
-            catch (Exception ex)
-            {
-                clsVproErrorHandler.HandlerError(ex);
-            }
-
-        }
-        protected IQueryable Load_Menu2(object cat_parent_id)
-        {
-            try
-            {
-                var list = per.Menu2(cat_parent_id);
-                return list;
-            }
-            catch (Exception ex)
-            {
-                clsVproErrorHandler.HandlerError(ex);
-                return null;
-            }
-
-        }
-
         private void loadSpBanchay()
         {
             try
             {
-                rptProBanchay.DataSource = index.Loadindex(1, 2, -1, 15);
+                rptProBanchay.DataSource = index.Loadindex(1, 2, -1, 12);
                 rptProBanchay.DataBind();
             }
             catch
             {
+            }
+        }
+        private void loadSpGiamGia()
+        {
+            try
+            {
+                rptProGiamGia.DataSource = list_pro.Load_listproGiamGia(12);
+                rptProGiamGia.DataBind();
+            }
+            catch
+            {
+            }
+        }
+        private void loadSpGoiY()
+        {
+            try
+            {
+                rptProGoiY.DataSource = list_pro.Load_listproGoiY(12);
+                rptProGoiY.DataBind();
+            }
+            catch
+            {
+            }
+        }
+        private void loadNews()
+        {
+            var list = lnews.Load_listNewsHome(12);
+            int count = list.Count;
+            if (count > 0)
+            {
+                var list1 = list.Take(1);
+                rptNewsTop.DataSource = list1;
+                rptNewsTop.DataBind();
+
+                if (count > 1)
+                {
+                    var list2 = list.Skip(1).ToList();
+                    rptNews.DataSource = list2;
+                    rptNews.DataBind();
+                }
+            }
+        }
+        protected void Load_Menu1()
+        {
+            try
+            {
+                Rpmenu.DataSource = per.Load_danhmuc_position(1, 1, 2);
+                Rpmenu.DataBind();
+            }
+            catch (Exception ex)
+            {
+                clsVproErrorHandler.HandlerError(ex);
             }
         }
         #endregion
@@ -108,7 +137,7 @@ namespace MyPham.Usercontrols
             }
 
         }
-        public string GetImageCat(object News_Id, object News_Image1)
+        public string GetImage_Cat(object News_Id, object News_Image1)
         {
 
             try
@@ -128,7 +157,7 @@ namespace MyPham.Usercontrols
                 return null;
             }
         }
-        public string GetLink(object Cat_Url, object Cat_Seo_Url, object Cat_Type)
+        public string GetLink_Cat(object Cat_Url, object Cat_Seo_Url)
         {
             try
             {
@@ -137,7 +166,6 @@ namespace MyPham.Usercontrols
             }
             catch (Exception)
             {
-
                 throw;
             }
         }

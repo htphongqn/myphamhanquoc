@@ -32,13 +32,13 @@ namespace MyPham.Pages
                 UserControl list_pro = null;
                 UserControl prodetails = null;
                 //UserControl list_news = null;
-                //UserControl details_news = null;
+                UserControl details_news = null;
                 UserControl search = null;
 
                 list_pro = Page.LoadControl("../Usercontrols/ListProject.ascx") as UserControl;
                 prodetails = Page.LoadControl("../Usercontrols/ProjectDetail.ascx") as UserControl;
                 //list_news = Page.LoadControl("../Usercontrols/ListNews.ascx") as UserControl;
-                //details_news = Page.LoadControl("../Usercontrols/NewsDetail.ascx") as UserControl;
+                details_news = Page.LoadControl("../Usercontrols/NewsDetail.ascx") as UserControl;
                 search = Page.LoadControl("../Usercontrols/SearchResult.ascx") as UserControl;
                 int _type = Utils.CIntDef(Request["type"]);
                 string _catSeoUrl = Utils.CStrDef(Request.QueryString["curl"]);
@@ -54,14 +54,14 @@ namespace MyPham.Pages
                         {
                             phdMain.Controls.Add(list_pro);
                         }
-                        //else
-                        //{
-                        //    if (Utils.CIntDef(Session["Cat_showitem"]) == 1)
-                        //    {
-                        //        phdMain.Controls.Add(details_news);
-                        //    }
-                        //    else phdMain.Controls.Add(list_news);
-                        //}
+                        else
+                        {
+                            if (Utils.CIntDef(Session["Cat_showitem"]) == 1)
+                            {
+                                phdMain.Controls.Add(details_news);
+                            }
+                            //else phdMain.Controls.Add(list_news);
+                        }
                         break;
                     case 5:
                         phdMain.Controls.Add(search);
@@ -77,7 +77,7 @@ namespace MyPham.Pages
                         }
                         else
                         {
-                            //phdMain.Controls.Add(details_news);
+                            phdMain.Controls.Add(details_news);
                         }
                         break;
 

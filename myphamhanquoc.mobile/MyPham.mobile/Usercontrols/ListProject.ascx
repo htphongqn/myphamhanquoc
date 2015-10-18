@@ -6,8 +6,8 @@
     <h1 class="box_Tab">
         <asp:Label ID="Lbtitle" runat="server"></asp:Label>
     </h1>
-    <div class="box_ct home_product_relate_list" id="ajaxload">
-	<ul>
+    <div class="box_ct home_product_relate_list">
+	<ul id="ajaxload">
         <asp:Repeater ID="Rplistpro" runat="server">
         <ItemTemplate>
         <li>
@@ -34,17 +34,21 @@
 </div>
 
 <script>
-    var skip = 10;
+    var skip = 12;
     function viewmore(id, count, code) {
         $.ajax({
             url: '/Pages/ajaxmoreprolist.aspx',
             data: "id=" + id + "&skip=" + skip + "&code=" + code + "" + "",
             success: function (e) {
-                skip += 10;
+                skip += 12;
                 $("#ajaxload").append(e);
                 if (skip >= count)
                     document.getElementById("divmore").style.display = "none";
             }
         });
     }
+    window.onload = function () {
+        if (skip >= <%=getCountList() %>)
+            document.getElementById("divmore").style.display = "none";
+    };
 </script>

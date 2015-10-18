@@ -10,60 +10,60 @@
 namespace MyPham.Usercontrols {
     
     
-    public partial class CateProductsHome {
+    public partial class NewsDetail {
         
         /// <summary>
-        /// rptProBanchay control.
+        /// lbNewsTitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptProBanchay;
+        protected global::System.Web.UI.WebControls.Literal lbNewsTitle;
         
         /// <summary>
-        /// rptProGiamGia control.
+        /// lbNewsDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptProGiamGia;
+        protected global::System.Web.UI.WebControls.Literal lbNewsDate;
         
         /// <summary>
-        /// Rpmenu control.
+        /// liHtml control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater Rpmenu;
+        protected global::System.Web.UI.WebControls.Literal liHtml;
         
         /// <summary>
-        /// rptProGoiY control.
+        /// dvOtherNews control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptProGoiY;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dvOtherNews;
         
         /// <summary>
-        /// rptNewsTop control.
+        /// RpNewsOther control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptNewsTop;
+        protected global::System.Web.UI.WebControls.Repeater RpNewsOther;
         
         /// <summary>
-        /// rptNews control.
+        /// hplViewmore control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptNews;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor hplViewmore;
     }
 }

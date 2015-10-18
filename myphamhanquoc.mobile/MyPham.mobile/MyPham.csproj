@@ -119,6 +119,7 @@
     <Content Include="Pages\Payment.aspx" />
     <Content Include="Pages\Print.aspx" />
     <Content Include="Pages\Register.aspx" />
+    <Content Include="Pages\thank.aspx" />
     <Content Include="Pages\thong-tin-ca-nhan.aspx" />
     <Content Include="Resources\fonts\fontawesome-webfont.svg" />
     <Content Include="Resources\Images\account_icon.png" />
@@ -218,6 +219,7 @@
     <Content Include="Usercontrols\Header.ascx" />
     <Content Include="Usercontrols\ListProject.ascx" />
     <Content Include="Usercontrols\MenuMobile.ascx" />
+    <Content Include="Usercontrols\NewsDetail.ascx" />
     <Content Include="Usercontrols\Path.ascx" />
     <Content Include="Usercontrols\ProjectDetail.ascx" />
     <Content Include="Usercontrols\SearchResult.ascx" />
@@ -333,6 +335,13 @@
     <Compile Include="Pages\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\thank.aspx.cs">
+      <DependentUpon>thank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\thank.aspx.designer.cs">
+      <DependentUpon>thank.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\thong-tin-ca-nhan.aspx.cs">
       <DependentUpon>thong-tin-ca-nhan.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -396,6 +405,13 @@
     </Compile>
     <Compile Include="Usercontrols\MenuMobile.ascx.designer.cs">
       <DependentUpon>MenuMobile.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\NewsDetail.ascx.cs">
+      <DependentUpon>NewsDetail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\NewsDetail.ascx.designer.cs">
+      <DependentUpon>NewsDetail.ascx</DependentUpon>
     </Compile>
     <Compile Include="Usercontrols\Path.ascx.cs">
       <DependentUpon>Path.ascx</DependentUpon>

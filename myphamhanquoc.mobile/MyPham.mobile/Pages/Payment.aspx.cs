@@ -268,6 +268,7 @@ namespace MyPham.Pages
             else
             {
                 Finish();
+                Response.Redirect("/thank.html?orderid=" + Payment_cart._idorder);
             }
         }
     }

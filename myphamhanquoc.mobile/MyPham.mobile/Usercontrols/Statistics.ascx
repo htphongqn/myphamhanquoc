@@ -10,7 +10,7 @@
 </div>
 
 <div class="row_menu_f">
-    <h3 class="title_col_footer">Follow us</h3>
+    <h3 class="title_col_footer">Kết nối</h3>
     <div class="col_F_ct" id="social_network">
         <asp:Repeater ID="rptSocialNetwork" runat="server">
             <ItemTemplate>

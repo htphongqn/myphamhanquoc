@@ -2,19 +2,19 @@
             
 <div class="box">
     <h1 class="box_Tab">Tìm kiếm</h1>
-    <div class="box_ct home_product_relate_list" id="ajaxload">
-        <ul>
+    <div class="box_ct home_product_relate_list">
+        <ul id="ajaxload">
 			<asp:Repeater ID="Rplistpro" runat="server">
 	        <ItemTemplate>
 	        <li>
-	            <div class="product">
-	                <div class="img_product"> 
+	            <div class="s_item">
+	                <div class="img_s_item"> 
 	                    <a href="<%# GetLink(Eval("NEWS_URL"),Eval("NEWS_SEO_URL"),Eval("CAT_SEO_URL")) %>"> 
 	                        <img src="<%# GetImageT(Eval("NEWS_ID"),Eval("NEWS_IMAGE3")) %>" alt="<%# Eval("NEWS_TITLE") %>" /> 
 	                    </a>
 	                </div>
 	                <div class="info_P">
-	                    <h3 class="product_name"> <a href="<%# GetLink(Eval("NEWS_URL"),Eval("NEWS_SEO_URL"),Eval("CAT_SEO_URL")) %>"><%# Eval("NEWS_TITLE") %></a></h3>
+	                    <h3 class="s_item_name"> <a href="<%# GetLink(Eval("NEWS_URL"),Eval("NEWS_SEO_URL"),Eval("CAT_SEO_URL")) %>"><%# Eval("NEWS_TITLE") %></a></h3>
 	                    <div class="first_price"> <del><%# GetPrice(Eval("News_Price2"), Eval("News_Price1"))%></del></div>
 	                    <price><%# GetPrice(Eval("News_Price1"), Eval("News_Price2"))%></price>
 	                </div>
@@ -30,17 +30,21 @@
 </div>
 
 <script>
-    var skip = 10;
+    var skip = 12;
     function viewmore(id, count, code) {
         $.ajax({
             url: '/Pages/ajaxmoreprolist.aspx',
             data: "id=" + id + "&skip=" + skip + "&code=" + code + "" + "",
             success: function (e) {
-                skip += 10;
+                skip += 12;
                 $("#ajaxload").append(e);
                 if (skip >= count)
                     document.getElementById("divmore").style.display = "none";
             }
         });
     }
+    window.onload = function () {
+        if (skip >= <%=getCountList() %>)
+            document.getElementById("divmore").style.display = "none";
+    };
 </script>
