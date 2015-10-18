@@ -76,7 +76,7 @@
                             <asp:ListItem Text="Sản phẩm" Value="1"></asp:ListItem>
                         </asp:RadioButtonList>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" id="idCate" runat="server">
                         <label>Chuyên mục</label>
                         <asp:DropDownList ID="ddlCategory" runat="server" class="form-control">
                         </asp:DropDownList>

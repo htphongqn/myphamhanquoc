@@ -33,7 +33,10 @@ namespace yeuthietkeweb.cms.pages
                 trImage2.Visible = false;
                 Hyperseo_cate.Visible = false;
             }
-            else Hyperseo_cate.HRef = "category_seo.aspx?cat_id=" + m_cat_id;
+            else
+            {
+                Hyperseo_cate.HRef = "category_seo.aspx?cat_id=" + m_cat_id;
+            }
             if (!IsPostBack)
             {
                 getInfo();

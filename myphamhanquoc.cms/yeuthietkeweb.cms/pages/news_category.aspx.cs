@@ -90,10 +90,10 @@ namespace yeuthietkeweb.cms.pages
 
                 DB.ESHOP_NEWS_CATs.DeleteAllOnSubmit(gcdel);
 
-                foreach (DataGridItem item in rptList.Items)
+                foreach (RepeaterItem item in rptList.Items)
                 {
                     check = new HtmlInputCheckBox();
-                    check = (HtmlInputCheckBox)item.Cells[1].FindControl("chkSelect");
+                    check = (HtmlInputCheckBox)item.FindControl("chkSelect");
                     Label lblID = (Label)item.FindControl("lblID");
 
                     if (check.Checked)
