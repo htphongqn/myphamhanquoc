@@ -128,7 +128,7 @@ namespace yeuthietkeweb.cms.pages
                     txtHeight.Value = Utils.CStrDef(G_info.ToList()[0].AD_ITEM_HEIGHT);
                     txtOrder.Value = Utils.CStrDef(G_info.ToList()[0].AD_ITEM_ORDER);
                     //ucFromDate.returnDate = Utils.CDateDef(G_info.ToList()[0].AD_ITEM_DATEFROM, DateTime.Now);
-                    //ucToDate.returnDate = Utils.CDateDef(G_info.ToList()[0].AD_ITEM_DATEFROM, DateTime.Now.Add(new TimeSpan(365, 0, 0, 0)));
+                    //ucToDate.returnDate = Utils.CDateDef(G_info.ToList()[0].AD_ITEM_DATETO, DateTime.Now.Add(new TimeSpan(365, 0, 0, 0)));
                     rblLanguage.SelectedValue = Utils.CStrDef(G_info.ToList()[0].AD_ITEM_LANGUAGE);
                     //txtClip.Value = Utils.CStrDef(G_info.ToList()[0].AD_ITEM_FIELD1);
 
