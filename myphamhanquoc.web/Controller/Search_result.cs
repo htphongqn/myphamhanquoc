@@ -14,7 +14,7 @@ namespace Controller
         #region Decclare
         dbShopDataContext db = new dbShopDataContext();
         #endregion
-        public List<Pro_details_entity> Load_search_result(string _txt,int type)
+        public List<Pro_details_entity> Load_search_result(string _txt, int cateid, int type)
         {
             List<Pro_details_entity> l = new List<Pro_details_entity>();
             var list = (from c in db.ESHOP_NEWS_CATs
@@ -22,6 +22,7 @@ namespace Controller
                           join b in db.ESHOP_CATEGORies on c.CAT_ID equals b.CAT_ID
                           where (SqlMethods.Like(a.NEWS_KEYWORD_ASCII, ClearUnicode(_txt)) || "" == _txt || "%%" == _txt)
                           && (a.NEWS_TYPE == type || type == -1)
+                          && (b.CAT_ID == cateid || b.CAT_PARENT_PATH.Contains(cateid.ToString()) || cateid == 0)
                           select new { a.NEWS_ID, a.NEWS_TITLE, a.NEWS_IMAGE3,a.NEWS_PRICE1, a.NEWS_DESC, a.NEWS_SEO_URL, a.NEWS_URL, a.NEWS_ORDER, a.NEWS_ORDER_PERIOD, a.NEWS_PUBLISHDATE, b.CAT_SEO_URL }).Distinct().OrderByDescending(n => n.NEWS_ID).OrderByDescending(n => n.NEWS_ORDER);
             foreach (var i in list)
             {
