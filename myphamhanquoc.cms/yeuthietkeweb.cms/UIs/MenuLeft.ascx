@@ -36,6 +36,12 @@
                 </ul>
             </li>
             <li>
+                <a href="#"><i class="fa fa-table fa-fw"></i>Đơn hàng<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li><a href="order_list.aspx">Danh sách đơn hàng</a></li>
+                </ul>
+            </li>
+            <li>
                 <a href="#"><i class="fa fa-table fa-fw"></i>Hình ảnh<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li><a href="aditem_list.aspx">Danh sách hình ảnh</a></li>

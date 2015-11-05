@@ -26,10 +26,10 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-6">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    Thông tin chung
+                    Thông tin đơn hàng
                 </div>
                 <div class="panel-body">
                     <div class="form-group">
@@ -57,6 +57,15 @@
                         <label>Ghi chú</label>
                         <textarea id="txtOrderDesc" runat="server" class="form-control" readonly="readonly"></textarea>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Thông tin khách hàng
+                </div>
+                <div class="panel-body">
                     <div class="form-group">
                         <label>Tên khách hàng</label>
                         <input type="text" name="txtName" id="txtName" runat="server" class="form-control"
@@ -78,6 +87,10 @@
 						    readonly="readonly" />
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="panel panel-default">
                 <div class="panel-body">
                     <div class="dataTable_wrapper">
                         <table class="table table-striped table-bordered table-hover" id="dataTables-example">
@@ -116,8 +129,8 @@
                             </tbody>
                         </table>
                         <div style="text-align: right;">
-                            <asp:Label ID="lblFreeShip" runat="server"></asp:Label><br />
-                            <asp:Label ID="lblTotal" runat="server"></asp:Label>
+                            <asp:Literal ID="lblFreeShip" runat="server"></asp:Literal><br />
+                            <asp:Literal ID="lblTotal" runat="server"></asp:Literal>
                         </div>
                     </div>
                 </div>

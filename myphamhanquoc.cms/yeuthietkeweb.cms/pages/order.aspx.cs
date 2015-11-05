@@ -113,8 +113,8 @@ namespace yeuthietkeweb.cms.pages
                     //txtDistrict.Value = G_info.ToList()[0].ORDER_FIELD5;
                     //ucDate.returnDate = Utils.CDateDef(G_info.ToList()[0].ORDER_UPDATE, DateTime.Now);
 
-                    lblFreeShip.Text = "Phí vận chuyển : " + GetMoney(G_info.ToList()[0].ORDER_SHIPPING_FEE);
-                    lblTotal.Text = "Tổng tiền : " + GetMoney(G_info.ToList()[0].ORDER_TOTAL_AMOUNT);
+                    lblFreeShip.Text = "Phí vận chuyển : <b>" + GetMoney(G_info.ToList()[0].ORDER_SHIPPING_FEE) + "</b>";
+                    lblTotal.Text = "Tổng tiền : <b>" + GetMoney(G_info.ToList()[0].ORDER_TOTAL_ALL) + "</b>";
                 }
                 else
                 {

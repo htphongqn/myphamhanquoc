@@ -118,7 +118,7 @@ namespace yeuthietkeweb.cms.pages {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFreeShip;
+        protected global::System.Web.UI.WebControls.Literal lblFreeShip;
         
         /// <summary>
         /// lblTotal control.
@@ -127,6 +127,6 @@ namespace yeuthietkeweb.cms.pages {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTotal;
+        protected global::System.Web.UI.WebControls.Literal lblTotal;
     }
 }
