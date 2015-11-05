@@ -55,7 +55,7 @@ namespace Controller
         {
             try
             {
-                var list = db.ESHOP_CATEGORies.Where(n => n.CAT_STATUS == 1 && n.CAT_TYPE == type && n.CAT_RANK == rank).OrderByDescending(n => n.CAT_ORDER).Take(limit).ToList();
+                var list = db.ESHOP_CATEGORies.Where(n => n.CAT_STATUS == 1 && n.CAT_TYPE == type && n.CAT_RANK == rank).OrderByDescending(n => n.CAT_ORDER).ToList();
                 return list;
             }
             catch (Exception)
