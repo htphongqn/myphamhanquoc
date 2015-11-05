@@ -21,7 +21,7 @@ namespace yeuthietkeweb.web.Pages
             _catid = Utils.CIntDef(Request.QueryString["catid"]);
             _position = Utils.CIntDef(Request.QueryString["position"]);
             if (!IsPostBack)
-                Load_Menu(_catid, 5);
+                Load_Menu(_catid, 100);
         }
         private void Load_Menu(object cat_parent_id, object limit)
         {
