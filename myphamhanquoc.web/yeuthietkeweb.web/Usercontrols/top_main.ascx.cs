@@ -58,6 +58,7 @@ namespace yeuthietkeweb.web.Usercontrols
 
                 ddlSearchCatsProduct.DataSource = list;
                 ddlSearchCatsProduct.DataBind();
+                ddlSearchCatsProduct.Items.Insert(0, new ListItem("Tất cả", "0"));
             }
             catch (Exception ex)
             {

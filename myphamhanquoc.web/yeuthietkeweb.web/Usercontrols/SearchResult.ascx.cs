@@ -47,7 +47,7 @@ namespace yeuthietkeweb.UIs
                     if (!_txt.Contains("%"))
                         _txt = "%" + _txt + "%";
                 }
-                var _vNews = search.Load_search_result(_txt, -1);
+                var _vNews = search.Load_search_result(_txt, _catid, - 1);
                 if (_vNews.ToList().Count > 0)
                 {
                     if (_page != 0)

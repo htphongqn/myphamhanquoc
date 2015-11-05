@@ -46,7 +46,7 @@ namespace yeuthietkeweb.cms.pages
                 //bplNewsCopy.HRef = "news_copy.aspx?news_id=" + m_news_id;
                 hplComment.HRef = "news_comment.aspx?news_id=" + m_news_id; hplComment.Visible = false;
                 //hplCatProducts.HRef = "news_news.aspx?news_id=" + m_news_id;
-                idCate.Visible = false;
+                trCate.Visible = false;
             }
 
             if (!IsPostBack)

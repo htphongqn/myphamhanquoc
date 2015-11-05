@@ -50,6 +50,13 @@ namespace yeuthietkeweb.Pages
         {
             try
             {
+                string strSecView = LookCookie().ToLower();
+                string strSecurity = txtCapcha.Value.ToString().ToLower();
+                if (strSecurity != strSecView)
+                {
+                    Response.Write("<script>alert('Nhập mã bảo mật sai!');</script>");
+                    return;
+                }
                 string _sbody = string.Empty;
                 string _email = txtEmail.Value;
                 string _pass = fm.MaHoaMatKhau(txtPassword.Value);
@@ -57,8 +64,8 @@ namespace yeuthietkeweb.Pages
                 string _address = txtAddress.Value;
                 string _Phone = txtPhone.Value;
                 string _sCodeActive = fm.TaoChuoiTuDong(15);
-                if (this.txtCapcha.Value == this.Session["CaptchaImageText"].ToString())
-                {
+                //if (this.txtCapcha.Value == this.Session["CaptchaImageText"].ToString())
+                //{
                     if (acc.Check_email(txtEmail.Value))
                     {
                         lbMessage.Text = "Email đã có người sử dụng!";
@@ -77,11 +84,11 @@ namespace yeuthietkeweb.Pages
                     {
                         lbMessage.Text = "Lỗi, Vui lòng thử lại!";
                     }
-                }
-                else
-                {
-                    lbMessage.Text = "Mã xác nhận không đúng!";
-                }
+                //}
+                //else
+                //{
+                //    lbMessage.Text = "Mã xác nhận không đúng!";
+                //}
             }
             catch
             {

@@ -107,7 +107,6 @@ namespace Controller
             int _orderID = -1;
             ESHOP_ORDER _order = new ESHOP_ORDER();
             _order.ORDER_TOTAL_ALL = Total_All;
-            _order.ORDER_TOTAL_ALL = Total_All;
             _order.ORDER_NAME = Name;
             _order.ORDER_CODE = OrderCode;
             _order.ORDER_EMAIL = Email;
@@ -158,7 +157,7 @@ namespace Controller
 
         }
         //Payment
-        public bool Payment_cart_rs(int userId, Guid _guid, decimal _totalmoney, string _sEmail, string _sName, string _sPhone, string _sAddress,int _iPaymentID,string hinhthuc, string _sDesc, string _nameweb, string _url_web)
+        public int Payment_cart_rs(int userId, Guid _guid, decimal _totalmoney, string _sEmail, string _sName, string _sPhone, string _sAddress,int _iPaymentID,string hinhthuc, string _sDesc, string _nameweb, string _url_web)
         {
             try
             {
@@ -194,7 +193,7 @@ namespace Controller
                 }
                 string _sMailBody=Email_info_product_customer(_mailbody,FormatMoney(_totalmoney), _sEmail, _sName, _sPhone, _sAddress, hinhthuc, _sDesc, _nameweb, _url_web);
                 _Mailbody = _sMailBody;
-                return true;
+                return _orderID;
             }
             catch (Exception)
             {
