@@ -99,7 +99,7 @@ namespace Controller
         public void Addvister()
         {
             var _hitTotal = db.GetTable<ESHOP_CONFIG>();
-            if (_hitTotal.ToList().Count > 0)
+            if (_hitTotal != null && _hitTotal.ToList().Count > 0)
             {
                 _hitTotal.ToList()[0].CONFIG_HITCOUNTER = _hitTotal.ToList()[0].CONFIG_HITCOUNTER + 1;
                 db.SubmitChanges();

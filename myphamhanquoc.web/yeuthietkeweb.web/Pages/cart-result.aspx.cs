@@ -32,7 +32,7 @@ namespace yeuthietkeweb.Pages
             }
             var _configs = cf.Config_meta();
 
-            if (_configs.ToList().Count > 0)
+            if (_configs != null && _configs.ToList().Count > 0)
             {
                 if (!string.IsNullOrEmpty(_configs.ToList()[0].CONFIG_FAVICON))
                     ltrFavicon.Text = "<link rel='shortcut icon' href='" + PathFiles.GetPathConfigs() + _configs.ToList()[0].CONFIG_FAVICON + "' />";
@@ -59,7 +59,7 @@ namespace yeuthietkeweb.Pages
             else
             {
                 var _basket = cart.Load_cart(_guid);
-                if (_basket.ToList().Count > 0)
+                if (_basket != null && _basket.ToList().Count > 0)
                 {
                     Rpgiohang.DataSource = _basket;
                     Rpgiohang.DataBind();
