@@ -202,7 +202,7 @@ namespace yeuthietkeweb.cms.pages
 
             try
             {
-                foreach (DataGridItem item in rptList.Items)
+                foreach (RepeaterItem item in rptList.Items)
                 {
                     check = new HtmlInputCheckBox();
                     check = (HtmlInputCheckBox)item.FindControl("chkSelect");
